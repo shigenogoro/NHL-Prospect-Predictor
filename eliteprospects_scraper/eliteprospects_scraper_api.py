@@ -173,3 +173,16 @@ def getSeasonRoster(league, season):
     df_players.drop(['player'], axis=1)
 
     return df_players
+
+def getPlayersMetadata(df_players):
+    '''
+        Get player's metadata from df_players
+        Parameters:
+            df_players (pd.DataFrame): DataFrame with all players
+        Returns:
+            df_players (pd.DataFrame): DataFrame with all players and metadata
+    '''
+
+    # Get distinct players
+    players_meta = df_players[['playername', 'fw_def', 'link']].drop_duplicates().reset_index(drop=True)
+    return players_meta
