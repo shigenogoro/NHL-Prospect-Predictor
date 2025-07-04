@@ -19,6 +19,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 '''
     The following functions are used to help with handle the table data and pagination
@@ -193,6 +195,70 @@ def getPlayersMetadata(df_players):
     # Get distinct players
     players_meta = df_players[['playername', 'fw_def', 'link']].drop_duplicates().reset_index(drop=True)
     return players_meta
+
+def getSinglePlayerStats(player_url, stat_type='Regular Season'):
+    '''
+        Get player's stats from a player's webpage
+        Parameters:
+            player_url (str): URL to the player's webpage
+        Returns:
+            df_stats (pd.DataFrame): DataFrame with all player's stats
+    '''
+    # Parameters Checking
+    valid_stat_types = ["Regular Season", "Postseason"]
+    if stat_type not in valid_stat_types:
+        raise ValueError(f"Invalid stat type. Valid stat types are: {', '.join(valid_stat_types)}")
+
+    # Players Stats on their webpage are loaded using JavaScript
+    # Use Selenium to load the page and extract the stats
+    # Set up Selenium
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")  # Run Chrome in headless mode (no GUI)
+    chrome_options.add_argument("--no-sandbox")  # Bypass OS security model
+    chrome_options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage
+
+    # Initialize the Chrome WebDriver
+    driver = webdriver.Chrome(options=chrome_options)
+    wait = WebDriverWait(driver, 10)
+
+    # Load the player's webpage
+    driver.get(player_url)
+    time.sleep(3) # Wait for the page to load
+
+    # Manipulate the dropdown manu for regular season or postseason
+    # Step 1: Click the dropdown control (the clickable box)
+    dropdown_control = wait.until(
+        EC.element_to_be_clickable((By.CLASS_NAME, "css-x1uf2d-control"))
+    )
+
+    # Scroll into view
+    driver.execute_script("arguments[0].scrollIntoView(true);", dropdown_control)
+    time.sleep(0.5)
+
+    dropdown_control.click()
+    time.sleep(1)
+
+    # Step 2: Find the hidden input inside dropdown and type the desired option
+    input_box = driver.find_element(By.ID, "react-select-player-statistics-default-season-selector-league-input")
+    input_box.send_keys(stat_type)
+    input_box.send_keys(Keys.ENTER)
+
+    # Wait for table to update
+    time.sleep(3)
+
+    # Get fully rendered HTML
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+    player_table = soup.find('table', {'class': 'SortTable_table__jnnJk PlayerStatistics_mobileColumnWidth__4eS8P'})
+
+    # Close the WebDriver
+    driver.quit()
+
+    # Check if the table exists
+    if player_table is not None:
+        df_stats = tableDataToRows(player_table)
+        return df_stats
+
+    return None
 
 '''
     The following functions are used to handle the goalie's stats
