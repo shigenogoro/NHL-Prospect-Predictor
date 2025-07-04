@@ -20,6 +20,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
+'''
+    The following functions are used to help with handle the table data and pagination
+'''
+
 # Helper Function to extract data from a table - return a list with rows data frame
 def tableDataToRows(table):
     '''
@@ -75,6 +79,9 @@ def getNumberOfPages(url):
     else:
         return 0
 
+'''
+    The following functions are used to handle the player's stats
+'''
 
 def getSeasonRoster(league, season):
     '''
@@ -186,3 +193,7 @@ def getPlayersMetadata(df_players):
     # Get distinct players
     players_meta = df_players[['playername', 'fw_def', 'link']].drop_duplicates().reset_index(drop=True)
     return players_meta
+
+'''
+    The following functions are used to handle the goalie's stats
+'''
