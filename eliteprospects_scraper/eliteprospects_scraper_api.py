@@ -26,7 +26,7 @@ from selenium.webdriver.support import expected_conditions as EC
     The following functions are used to help with handle the table data and pagination
 '''
 
-# Helper Function to extract data from a table - return a list with rows data frame
+# Helper function to extract data from a table - return a list with rows data frame
 def tableDataToRows(table):
     '''
         Helper function to extract data from a table
@@ -48,7 +48,7 @@ def tableDataToRows(table):
     df_rows = pd.DataFrame(rows[1:], columns=rows[0])
     return df_rows
 
-# Helper Function to extract number of pages
+# Helper function to extract number of pages
 def getNumberOfPages(url):
     '''
         Helper function to extract the number of pages in a table
@@ -80,6 +80,22 @@ def getNumberOfPages(url):
             return num_pages
     else:
         return 0
+
+# Helper function to merge regular season and postseason stats
+def mergeStats(df_regular, df_postseason):
+    '''
+        Helper function to merge regular season and postseason stats
+        Parameters:
+            df_regular (pd.DataFrame): DataFrame with regular season stats
+            df_postseason (pd.DataFrame): DataFrame with postseason stats
+        Returns:
+            df (pd.DataFrame): DataFrame with merged stats
+    '''
+    # Merge the two dataframes on season, team and league
+    full_stats_df = df_regular.merge(df_postseason, on=['season', 'team', 'league'], how='left')
+
+    return full_stats_df
+
 
 '''
     The following functions are used to handle the player's stats
@@ -196,7 +212,7 @@ def getPlayersMetadata(df_players):
     players_meta = df_players[['playername', 'fw_def', 'link']].drop_duplicates().reset_index(drop=True)
     return players_meta
 
-def getSinglePlayerStats(player_url, stat_type='Regular Season'):
+def getSinglePlayerStatsByType(player_url, stat_type='Regular Season'):
     '''
         Get player's stats from a player's webpage
         Parameters:
@@ -256,9 +272,79 @@ def getSinglePlayerStats(player_url, stat_type='Regular Season'):
     # Check if the table exists
     if player_table is not None:
         df_stats = tableDataToRows(player_table)
+
+        # Convert all column names to the lowercase
+        df_stats.columns = [col_name.lower() for col_name in df_stats.columns]
+        df_stats.rename(columns={'s': 'season'}, inplace=True)
+
         return df_stats
 
     return None
+
+def getSinglePlayerStats(player_url):
+    '''
+        Get player's stats from a player's webpage
+        Parameters:
+            player_url (str): URL to the player's webpage
+        Returns:
+            df_stats (pd.DataFrame): DataFrame with all player's stats
+    '''
+    # Get regular season stats
+    df_regular = getSinglePlayerStatsByType(player_url, 'Regular Season')
+
+    # Get postseason stats
+    df_postseason = getSinglePlayerStatsByType(player_url, 'Postseason')
+
+    # Merge the two dataframes
+    df_stats = mergeStats(df_regular, df_postseason)
+
+    # Rename the columns
+    df_stats.rename(columns={
+        'gp_x': 'gp_regular',
+        'g_x': 'g_regular',
+        'a_x': 'a_regular',
+        'tp_x': 'tp_regular',
+        'pim_x': 'pim_regular',
+        '+/-_x': '+/-_regular',
+        'gp_y': 'gp_post',
+        'g_y': 'g_post',
+        'a_y': 'a_post',
+        'tp_y': 'tp_post',
+        'pim_y': 'pim_post',
+        '+/-_y': '+/-_post'
+    }, inplace=True)
+
+    return df_stats
+
+def getPlayersStats(players_meatadata):
+    '''
+        Get all players' stats from a list of player links
+        Parameters:
+            player_links (list): List of player links
+        Returns:
+            df_stats (pd.DataFrame): DataFrame with all players' stats
+    '''
+    # Get Players' Name and Links
+    players_links = players_meatadata['link'].tolist()
+    players_names = players_meatadata['playername'].tolist()
+
+    # Get all players' stats
+    players_stats = pd.DataFrame()
+    for i in range(len(players_links)):
+        print(f"Collecting data from {players_links[i]}")
+        player_stats = getSinglePlayerStats(players_links[i])
+        player_stats['playername'] = players_names[i]
+        players_stats = pd.concat([players_stats, player_stats]).reset_index(drop=True)
+        time.sleep(3)
+
+    # Move the playername column to the front
+    playersname_col = players_stats.iloc[:, -1]
+    other_cols = players_stats.iloc[:, :-1]
+
+    # Combine
+    players_stats = pd.concat([playersname_col, other_cols], axis=1)
+
+    return players_stats
 
 '''
     The following functions are used to handle the goalie's stats
