@@ -335,7 +335,7 @@ def getPlayersStats(players_meatadata):
         player_stats = getSinglePlayerStats(players_links[i])
         player_stats['playername'] = players_names[i]
         players_stats = pd.concat([players_stats, player_stats]).reset_index(drop=True)
-        time.sleep(3)
+        time.sleep(5)
 
     # Move the playername column to the front
     playersname_col = players_stats.iloc[:, -1]
