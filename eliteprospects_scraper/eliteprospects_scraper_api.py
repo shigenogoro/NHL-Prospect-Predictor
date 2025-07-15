@@ -1,7 +1,7 @@
 '''
     API for Elite Prospects Scraper
-    1. getSeasonRoster(league, season): Allows you to get all players from a specific league and season
-    2. getPlayer(url): Allows you to get all information from a player's webpage
+    1. get_season_roster(league, season): Allows you to get all players from a specific league and season
+    2. get_single_player_stats(url): Allows you to get all information from a player's webpage
 '''
 
 import numpy as np
@@ -27,7 +27,7 @@ from selenium.webdriver.support import expected_conditions as EC
 '''
 
 # Helper function to extract data from a table - return a list with rows data frame
-def tableDataToRows(table):
+def table_data_to_rows(table):
     '''
         Helper function to extract data from a table
         Parameters:
@@ -49,7 +49,7 @@ def tableDataToRows(table):
     return df_rows
 
 # Helper function to extract number of pages
-def getNumberOfPages(url):
+def get_number_of_pages(url):
     '''
         Helper function to extract the number of pages in a table
         Parameters:
@@ -82,7 +82,7 @@ def getNumberOfPages(url):
         return 0
 
 # Helper function to merge regular season and postseason stats
-def mergeStats(df_regular, df_postseason):
+def merge_stats(df_regular, df_postseason):
     '''
         Helper function to merge regular season and postseason stats
         Parameters:
@@ -101,7 +101,7 @@ def mergeStats(df_regular, df_postseason):
     The following functions are used to handle the player's stats
 '''
 
-def getSeasonRoster(league, season):
+def get_season_roster(league, season):
     '''
         Get all players from a specific league and season
         Parameters:
@@ -126,7 +126,7 @@ def getSeasonRoster(league, season):
 
     # Get the URL
     url = 'https://www.eliteprospects.com/league/' + league + '/stats/' + season
-    num_pages = getNumberOfPages(url)
+    num_pages = get_number_of_pages(url)
 
     # Initiate a list of players
     players = []
@@ -144,7 +144,7 @@ def getSeasonRoster(league, season):
 
         # Check if the table exists
         if player_table is not None:
-            df_players = tableDataToRows(player_table)
+            df_players = table_data_to_rows(player_table)
 
             # Player exists in the table
             if df_players['#'].count() > 0:
@@ -199,7 +199,7 @@ def getSeasonRoster(league, season):
 
     return df_players
 
-def getPlayersMetadata(df_players):
+def get_players_metadata(df_players):
     '''
         Get player's metadata from df_players
         Parameters:
@@ -212,7 +212,7 @@ def getPlayersMetadata(df_players):
     players_meta = df_players[['playername', 'fw_def', 'link']].drop_duplicates().reset_index(drop=True)
     return players_meta
 
-def getSinglePlayerStatsByType(player_url, stat_type='Regular Season'):
+def get_single_player_stats_by_type(player_url, stat_type='Regular Season'):
     '''
         Get player's stats from a player's webpage
         Parameters:
@@ -271,7 +271,7 @@ def getSinglePlayerStatsByType(player_url, stat_type='Regular Season'):
 
     # Check if the table exists
     if player_table is not None:
-        df_stats = tableDataToRows(player_table)
+        df_stats = table_data_to_rows(player_table)
 
         # Convert all column names to the lowercase
         df_stats.columns = [col_name.lower() for col_name in df_stats.columns]
@@ -281,7 +281,7 @@ def getSinglePlayerStatsByType(player_url, stat_type='Regular Season'):
 
     return None
 
-def getSinglePlayerStats(player_url):
+def get_single_player_stats(player_url):
     '''
         Get player's stats from a player's webpage
         Parameters:
@@ -290,13 +290,13 @@ def getSinglePlayerStats(player_url):
             df_stats (pd.DataFrame): DataFrame with all player's stats
     '''
     # Get regular season stats
-    df_regular = getSinglePlayerStatsByType(player_url, 'Regular Season')
+    df_regular = get_single_player_stats_by_type(player_url, 'Regular Season')
 
     # Get postseason stats
-    df_postseason = getSinglePlayerStatsByType(player_url, 'Postseason')
+    df_postseason = get_single_player_stats_by_type(player_url, 'Postseason')
 
     # Merge the two dataframes
-    df_stats = mergeStats(df_regular, df_postseason)
+    df_stats = merge_stats(df_regular, df_postseason)
 
     # Rename the columns
     df_stats.rename(columns={
@@ -316,7 +316,7 @@ def getSinglePlayerStats(player_url):
 
     return df_stats
 
-def getPlayersStats(players_meatadata):
+def get_players_stats(players_meatadata):
     '''
         Get all players' stats from a list of player links
         Parameters:
@@ -332,7 +332,7 @@ def getPlayersStats(players_meatadata):
     players_stats = pd.DataFrame()
     for i in range(len(players_links)):
         print(f"Collecting data from {players_links[i]}")
-        player_stats = getSinglePlayerStats(players_links[i])
+        player_stats = get_single_player_stats(players_links[i])
         player_stats['playername'] = players_names[i]
         players_stats = pd.concat([players_stats, player_stats]).reset_index(drop=True)
         time.sleep(5)
