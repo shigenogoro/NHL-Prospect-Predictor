@@ -302,6 +302,9 @@ def get_single_player_stats(player_metadata):
     print(f"Collecting regular season stats from {player_url}")
     df_regular = get_single_player_stats_by_type(player_url, 'Regular Season')
 
+    # Wait for couple of seconds before going to the post-season stats
+    time.sleep(random.uniform(1, 5))
+
     # Get postseason stats
     print(f"Collecting postseason stats from {player_url}")
     df_postseason = get_single_player_stats_by_type(player_url, 'Postseason')
