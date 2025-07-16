@@ -10,7 +10,6 @@ from bs4 import BeautifulSoup
 import requests
 import time
 import re   #　Regular expressions
-import random
 
 # Used to grab the part where JavaScript is used to load the data
 from selenium import webdriver
@@ -165,7 +164,7 @@ def get_season_roster(league, season):
                 players.append(df_players)
 
                 # Wait 3 seconds before going to the next page
-                time.sleep(random.uniform(1, 3))
+                time.sleep(3)
 
     # Concatenate all the pages into one DataFrame
     df_players = pd.concat(players).reset_index()
@@ -232,11 +231,6 @@ def get_single_player_stats_by_type(player_url, stat_type='Regular Season'):
     chrome_options.add_argument("--headless")  # Run Chrome in headless mode (no GUI)
     chrome_options.add_argument("--no-sandbox")  # Bypass OS security model
     chrome_options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage
-    chrome_options.add_argument('--ignore-certificate-errors')
-    chrome_options.add_argument('--allow-insecure-localhost')
-    chrome_options.add_argument(
-        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-    )
 
     # Initialize the Chrome WebDriver
     driver = webdriver.Chrome(options=chrome_options)
