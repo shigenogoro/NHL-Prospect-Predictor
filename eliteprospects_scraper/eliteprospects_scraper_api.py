@@ -19,6 +19,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
+import undetected_chromedriver as uc
 
 '''
     The following functions are used to help with handle the table data and pagination
@@ -120,6 +121,44 @@ def standardize_stat_columns(df):
         'year': 'season'
     }
     return df.rename(columns={col: rename_map.get(col.lower(), col.lower()) for col in df.columns})
+
+# Helper Function to Get Player's Stats
+def get_stats(driver, wait, player_name, stat_name):
+    try:
+        # Click dropdown
+        dropdown = wait.until(ec.element_to_be_clickable((By.CLASS_NAME, "css-x1uf2d-control")))
+        driver.execute_script("arguments[0].scrollIntoView(true);", dropdown)
+        dropdown.click()
+        time.sleep(0.3)
+
+        # Input stat type and hit Enter
+        input_box = driver.find_element(By.ID, "react-select-player-statistics-default-season-selector-league-input")
+        input_box.send_keys(stat_name)
+        input_box.send_keys(Keys.ENTER)
+        time.sleep(random.uniform(1.5, 2.0))
+
+        soup = BeautifulSoup(driver.page_source, "html.parser")
+        table = soup.find("table", class_="SortTable_table__jnnJk PlayerStatistics_mobileColumnWidth__4eS8P")
+
+        # Append playername to the table
+        player_stats = table_data_to_rows(table)
+        player_stats['playername'] = player_name
+
+        # Move the playername column to the front
+        playername_col = player_stats.iloc[:, -1]
+        other_cols = player_stats.iloc[:, :-1]
+        player_stats = pd.concat([playername_col, other_cols], axis=1)
+
+        # Modified the column name to lowercase
+        player_stats.columns = [col.lower() for col in player_stats.columns]
+
+        # Standardize the column names
+        player_stats = standardize_stat_columns(player_stats)
+
+        return player_stats
+    except Exception as e:
+        print(f"Failed to get '{stat_name}' table: {e}")
+        return None
 
 
 '''
@@ -238,7 +277,7 @@ def get_players_metadata(df_players):
     return players_meta
 
 
-def get_player_stats(player_metadata, stats_type='Regular Season + Postseason'):
+def get_player_stats(player_metadata, stats_type="Regular Season + Postseason"):
     """
     Get a player's stats from a player's webpage.
 
@@ -254,12 +293,14 @@ def get_player_stats(player_metadata, stats_type='Regular Season + Postseason'):
 
     print(f"\nCollecting {stats_type} stats for {player_name} at {player_url}")
 
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
+    # Use uc.ChromeOptions, NOT selenium's Options
+    chrome_options = uc.ChromeOptions()
+
+    chrome_options.add_argument("--headless=new")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
 
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = uc.Chrome(options=chrome_options)
     wait = WebDriverWait(driver, 15)
     result = None
 
@@ -267,57 +308,8 @@ def get_player_stats(player_metadata, stats_type='Regular Season + Postseason'):
         driver.get(player_url)
         time.sleep(random.uniform(1, 2))
 
-        def get_stats(stat_name):
-            try:
-                # Click dropdown
-                dropdown = wait.until(ec.element_to_be_clickable((By.CLASS_NAME, "css-x1uf2d-control")))
-                driver.execute_script("arguments[0].scrollIntoView(true);", dropdown)
-                dropdown.click()
-                time.sleep(0.3)
-
-                # Input stat type and hit Enter
-                input_box = driver.find_element(By.ID,
-                                                "react-select-player-statistics-default-season-selector-league-input")
-                input_box.send_keys(stat_name)
-                input_box.send_keys(Keys.ENTER)
-                time.sleep(random.uniform(1.5, 2.0))
-
-                soup = BeautifulSoup(driver.page_source, "html.parser")
-                table = soup.find("table", class_="SortTable_table__jnnJk PlayerStatistics_mobileColumnWidth__4eS8P")
-
-                # Append playername to the table
-                player_stats = table_data_to_rows(table)
-                player_stats['playername'] = player_name
-
-                # Move the playername column to the front
-                playername_col = player_stats.iloc[:, -1]
-                other_cols = player_stats.iloc[:, :-1]
-                player_stats = pd.concat([playername_col, other_cols], axis=1)
-
-                # Modified the column name to lowercase
-                player_stats.columns = [col.lower() for col in player_stats.columns]
-
-                # Standardize the column names
-                player_stats = standardize_stat_columns(player_stats)
-
-                return player_stats
-            except Exception as e:
-                print(f"Failed to get '{stat_name}' table: {e}")
-                return None
-
-        if stats_type == "Regular Season + Postseason":
-            df_regular = get_stats("Regular Season")
-            df_postseason = get_stats("Postseason")
-
-            # Merge Regular Season and Postseason stats if needed
-            if df_regular is not None and df_postseason is not None:
-                result = merge_stats(df_regular, df_postseason)
-            elif df_regular is not None:
-                result = df_regular
-            elif df_postseason is not None:
-                result = df_postseason
-        else:
-            result = get_stats(stats_type)
+        # Get data by stats_type
+        result = get_stats(driver, wait, player_name, stats_type)
 
         if result is None:
             print(f"No stats found for {player_name}")
@@ -329,7 +321,6 @@ def get_player_stats(player_metadata, stats_type='Regular Season + Postseason'):
         driver.quit()
 
     return result
-
 
 '''
     The following functions are used to handle the goalie's stats
