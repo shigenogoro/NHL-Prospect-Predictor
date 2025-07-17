@@ -241,6 +241,9 @@ def get_single_player_stats_by_type(player_url, stat_type='Regular Season'):
     # Initialize the Chrome WebDriver
     try:
         driver = webdriver.Chrome(options=chrome_options)
+
+        # Set page load timeout to 30 seconds
+        driver.set_page_load_timeout(30)
         wait = WebDriverWait(driver, 20)
 
         # Load the player's webpage
