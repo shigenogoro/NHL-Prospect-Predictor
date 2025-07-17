@@ -239,40 +239,41 @@ def get_single_player_stats_by_type(player_url, stat_type='Regular Season'):
     )
 
     # Initialize the Chrome WebDriver
-    driver = webdriver.Chrome(options=chrome_options)
-    wait = WebDriverWait(driver, 20)
+    try:
+        driver = webdriver.Chrome(options=chrome_options)
+        wait = WebDriverWait(driver, 20)
 
-    # Load the player's webpage
-    driver.get(player_url)
-    time.sleep(3) # Wait for the page to load
+        # Load the player's webpage
+        driver.get(player_url)
+        time.sleep(3) # Wait for the page to load
 
-    # Manipulate the dropdown manu for regular season or postseason
-    # Step 1: Click the dropdown control (the clickable box)
-    dropdown_control = wait.until(
-        ec.element_to_be_clickable((By.CLASS_NAME, "css-x1uf2d-control"))
-    )
+        # Manipulate the dropdown manu for regular season or postseason
+        # Step 1: Click the dropdown control (the clickable box)
+        dropdown_control = wait.until(
+            ec.element_to_be_clickable((By.CLASS_NAME, "css-x1uf2d-control"))
+        )
 
-    # Scroll into view
-    driver.execute_script("arguments[0].scrollIntoView(true);", dropdown_control)
-    time.sleep(0.5)
+        # Scroll into view
+        driver.execute_script("arguments[0].scrollIntoView(true);", dropdown_control)
+        time.sleep(0.5)
 
-    dropdown_control.click()
-    time.sleep(1)
+        dropdown_control.click()
+        time.sleep(1)
 
-    # Step 2: Find the hidden input inside the dropdown and type the desired option
-    input_box = driver.find_element(By.ID, "react-select-player-statistics-default-season-selector-league-input")
-    input_box.send_keys(stat_type)
-    input_box.send_keys(Keys.ENTER)
+        # Step 2: Find the hidden input inside the dropdown and type the desired option
+        input_box = driver.find_element(By.ID, "react-select-player-statistics-default-season-selector-league-input")
+        input_box.send_keys(stat_type)
+        input_box.send_keys(Keys.ENTER)
 
-    # Wait for the table to update
-    time.sleep(3)
+        # Wait for the table to update
+        time.sleep(3)
 
-    # Get fully rendered HTML
-    soup = BeautifulSoup(driver.page_source, 'html.parser')
-    player_table = soup.find('table', {'class': 'SortTable_table__jnnJk PlayerStatistics_mobileColumnWidth__4eS8P'})
-
-    # Close the WebDriver
-    driver.quit()
+        # Get fully rendered HTML
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+        player_table = soup.find('table', {'class': 'SortTable_table__jnnJk PlayerStatistics_mobileColumnWidth__4eS8P'})
+    finally:
+        # Close the WebDriver
+        driver.quit()
 
     # Check if the table exists
     if player_table is not None:
@@ -290,13 +291,21 @@ def get_single_player_stats(player_metadata):
     """
         Get player's stats from a player's webpage
         Parameters:
-            player_metadata (pd.DataFrame): DataFrame with player's metadata
+            player_metadata (pd.Series or pd.DataFrame): Player's metadata (Series or single-row DataFrame)
         Returns:
             df_stats (pd.DataFrame): DataFrame with all player's stats
     """
-    # Extract playername and link from player_metadata
-    player_url = player_metadata['link']
-    player_name = player_metadata['playername']
+    # Handle both Series and DataFrame inputs
+    if isinstance(player_metadata, pd.DataFrame):
+        # If DataFrame, extract the first row as Series
+        player_data = player_metadata.iloc[0]
+    else:
+        # If Series, use directly
+        player_data = player_metadata
+
+    # Extract playername and link from player_data
+    player_url = player_data['link']
+    player_name = player_data['playername']
 
     # Get regular season stats
     print(f"Collecting regular season stats from {player_url}")
@@ -340,33 +349,21 @@ def get_single_player_stats(player_metadata):
 
     return player_stats
 
-def get_players_stats(players_meatadata):
+def get_players_stats(players_metadata):
     """
-        Get all players' stats from a list of player links
+        Get all players' stats from a list of player metadata
         Parameters:
-            players_meatadata (pd.DataFrame): DataFrame with all players and metadata
+            players_metadata (pd.DataFrame): DataFrame with all players and metadata
         Returns:
             df_stats (pd.DataFrame): DataFrame with all players' stats
     """
-    # Get Players' Name and Links
-    players_links = players_meatadata['link'].tolist()
-    players_names = players_meatadata['playername'].tolist()
-
-    # Get all players' stats
     players_stats = pd.DataFrame()
-    for i in range(len(players_links)):
-        print(f"Collecting data from {players_links[i]}")
-        player_stats = get_single_player_stats(players_links[i])
-        player_stats['playername'] = players_names[i]
+    for i in range(len(players_metadata)):
+        player_metadata_row = players_metadata.iloc[i]
+        print(f"Collecting data from {player_metadata_row['link']}")
+        player_stats = get_single_player_stats(player_metadata_row)
         players_stats = pd.concat([players_stats, player_stats]).reset_index(drop=True)
         time.sleep(5)
-
-    # Move the playername column to the front
-    playersname_col = players_stats.iloc[:, -1]
-    other_cols = players_stats.iloc[:, :-1]
-
-    # Combine
-    players_stats = pd.concat([playersname_col, other_cols], axis=1)
 
     return players_stats
 
