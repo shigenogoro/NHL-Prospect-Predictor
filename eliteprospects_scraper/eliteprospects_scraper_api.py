@@ -90,10 +90,36 @@ def merge_stats(df_regular, df_postseason):
         Returns:
             df (pd.DataFrame): DataFrame with merged stats
     """
-    # Merge the two dataframes on season, team and league
-    full_stats_df = df_regular.merge(df_postseason, on=['season', 'team', 'league'], how='left')
+    required_columns = {'season', 'team', 'league'}
 
-    return full_stats_df
+    # Sanity check
+    if not required_columns.issubset(df_regular.columns) or not required_columns.issubset(df_postseason.columns):
+        print("Merge failed due to missing columns.")
+        print("Regular season columns:", df_regular.columns.tolist())
+        print("Postseason columns:", df_postseason.columns.tolist())
+        return pd.concat([df_regular, df_postseason], ignore_index=True)
+
+    # Merge with suffixes
+    df_merged = df_regular.merge(
+        df_postseason,
+        on=['playername', 'season', 'team', 'league'],
+        how='left',
+        suffixes=('_regular', '_post')
+    )
+
+    return df_merged
+
+# Helper function to standardize the column names
+def standardize_stat_columns(df):
+    rename_map = {
+        's': 'season',
+        'tm': 'team',
+        'team': 'team',
+        'lg.': 'league',
+        'league': 'league',
+        'year': 'season'
+    }
+    return df.rename(columns={col: rename_map.get(col.lower(), col.lower()) for col in df.columns})
 
 
 '''
@@ -211,165 +237,99 @@ def get_players_metadata(df_players):
     players_meta = df_players[['playername', 'fw_def', 'link']].drop_duplicates().reset_index(drop=True)
     return players_meta
 
-def get_single_player_stats_by_type(player_url, stat_type='Regular Season'):
-    """
-        Get player's stats from a player's webpage
-        Parameters:
-            player_url (str): URL to the player's webpage
-            stat_type (str): Type of stats to get (Regular Season or Postseason)
-        Return:
-            df_stats (pd.DataFrame): DataFrame with all player's stats
-    """
-    # Parameters Checking
-    valid_stat_types = ["Regular Season", "Postseason"]
-    if stat_type not in valid_stat_types:
-        raise ValueError(f"Invalid stat type. Valid stat types are: {', '.join(valid_stat_types)}")
 
-    # Players' Stats on their webpage are loaded using JavaScript
-    # Use Selenium to load the page and extract the stats
-    # Set up Selenium
+def get_player_stats(player_metadata, stats_type='Regular Season + Postseason'):
+    """
+    Get a player's stats from a player's webpage.
+
+    Parameters:
+        player_metadata (pd.Series): Series with 'playername' and 'link'.
+        stats_type (str): "Regular Season", "Postseason", or "Regular Season + Postseason".
+
+    Returns:
+        result (pd.DataFrame or None): Combined stats DataFrame.
+    """
+    player_name = str(player_metadata['playername'])
+    player_url = str(player_metadata['link'])
+
+    print(f"\nCollecting {stats_type} stats for {player_name} at {player_url}")
+
     chrome_options = Options()
-    chrome_options.add_argument("--headless")  # Run Chrome in headless mode (no GUI)
-    chrome_options.add_argument("--no-sandbox")  # Bypass OS security model
-    chrome_options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage
-    chrome_options.add_argument('--ignore-certificate-errors')
-    chrome_options.add_argument('--allow-insecure-localhost')
-    chrome_options.add_argument(
-        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-    )
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
 
-    # Initialize the Chrome WebDriver
-    driver = None
+    driver = webdriver.Chrome(options=chrome_options)
+    wait = WebDriverWait(driver, 15)
+    result = None
+
     try:
-        driver = webdriver.Chrome(options=chrome_options)
-
-        # Set page load timeout to 60 seconds
-        driver.set_page_load_timeout(60)
-        wait = WebDriverWait(driver, 10)
-
-        # Load the player's webpage
         driver.get(player_url)
-        time.sleep(3) # Wait for the page to load
+        time.sleep(random.uniform(1, 2))
 
-        # Manipulate the dropdown manu for regular season or postseason
-        # Step 1: Click the dropdown control (the clickable box)
-        dropdown_control = wait.until(
-            ec.element_to_be_clickable((By.CLASS_NAME, "css-x1uf2d-control"))
-        )
+        def get_stats(stat_name):
+            try:
+                # Click dropdown
+                dropdown = wait.until(ec.element_to_be_clickable((By.CLASS_NAME, "css-x1uf2d-control")))
+                driver.execute_script("arguments[0].scrollIntoView(true);", dropdown)
+                dropdown.click()
+                time.sleep(0.3)
 
-        # Scroll into view
-        driver.execute_script("arguments[0].scrollIntoView(true);", dropdown_control)
-        time.sleep(0.5)
+                # Input stat type and hit Enter
+                input_box = driver.find_element(By.ID,
+                                                "react-select-player-statistics-default-season-selector-league-input")
+                input_box.send_keys(stat_name)
+                input_box.send_keys(Keys.ENTER)
+                time.sleep(random.uniform(1.5, 2.0))
 
-        dropdown_control.click()
-        time.sleep(1)
+                soup = BeautifulSoup(driver.page_source, "html.parser")
+                table = soup.find("table", class_="SortTable_table__jnnJk PlayerStatistics_mobileColumnWidth__4eS8P")
 
-        # Step 2: Find the hidden input inside the dropdown and type the desired option
-        input_box = driver.find_element(By.ID, "react-select-player-statistics-default-season-selector-league-input")
-        input_box.send_keys(stat_type)
-        input_box.send_keys(Keys.ENTER)
+                # Append playername to the table
+                player_stats = table_data_to_rows(table)
+                player_stats['playername'] = player_name
 
-        # Wait for the table to update
-        time.sleep(3)
+                # Move the playername column to the front
+                playername_col = player_stats.iloc[:, -1]
+                other_cols = player_stats.iloc[:, :-1]
+                player_stats = pd.concat([playername_col, other_cols], axis=1)
 
-        # Get fully rendered HTML
-        soup = BeautifulSoup(driver.page_source, 'html.parser')
-        player_table = soup.find('table', {'class': 'SortTable_table__jnnJk PlayerStatistics_mobileColumnWidth__4eS8P'})
+                # Modified the column name to lowercase
+                player_stats.columns = [col.lower() for col in player_stats.columns]
+
+                # Standardize the column names
+                player_stats = standardize_stat_columns(player_stats)
+
+                return player_stats
+            except Exception as e:
+                print(f"Failed to get '{stat_name}' table: {e}")
+                return None
+
+        if stats_type == "Regular Season + Postseason":
+            df_regular = get_stats("Regular Season")
+            df_postseason = get_stats("Postseason")
+
+            # Merge Regular Season and Postseason stats if needed
+            if df_regular is not None and df_postseason is not None:
+                result = merge_stats(df_regular, df_postseason)
+            elif df_regular is not None:
+                result = df_regular
+            elif df_postseason is not None:
+                result = df_postseason
+        else:
+            result = get_stats(stats_type)
+
+        if result is None:
+            print(f"No stats found for {player_name}")
+
+    except Exception as e:
+        print(f"Error scraping {player_name}: {e}")
+
     finally:
-        # Close the WebDriver
         driver.quit()
 
-    # Check if the table exists
-    if player_table is not None:
-        df_stats = table_data_to_rows(player_table)
+    return result
 
-        # Convert all column names to the lowercase
-        df_stats.columns = [col_name.lower() for col_name in df_stats.columns]
-        df_stats.rename(columns={'s': 'season'}, inplace=True)
-
-        return df_stats
-
-    return None
-
-def get_single_player_stats(player_metadata):
-    """
-        Get player's stats from a player's webpage
-        Parameters:
-            player_metadata (pd.Series or pd.DataFrame): Player's metadata (Series or single-row DataFrame)
-        Returns:
-            df_stats (pd.DataFrame): DataFrame with all player's stats
-    """
-    # Handle both Series and DataFrame inputs
-    if isinstance(player_metadata, pd.DataFrame):
-        # If DataFrame, extract the first row as Series
-        player_data = player_metadata.iloc[0]
-    else:
-        # If Series, use directly
-        player_data = player_metadata
-
-    # Extract playername and link from player_data
-    player_url = player_data['link']
-    player_name = player_data['playername']
-
-    # Get regular season stats
-    print(f"Collecting regular season stats from {player_url}")
-    df_regular = get_single_player_stats_by_type(player_url, 'Regular Season')
-
-    # Wait for couple of seconds before going to the post-season stats
-    time.sleep(random.uniform(1, 3))
-
-    # Get postseason stats
-    print(f"Collecting postseason stats from {player_url}")
-    df_postseason = get_single_player_stats_by_type(player_url, 'Postseason')
-
-    # Merge the two dataframes
-    player_stats = merge_stats(df_regular, df_postseason)
-
-    # Rename the columns
-    player_stats.rename(columns={
-        'gp_x': 'gp_regular',
-        'g_x': 'g_regular',
-        'a_x': 'a_regular',
-        'tp_x': 'tp_regular',
-        'pim_x': 'pim_regular',
-        '+/-_x': '+/-_regular',
-        'gp_y': 'gp_post',
-        'g_y': 'g_post',
-        'a_y': 'a_post',
-        'tp_y': 'tp_post',
-        'pim_y': 'pim_post',
-        '+/-_y': '+/-_post'
-    }, inplace=True)
-
-    # Add the playername column
-    player_stats['playername'] = player_name
-
-    # Move the playername column to the front
-    playersname_col = player_stats.iloc[:, -1]
-    other_cols = player_stats.iloc[:, :-1]
-
-    # Combine
-    player_stats = pd.concat([playersname_col, other_cols], axis=1)
-
-    return player_stats
-
-def get_players_stats(players_metadata):
-    """
-        Get all players' stats from a list of player metadata
-        Parameters:
-            players_metadata (pd.DataFrame): DataFrame with all players and metadata
-        Returns:
-            df_stats (pd.DataFrame): DataFrame with all players' stats
-    """
-    players_stats = pd.DataFrame()
-    for i in range(len(players_metadata)):
-        player_metadata_row = players_metadata.iloc[i]
-        print(f"Collecting data from {player_metadata_row['link']}")
-        player_stats = get_single_player_stats(player_metadata_row)
-        players_stats = pd.concat([players_stats, player_stats]).reset_index(drop=True)
-        time.sleep(5)
-
-    return players_stats
 
 '''
     The following functions are used to handle the goalie's stats
