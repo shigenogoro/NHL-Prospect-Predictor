@@ -239,12 +239,13 @@ def get_single_player_stats_by_type(player_url, stat_type='Regular Season'):
     )
 
     # Initialize the Chrome WebDriver
+    driver = None
     try:
         driver = webdriver.Chrome(options=chrome_options)
 
-        # Set page load timeout to 30 seconds
-        driver.set_page_load_timeout(30)
-        wait = WebDriverWait(driver, 20)
+        # Set page load timeout to 60 seconds
+        driver.set_page_load_timeout(60)
+        wait = WebDriverWait(driver, 10)
 
         # Load the player's webpage
         driver.get(player_url)
@@ -315,7 +316,7 @@ def get_single_player_stats(player_metadata):
     df_regular = get_single_player_stats_by_type(player_url, 'Regular Season')
 
     # Wait for couple of seconds before going to the post-season stats
-    time.sleep(random.uniform(1, 5))
+    time.sleep(random.uniform(1, 3))
 
     # Get postseason stats
     print(f"Collecting postseason stats from {player_url}")
