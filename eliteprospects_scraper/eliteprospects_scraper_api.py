@@ -291,7 +291,7 @@ def get_player_stats(player_metadata, stats_type="Regular Season + Postseason"):
     player_name = str(player_metadata['playername'])
     player_url = str(player_metadata['link'])
 
-    print(f"\nCollecting {stats_type} stats for {player_name} at {player_url}")
+    print(f"Collecting {stats_type} stats for {player_name} at {player_url}")
 
     # Use uc.ChromeOptions, NOT selenium's Options
     chrome_options = uc.ChromeOptions()
