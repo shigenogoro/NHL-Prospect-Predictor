@@ -14,6 +14,7 @@ import random
 
 # Used to grab the part where JavaScript is used to load the data
 from selenium import webdriver
+from selenium.common import ElementClickInterceptedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
@@ -306,9 +307,25 @@ def get_player_stats(player_metadata, stats_type="Regular Season + Postseason"):
 
     try:
         driver.get(player_url)
-        time.sleep(random.uniform(1, 2))
+        time.sleep(random.uniform(1.5, 2.5))
 
-        # Get data by stats_type
+        try:
+            # Click dropdown if needed
+            dropdown = wait.until(ec.element_to_be_clickable((By.CSS_SELECTOR, "div.css-x1uf2d-control")))
+            driver.execute_script("arguments[0].scrollIntoView(true);", dropdown)
+            time.sleep(0.5)
+            dropdown.click()
+        except ElementClickInterceptedException:
+            print(f"Ad or overlay is blocking dropdown for {player_name}. Trying to remove it...")
+            try:
+                ad = driver.find_element(By.CSS_SELECTOR, "aside.AdSlot_centering__vHSRy")
+                driver.execute_script("arguments[0].remove();", ad)
+                time.sleep(0.5)
+                dropdown.click()
+            except Exception:
+                print("Failed to remove overlay/ad.")
+
+        # Get stats
         result = get_stats(driver, wait, player_name, stats_type)
 
         if result is None:
