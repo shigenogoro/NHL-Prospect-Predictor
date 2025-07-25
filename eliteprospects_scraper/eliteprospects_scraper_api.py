@@ -13,11 +13,9 @@ import re   #　Regular expressions
 import random
 
 # Used to grab the part where JavaScript is used to load the data
-from selenium import webdriver
 from selenium.common import ElementClickInterceptedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 import undetected_chromedriver as uc
@@ -161,6 +159,31 @@ def get_stats(driver, wait, player_name, stat_name):
         print(f"Failed to get '{stat_name}' table: {e}")
         return None
 
+# Helper Function to Truncate Description
+def truncate_description(text):
+    """
+    Truncate the description at the last complete sentence (last period).
+    """
+    if not text:
+        return None
+    last_period = text.rfind(".")
+    return text[:last_period + 1] if last_period != -1 else text
+
+# Helper Function to Extract Draft Info
+def extract_draft_info(text):
+    """
+    Extracts (round, overall, year) as strings from a draft description like:
+    '1rd round, 4th overall (2017)'
+    """
+    if not text:
+        return None
+    match = re.search(r"(\d+)[a-z]{2}\s+round,\s+(\d+)[a-z]{2}\s+overall\s+\((\d{4})\)", text.lower())
+    if match:
+        round_num = match.group(1)
+        overall_num = match.group(2)
+        year = match.group(3)
+        return (round_num, overall_num, year)
+    return None
 
 '''
     The following functions are used to handle the player's stats
@@ -334,6 +357,150 @@ def get_player_stats(player_metadata, stats_type="Regular Season + Postseason"):
     except Exception as e:
         print(f"Error scraping {player_name}: {e}")
 
+    finally:
+        driver.quit()
+
+    return result
+
+def get_player_facts(player_metadata):
+    """
+    Scrapes player's facts from their Elite Prospects page using Selenium.
+
+    Parameters:
+        player_metadata (pd.Series): Contains 'playername' and 'link'.
+
+    Returns:
+        pd.DataFrame: Extracted player facts as a single-row DataFrame or empty DataFrame on failure.
+    """
+    player_name = str(player_metadata['playername'])
+    player_url = str(player_metadata['link'])
+
+    print(f"Collecting facts for {player_name} at {player_url}")
+
+    chrome_options = uc.ChromeOptions()
+    chrome_options.add_argument("--headless=new")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+
+    driver = uc.Chrome(options=chrome_options)
+    wait = WebDriverWait(driver, 15)
+
+    result = None
+
+    try:
+        driver.get(player_url)
+        time.sleep(random.uniform(1.5, 2.5))
+
+        player_facts_section = wait.until(
+            ec.presence_of_element_located((By.ID, "player-facts"))
+        )
+
+        facts_dict = {}
+
+        # Main facts
+        try:
+            facts_list = player_facts_section.find_element(
+                By.CLASS_NAME, "PlayerFacts_factsList__Xw_ID"
+            )
+            fact_items = facts_list.find_elements(By.TAG_NAME, "li")
+            for item in fact_items:
+                try:
+                    label = item.find_element(By.CLASS_NAME, "PlayerFacts_factLabel__EqzO5").text.strip()
+                    value = item.text.replace(label, "").strip()
+                    facts_dict[label] = value
+                except:
+                    continue
+        except:
+            print("Failed to extract main facts.")
+
+        # Extra facts
+        try:
+            extra_facts_list = player_facts_section.find_element(
+                By.CSS_SELECTOR, ".PlayerFacts_factsList__Xw_ID.PlayerFacts_fullWidth__W878B"
+            )
+            extra_fact_items = extra_facts_list.find_elements(By.TAG_NAME, "li")
+            for item in extra_fact_items:
+                try:
+                    label = item.find_element(By.CLASS_NAME, "PlayerFacts_factLabel__EqzO5").text.strip()
+                    value = item.text.replace(label, "").strip()
+                    facts_dict[label] = value
+
+                    # Special handling for Draft
+                    if label == "Drafted":
+                        match = re.search(r"(\d{4}).*?round\s+(\d+).*?#(\d+)", value)
+                        if match:
+                            year, rnd, overall = match.groups()
+                            facts_dict["Draft"] = f"{rnd}rd round, {overall}th overall ({year})"
+                except:
+                    continue
+        except:
+            print("No extra facts found.")
+
+        # Height
+        height_cm = None
+        if "Height" in facts_dict:
+            match = re.search(r"(\d+)\s*cm", facts_dict["Height"])
+            if match:
+                height_cm = int(match.group(1))
+
+        # Weight
+        weight_kg = None
+        if "Weight" in facts_dict:
+            match = re.search(r"(\d+)\s*kg", facts_dict["Weight"])
+            if match:
+                weight_kg = int(match.group(1))
+
+        # Highlights
+        highlights = []
+        try:
+            highlight_elements = player_facts_section.find_elements(By.CLASS_NAME, "highlights-tooltip")
+            for elem in highlight_elements:
+                tooltip = elem.get_attribute("data-tooltip-content")
+                if tooltip:
+                    highlights.append(tooltip.strip())
+        except:
+            print("Failed to extract highlights.")
+
+        # Extract Player Types
+        player_types = []
+        try:
+            player_types_container = player_facts_section.find_element(By.CLASS_NAME, "PlayerFacts_playerTypes__lGoC4")
+            chip_elements = player_types_container.find_elements(By.CLASS_NAME, "Chip_chip__qIK6Z")
+            for chip in chip_elements:
+                text = chip.text.strip()
+                if text:
+                    player_types.append(text)
+        except Exception as e:
+            print("Failed to extract player types:", e)
+            player_types = None  # If failed, fallback to None
+
+        # Description (only before [EP 2017])
+        description = None
+        try:
+            desc_elem = player_facts_section.find_element(By.CLASS_NAME, "PlayerFacts_description__ujmxU")
+            full_desc = desc_elem.text.strip()
+            description = re.split(r"\[EP \d{4}\]", full_desc)[0].strip()
+        except:
+            print("Description not found.")
+
+        # Compile into a DataFrame
+        result = pd.DataFrame([{
+            "Player Name": player_name,
+            "Nation": facts_dict.get("Nation"),
+            "Position": facts_dict.get("Position"),
+            "Height (cm)": height_cm,
+            "Weight (kg)": weight_kg,
+            "Shoots": facts_dict.get("Shoots"),
+            "Player type": player_types,
+            "NHL Rights": facts_dict.get("NHL Rights"),
+            "Draft": extract_draft_info(facts_dict.get("Draft")),
+            "Highlights": highlights,
+            "Description": truncate_description(description)
+        }])
+
+    except Exception as e:
+        print(f"[ERROR] Failed to get facts for {player_name}: {e}")
+        return pd.DataFrame()
     finally:
         driver.quit()
 
