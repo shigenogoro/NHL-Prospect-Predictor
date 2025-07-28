@@ -1,7 +1,9 @@
 """
     API for Elite Prospects Scraper
     1. get_season_roster(league, season): Allows you to get all players from a specific league and season
-    2. get_single_player_stats(url): Allows you to get all information from a player's webpage
+    2. get_player_stats(player_metadata, stats_type): Allows you to get all information from a player's webpage
+    3. get_players_stats(players_metadata): Allows you to get all information from a list of players' webpage
+    4. get_player_facts(player_metadata): Allows you to get all facts from a player's webpage
 """
 
 import numpy as np
@@ -102,7 +104,7 @@ def merge_stats(df_regular, df_postseason):
     # Merge with suffixes
     df_merged = df_regular.merge(
         df_postseason,
-        on=['playername', 'season', 'team', 'league'],
+        on=['player_name', 'season', 'team', 'league'],
         how='left',
         suffixes=('_regular', '_post')
     )
@@ -139,14 +141,14 @@ def get_stats(driver, wait, player_name, stat_name):
         soup = BeautifulSoup(driver.page_source, "html.parser")
         table = soup.find("table", class_="SortTable_table__jnnJk PlayerStatistics_mobileColumnWidth__4eS8P")
 
-        # Append playername to the table
+        # Append player_name to the table
         player_stats = table_data_to_rows(table)
-        player_stats['playername'] = player_name
+        player_stats['player_name'] = player_name
 
-        # Move the playername column to the front
-        playername_col = player_stats.iloc[:, -1]
+        # Move the player_name column to the front
+        player_name_col = player_stats.iloc[:, -1]
         other_cols = player_stats.iloc[:, :-1]
-        player_stats = pd.concat([playername_col, other_cols], axis=1)
+        player_stats = pd.concat([player_name_col, other_cols], axis=1)
 
         # Modified the column name to lowercase
         player_stats.columns = [col.lower() for col in player_stats.columns]
@@ -269,7 +271,7 @@ def get_season_roster(league, season):
     df_players = df_players.drop(['index', '#'], axis=1).reset_index(drop=True)
 
     # Strip any "(position)" from the player string to get the name
-    df_players['playername'] = df_players['player'].str.replace(r'\s*\(.*?\)', "", regex=True)
+    df_players['player_name'] = df_players['player'].str.replace(r'\s*\(.*?\)', "", regex=True)
     # Extracts the text inside the parentheses as the position
     df_players['position'] = df_players['player'].str.extract(r'\((.*?)\).*')
 
@@ -297,7 +299,7 @@ def get_players_metadata(df_players):
     """
 
     # Get distinct players
-    players_meta = df_players[['playername', 'fw_def', 'link']].drop_duplicates().reset_index(drop=True)
+    players_meta = df_players[['player_name', 'fw_def', 'link']].drop_duplicates().reset_index(drop=True)
     return players_meta
 
 
@@ -306,13 +308,13 @@ def get_player_stats(player_metadata, stats_type="Regular Season + Postseason"):
     Get a player's stats from a player's webpage.
 
     Parameters:
-        player_metadata (pd.Series): Series with 'playername' and 'link'.
+        player_metadata (pd.Series): Series with 'player_name' and 'link'.
         stats_type (str): "Regular Season", "Postseason", or "Regular Season + Postseason".
 
     Returns:
         result (pd.DataFrame or None): Combined stats DataFrame.
     """
-    player_name = str(player_metadata['playername'])
+    player_name = str(player_metadata['player_name'])
     player_url = str(player_metadata['link'])
 
     print(f"Collecting {stats_type} stats for {player_name} at {player_url}")
@@ -324,7 +326,7 @@ def get_player_stats(player_metadata, stats_type="Regular Season + Postseason"):
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
 
-    driver = uc.Chrome(options=chrome_options)
+    driver = uc.Chrome(version_main=138, options=chrome_options)
     wait = WebDriverWait(driver, 15)
     result = None
 
@@ -367,12 +369,12 @@ def get_player_facts(player_metadata):
     Scrapes player's facts from their Elite Prospects page using Selenium.
 
     Parameters:
-        player_metadata (pd.Series): Contains 'playername' and 'link'.
+        player_metadata (pd.Series): Contains 'player_name' and 'link'.
 
     Returns:
         pd.DataFrame: Extracted player facts as a single-row DataFrame or empty DataFrame on failure.
     """
-    player_name = str(player_metadata['playername'])
+    player_name = str(player_metadata['player_name'])
     player_url = str(player_metadata['link'])
 
     print(f"Collecting facts for {player_name} at {player_url}")
@@ -382,7 +384,7 @@ def get_player_facts(player_metadata):
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
 
-    driver = uc.Chrome(options=chrome_options)
+    driver = uc.Chrome(version_main=138, options=chrome_options)
     wait = WebDriverWait(driver, 15)
 
     result = None
@@ -471,10 +473,9 @@ def get_player_facts(player_metadata):
                 if text:
                     player_types.append(text)
         except Exception as e:
-            print("Failed to extract player types:", e)
+            print("Failed to extract player types - No player types found.")
             player_types = None  # If failed, fallback to None
 
-        # Description (only before [EP 2017])
         description = None
         try:
             desc_elem = player_facts_section.find_element(By.CLASS_NAME, "PlayerFacts_description__ujmxU")
@@ -485,17 +486,17 @@ def get_player_facts(player_metadata):
 
         # Compile into a DataFrame
         result = pd.DataFrame([{
-            "Player Name": player_name,
-            "Nation": facts_dict.get("Nation"),
-            "Position": facts_dict.get("Position"),
-            "Height (cm)": height_cm,
-            "Weight (kg)": weight_kg,
-            "Shoots": facts_dict.get("Shoots"),
-            "Player type": player_types,
-            "NHL Rights": facts_dict.get("NHL Rights"),
-            "Draft": extract_draft_info(facts_dict.get("Draft")),
-            "Highlights": highlights,
-            "Description": truncate_description(description)
+            "player_name": player_name,
+            "nation": facts_dict.get("Nation"),
+            "position": facts_dict.get("Position"),
+            "height_cm": height_cm,
+            "weight_kg": weight_kg,
+            "shoots": facts_dict.get("Shoots"),
+            "player_type": player_types,
+            "nhl_rights": facts_dict.get("NHL Rights"),
+            "draft": extract_draft_info(facts_dict.get("Draft")),
+            "highlights": highlights,
+            "description": truncate_description(description)
         }])
 
     except Exception as e:

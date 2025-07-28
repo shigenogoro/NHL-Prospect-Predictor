@@ -1,4 +1,4 @@
-﻿player,team,gp,g,a,tp,ppg,pim,+/-,link,season,league,playername,position,fw_def
+﻿player,team,gp,g,a,tp,ppg,pim,+/-,link,season,league,player_name,position,fw_def
 Jarome Iginla (RW),Calgary Flames,82,52,44,96,1.17,77,27,https://www.eliteprospects.com/player/9036/jarome-iginla,2001-2002,nhl,Jarome Iginla,RW,FW
 Markus Näslund (LW),Vancouver Canucks,81,40,50,90,1.11,50,22,https://www.eliteprospects.com/player/697/markus-naslund,2001-2002,nhl,Markus Näslund,LW,FW
 Todd Bertuzzi (RW/LW),Vancouver Canucks,72,36,49,85,1.18,110,21,https://www.eliteprospects.com/player/9081/todd-bertuzzi,2001-2002,nhl,Todd Bertuzzi,RW/LW,FW
@@ -24,7 +24,7 @@ Peter Bondra (RW),Washington Capitals,77,39,31,70,0.91,80,-2,https://www.elitepr
 Sergei Samsonov (LW),Boston Bruins,74,29,41,70,0.95,27,21,https://www.eliteprospects.com/player/8667/sergei-samsonov,2001-2002,nhl,Sergei Samsonov,LW,FW
 Radek Bonk (C),Ottawa Senators,82,25,45,70,0.85,52,3,https://www.eliteprospects.com/player/8671/radek-bonk,2001-2002,nhl,Radek Bonk,C,FW
 Pavel Bure (RW),totals,68,34,35,69,1.01,62,-5,https://www.eliteprospects.com/player/16140/pavel-bure,2001-2002,nhl,Pavel Bure,RW,FW
-Sami Kapanen (LW),Carolina Hurricanes,77,27,42,69,0.90,23,9,https://www.eliteprospects.com/player/2657/sami-kapanen,2001-2002,nhl,Sami Kapanen,LW,FW
+Sami Kapanen (LW),Carolina Hurricanes,77,27,42,69,0.9,23,9,https://www.eliteprospects.com/player/2657/sami-kapanen,2001-2002,nhl,Sami Kapanen,LW,FW
 Andrew Brunette (LW),Minnesota Wild,81,21,48,69,0.85,18,-4,https://www.eliteprospects.com/player/9101/andrew-brunette,2001-2002,nhl,Andrew Brunette,LW,FW
 Sergei Fedorov (C),Detroit Red Wings,81,31,37,68,0.84,36,20,https://www.eliteprospects.com/player/8619/sergei-fedorov,2001-2002,nhl,Sergei Fedorov,C,FW
 Joe Thornton (C),Boston Bruins,66,22,46,68,1.03,127,7,https://www.eliteprospects.com/player/3670/joe-thornton,2001-2002,nhl,Joe Thornton,C,FW
@@ -36,10 +36,10 @@ Jeremy Roenick (C),Philadelphia Flyers,75,21,46,67,0.89,74,32,https://www.elitep
 Bill Guerin (RW),Boston Bruins,78,41,25,66,0.85,91,-1,https://www.eliteprospects.com/player/9053/bill-guerin,2001-2002,nhl,Bill Guerin,RW,FW
 Simon Gagné (LW),Philadelphia Flyers,79,33,33,66,0.84,32,31,https://www.eliteprospects.com/player/8828/simon-gagne,2001-2002,nhl,Simon Gagné,LW,FW
 Marián Hossa (RW),Ottawa Senators,80,31,35,66,0.83,50,11,https://www.eliteprospects.com/player/4720/marian-hossa,2001-2002,nhl,Marián Hossa,RW,FW
-Tony Amonte (RW/LW),Chicago Blackhawks,82,27,39,66,0.80,67,11,https://www.eliteprospects.com/player/9065/tony-amonte,2001-2002,nhl,Tony Amonte,RW/LW,FW
+Tony Amonte (RW/LW),Chicago Blackhawks,82,27,39,66,0.8,67,11,https://www.eliteprospects.com/player/9065/tony-amonte,2001-2002,nhl,Tony Amonte,RW/LW,FW
 Owen Nolan (RW),San Jose Sharks,75,23,43,66,0.88,93,7,https://www.eliteprospects.com/player/9674/owen-nolan,2001-2002,nhl,Owen Nolan,RW,FW
 Jeff O'Neill (RW),Carolina Hurricanes,76,31,33,64,0.84,63,-5,https://www.eliteprospects.com/player/8938/jeff-o-neill,2001-2002,nhl,Jeff O'Neill,RW,FW
-Mark Recchi (RW),Philadelphia Flyers,80,22,42,64,0.80,46,5,https://www.eliteprospects.com/player/8869/mark-recchi,2001-2002,nhl,Mark Recchi,RW,FW
+Mark Recchi (RW),Philadelphia Flyers,80,22,42,64,0.8,46,5,https://www.eliteprospects.com/player/8869/mark-recchi,2001-2002,nhl,Mark Recchi,RW,FW
 Brett Hull (RW),Detroit Red Wings,82,30,33,63,0.77,35,18,https://www.eliteprospects.com/player/21341/brett-hull,2001-2002,nhl,Brett Hull,RW,FW
 Theo Fleury (RW),New York Rangers,82,24,39,63,0.77,216,0,https://www.eliteprospects.com/player/21306/theo-fleury,2001-2002,nhl,Theo Fleury,RW,FW
 Brian Rolston (LW),Boston Bruins,82,31,31,62,0.76,30,11,https://www.eliteprospects.com/player/8927/brian-rolston,2001-2002,nhl,Brian Rolston,LW,FW
@@ -63,7 +63,7 @@ Nicklas Lidström (D),Detroit Red Wings,78,9,50,59,0.76,20,13,https://www.elitep
 Joe Nieuwendyk (C),totals,81,25,33,58,0.72,22,0,https://www.eliteprospects.com/player/8950/joe-nieuwendyk,2001-2002,nhl,Joe Nieuwendyk,C,FW
 Vincent Damphousse (C),San Jose Sharks,82,20,38,58,0.71,60,8,https://www.eliteprospects.com/player/21515/vincent-damphousse,2001-2002,nhl,Vincent Damphousse,C,FW
 Jozef Stümpel (C),totals,81,8,50,58,0.72,18,22,https://www.eliteprospects.com/player/8649/jozef-stumpel,2001-2002,nhl,Jozef Stümpel,C,FW
-Paul Kariya (LW),Mighty Ducks of Anaheim,82,32,25,57,0.70,28,-15,https://www.eliteprospects.com/player/9002/paul-kariya,2001-2002,nhl,Paul Kariya,LW,FW
+Paul Kariya (LW),Mighty Ducks of Anaheim,82,32,25,57,0.7,28,-15,https://www.eliteprospects.com/player/9002/paul-kariya,2001-2002,nhl,Paul Kariya,LW,FW
 Alexander Mogilny (RW),Toronto Maple Leafs,66,24,33,57,0.86,8,1,https://www.eliteprospects.com/player/21327/alexander-mogilny,2001-2002,nhl,Alexander Mogilny,RW,FW
 Jan Hrdina (C/W),Pittsburgh Penguins,79,24,33,57,0.72,50,-7,https://www.eliteprospects.com/player/8623/jan-hrdina,2001-2002,nhl,Jan Hrdina,C/W,FW
 Yanic Perreault (C),Montréal Canadiens,82,27,29,56,0.68,40,-3,https://www.eliteprospects.com/player/8912/yanic-perreault,2001-2002,nhl,Yanic Perreault,C,FW
@@ -83,7 +83,7 @@ Sandis Ozolins (D),totals,83,14,38,52,0.63,58,-7,https://www.eliteprospects.com/
 Ilya Kovalchuk (LW),Atlanta Thrashers,65,29,22,51,0.78,28,-19,https://www.eliteprospects.com/player/3660/ilya-kovalchuk,2001-2002,nhl,Ilya Kovalchuk,LW,FW
 John LeClair (LW),Philadelphia Flyers,82,25,26,51,0.62,30,5,https://www.eliteprospects.com/player/8992/john-leclair,2001-2002,nhl,John LeClair,LW,FW
 Mariusz Czerkawski (RW),New York Islanders,82,22,29,51,0.62,48,-8,https://www.eliteprospects.com/player/1467/mariusz-czerkawski,2001-2002,nhl,Mariusz Czerkawski,RW,FW
-Dean McAmmond (LW),Calgary Flames,73,21,30,51,0.70,60,2,https://www.eliteprospects.com/player/8972/dean-mcammond,2001-2002,nhl,Dean McAmmond,LW,FW
+Dean McAmmond (LW),Calgary Flames,73,21,30,51,0.7,60,2,https://www.eliteprospects.com/player/8972/dean-mcammond,2001-2002,nhl,Dean McAmmond,LW,FW
 Robert Reichel (C),Toronto Maple Leafs,78,20,31,51,0.65,26,7,https://www.eliteprospects.com/player/10850/robert-reichel,2001-2002,nhl,Robert Reichel,C,FW
 Luc Robitaille (LW),Detroit Red Wings,81,30,20,50,0.62,38,-2,https://www.eliteprospects.com/player/21334/luc-robitaille,2001-2002,nhl,Luc Robitaille,LW,FW
 Martin Havlát (RW/LW),Ottawa Senators,72,22,28,50,0.69,66,-7,https://www.eliteprospects.com/player/8624/martin-havlat,2001-2002,nhl,Martin Havlát,RW/LW,FW
@@ -93,9 +93,9 @@ Ryan Smyth (LW),Edmonton Oilers,61,15,35,50,0.82,48,7,https://www.eliteprospects
 Andrew Cassels (C),Vancouver Canucks,53,11,39,50,0.94,22,5,https://www.eliteprospects.com/player/42363/andrew-cassels,2001-2002,nhl,Andrew Cassels,C,FW
 Jere Lehtinen (LW),Dallas Stars,73,25,24,49,0.67,14,27,https://www.eliteprospects.com/player/2687/jere-lehtinen,2001-2002,nhl,Jere Lehtinen,LW,FW
 Alexei Morozov (RW),Pittsburgh Penguins,72,20,29,49,0.68,16,-7,https://www.eliteprospects.com/player/11044/alexei-morozov,2001-2002,nhl,Alexei Morozov,RW,FW
-Shane Doan (RW),Phoenix Coyotes,81,20,29,49,0.60,61,11,https://www.eliteprospects.com/player/9137/shane-doan,2001-2002,nhl,Shane Doan,RW,FW
-Doug Weight (C),St. Louis Blues,61,15,34,49,0.80,40,20,https://www.eliteprospects.com/player/8733/doug-weight,2001-2002,nhl,Doug Weight,C,FW
-Gary Roberts (LW),Toronto Maple Leafs,69,21,27,48,0.70,63,-4,https://www.eliteprospects.com/player/8936/gary-roberts,2001-2002,nhl,Gary Roberts,LW,FW
+Shane Doan (RW),Phoenix Coyotes,81,20,29,49,0.6,61,11,https://www.eliteprospects.com/player/9137/shane-doan,2001-2002,nhl,Shane Doan,RW,FW
+Doug Weight (C),St. Louis Blues,61,15,34,49,0.8,40,20,https://www.eliteprospects.com/player/8733/doug-weight,2001-2002,nhl,Doug Weight,C,FW
+Gary Roberts (LW),Toronto Maple Leafs,69,21,27,48,0.7,63,-4,https://www.eliteprospects.com/player/8936/gary-roberts,2001-2002,nhl,Gary Roberts,LW,FW
 Petr Sýkora (RW),New Jersey Devils,73,21,27,48,0.66,44,12,https://www.eliteprospects.com/player/8692/petr-sykora,2001-2002,nhl,Petr Sýkora,RW,FW
 Keith Primeau (C),Philadelphia Flyers,75,19,29,48,0.64,128,-3,https://www.eliteprospects.com/player/8863/keith-primeau,2001-2002,nhl,Keith Primeau,C,FW
 Matt Cullen (C),Mighty Ducks of Anaheim,79,18,30,48,0.61,24,-1,https://www.eliteprospects.com/player/8754/matt-cullen,2001-2002,nhl,Matt Cullen,C,FW
@@ -108,7 +108,7 @@ Scott Gomez (C),New Jersey Devils,76,10,38,48,0.63,36,-4,https://www.eliteprospe
 Pierre Turgeon (C),Dallas Stars,66,15,32,47,0.71,16,-4,https://www.eliteprospects.com/player/8860/pierre-turgeon,2001-2002,nhl,Pierre Turgeon,C,FW
 Jonas Höglund (W),Toronto Maple Leafs,82,13,34,47,0.57,26,11,https://www.eliteprospects.com/player/468/jonas-hoglund,2001-2002,nhl,Jonas Höglund,W,FW
 Brian Rafalski (D),New Jersey Devils,76,7,40,47,0.62,18,15,https://www.eliteprospects.com/player/1635/brian-rafalski,2001-2002,nhl,Brian Rafalski,D,DEF
-Chris Pronger (D),St. Louis Blues,78,7,40,47,0.60,120,23,https://www.eliteprospects.com/player/8538/chris-pronger,2001-2002,nhl,Chris Pronger,D,DEF
+Chris Pronger (D),St. Louis Blues,78,7,40,47,0.6,120,23,https://www.eliteprospects.com/player/8538/chris-pronger,2001-2002,nhl,Chris Pronger,D,DEF
 Petr Nedvěd (C),New York Rangers,78,21,25,46,0.59,36,-8,https://www.eliteprospects.com/player/8684/petr-nedved,2001-2002,nhl,Petr Nedvěd,C,FW
 Chris Drury (C),Colorado Avalanche,82,21,25,46,0.56,38,1,https://www.eliteprospects.com/player/8804/chris-drury,2001-2002,nhl,Chris Drury,C,FW
 Bates Battaglia (LW),Carolina Hurricanes,82,21,25,46,0.56,44,-6,https://www.eliteprospects.com/player/10213/bates-battaglia,2001-2002,nhl,Bates Battaglia,LW,FW
@@ -146,10 +146,10 @@ Oleg Petrov (LW),Montréal Canadiens,75,24,17,41,0.55,12,-4,https://www.elitepro
 Marco Sturm (LW),San Jose Sharks,77,21,20,41,0.53,32,23,https://www.eliteprospects.com/player/8573/marco-sturm,2001-2002,nhl,Marco Sturm,LW,FW
 Brian Savage (LW),totals,77,20,21,41,0.53,38,-13,https://www.eliteprospects.com/player/8872/brian-savage,2001-2002,nhl,Brian Savage,LW,FW
 Scott Young (RW),St. Louis Blues,67,19,22,41,0.61,26,11,https://www.eliteprospects.com/player/8797/scott-young,2001-2002,nhl,Scott Young,RW,FW
-Claude Lemieux (RW),Phoenix Coyotes,82,16,25,41,0.50,70,-5,https://www.eliteprospects.com/player/24783/claude-lemieux,2001-2002,nhl,Claude Lemieux,RW,FW
+Claude Lemieux (RW),Phoenix Coyotes,82,16,25,41,0.5,70,-5,https://www.eliteprospects.com/player/24783/claude-lemieux,2001-2002,nhl,Claude Lemieux,RW,FW
 Scott Mellanby (RW),St. Louis Blues,64,15,26,41,0.64,93,-5,https://www.eliteprospects.com/player/8570/scott-mellanby,2001-2002,nhl,Scott Mellanby,RW,FW
 Scott Hartnell (LW),Nashville Predators,75,14,27,41,0.55,111,5,https://www.eliteprospects.com/player/8764/scott-hartnell,2001-2002,nhl,Scott Hartnell,LW,FW
-Kim Johnsson (D),Philadelphia Flyers,82,11,30,41,0.50,42,12,https://www.eliteprospects.com/player/698/kim-johnsson,2001-2002,nhl,Kim Johnsson,D,DEF
+Kim Johnsson (D),Philadelphia Flyers,82,11,30,41,0.5,42,12,https://www.eliteprospects.com/player/698/kim-johnsson,2001-2002,nhl,Kim Johnsson,D,DEF
 Doug Gilmour (C),Montréal Canadiens,70,10,31,41,0.59,48,-7,https://www.eliteprospects.com/player/20597/doug-gilmour,2001-2002,nhl,Doug Gilmour,C,FW
 Maxim Afinogenov (RW/LW),Buffalo Sabres,81,21,19,40,0.49,69,-9,https://www.eliteprospects.com/player/8672/maxim-afinogenov,2001-2002,nhl,Maxim Afinogenov,RW/LW,FW
 Martin Lapointe (RW),Boston Bruins,68,17,23,40,0.59,101,12,https://www.eliteprospects.com/player/8989/martin-lapointe,2001-2002,nhl,Martin Lapointe,RW,FW
@@ -181,10 +181,10 @@ Vladimír Országh (RW),Nashville Predators,79,15,21,36,0.46,56,-15,https://www.
 Andrei Nikolishin (LW),Washington Capitals,80,13,23,36,0.45,40,-1,https://www.eliteprospects.com/player/19685/andrei-nikolishin,2001-2002,nhl,Andrei Nikolishin,LW,FW
 Mattias Öhlund (D),Vancouver Canucks,81,10,26,36,0.44,56,16,https://www.eliteprospects.com/player/749/mattias-ohlund,2001-2002,nhl,Mattias Öhlund,D,DEF
 Joé Juneau (C),Montréal Canadiens,70,8,28,36,0.51,10,-3,https://www.eliteprospects.com/player/21390/joe-juneau,2001-2002,nhl,Joé Juneau,C,FW
-Daniil Markov (D),Phoenix Coyotes,72,6,30,36,0.50,67,-7,https://www.eliteprospects.com/player/8613/daniil-markov,2001-2002,nhl,Daniil Markov,D,DEF
+Daniil Markov (D),Phoenix Coyotes,72,6,30,36,0.5,67,-7,https://www.eliteprospects.com/player/8613/daniil-markov,2001-2002,nhl,Daniil Markov,D,DEF
 Brenden Morrow (LW),Dallas Stars,72,17,18,35,0.49,109,12,https://www.eliteprospects.com/player/8960/brenden-morrow,2001-2002,nhl,Brenden Morrow,LW,FW
 Martin St-Louis (RW),Tampa Bay Lightning,53,16,19,35,0.66,20,4,https://www.eliteprospects.com/player/8772/martin-st-louis,2001-2002,nhl,Martin St-Louis,RW,FW
-Pavel Datsyuk (C),Detroit Red Wings,70,11,24,35,0.50,4,4,https://www.eliteprospects.com/player/8615/pavel-datsyuk,2001-2002,nhl,Pavel Datsyuk,C,FW
+Pavel Datsyuk (C),Detroit Red Wings,70,11,24,35,0.5,4,4,https://www.eliteprospects.com/player/8615/pavel-datsyuk,2001-2002,nhl,Pavel Datsyuk,C,FW
 Ben Clymer (RW/D),Tampa Bay Lightning,81,14,20,34,0.42,36,-10,https://www.eliteprospects.com/player/8788/ben-clymer,2001-2002,nhl,Ben Clymer,RW/D,DEF
 Adrian Aucoin (D),New York Islanders,81,12,22,34,0.42,62,23,https://www.eliteprospects.com/player/5530/adrian-aucoin,2001-2002,nhl,Adrian Aucoin,D,DEF
 Todd Marchant (C),Edmonton Oilers,82,12,22,34,0.41,41,7,https://www.eliteprospects.com/player/8532/todd-marchant,2001-2002,nhl,Todd Marchant,C,FW
@@ -193,29 +193,29 @@ Pavel Kubina (D),Tampa Bay Lightning,82,11,23,34,0.41,106,-22,https://www.elitep
 Wade Redden (D),Ottawa Senators,79,9,25,34,0.43,48,22,https://www.eliteprospects.com/player/8931/wade-redden,2001-2002,nhl,Wade Redden,D,DEF
 Derek Morris (D),Calgary Flames,61,4,30,34,0.56,88,-4,https://www.eliteprospects.com/player/8963/derek-morris,2001-2002,nhl,Derek Morris,D,DEF
 Alexei Zhitnik (D),Buffalo Sabres,82,1,33,34,0.41,80,-1,https://www.eliteprospects.com/player/8696/alexei-zhitnik,2001-2002,nhl,Alexei Zhitnik,D,DEF
-Antti Laaksonen (LW),Minnesota Wild,82,16,17,33,0.40,22,-5,https://www.eliteprospects.com/player/2675/antti-laaksonen,2001-2002,nhl,Antti Laaksonen,LW,FW
+Antti Laaksonen (LW),Minnesota Wild,82,16,17,33,0.4,22,-5,https://www.eliteprospects.com/player/2675/antti-laaksonen,2001-2002,nhl,Antti Laaksonen,LW,FW
 Andreas Dackell (LW),Montréal Canadiens,79,15,18,33,0.42,24,-3,https://www.eliteprospects.com/player/709/andreas-dackell,2001-2002,nhl,Andreas Dackell,LW,FW
 Grant Marshall (RW),Columbus Blue Jackets,81,15,18,33,0.41,86,-20,https://www.eliteprospects.com/player/8967/grant-marshall,2001-2002,nhl,Grant Marshall,RW,FW
 Marc Savard (C),Calgary Flames,56,14,19,33,0.59,48,-18,https://www.eliteprospects.com/player/8574/marc-savard,2001-2002,nhl,Marc Savard,C,FW
 Marcus Nilson (W/C),Florida Panthers,81,14,19,33,0.41,55,-14,https://www.eliteprospects.com/player/728/marcus-nilson,2001-2002,nhl,Marcus Nilson,W/C,FW
-Matt Cooke (LW),Vancouver Canucks,82,13,20,33,0.40,111,4,https://www.eliteprospects.com/player/8549/matt-cooke,2001-2002,nhl,Matt Cooke,LW,FW
+Matt Cooke (LW),Vancouver Canucks,82,13,20,33,0.4,111,4,https://www.eliteprospects.com/player/8549/matt-cooke,2001-2002,nhl,Matt Cooke,LW,FW
 Shayne Corson (LW),Toronto Maple Leafs,74,12,21,33,0.45,120,11,https://www.eliteprospects.com/player/21878/shayne-corson,2001-2002,nhl,Shayne Corson,LW,FW
 Scott Niedermayer (D),New Jersey Devils,76,11,22,33,0.43,30,12,https://www.eliteprospects.com/player/8521/scott-niedermayer,2001-2002,nhl,Scott Niedermayer,D,DEF
 Martin Erat (RW/LW),Nashville Predators,80,9,24,33,0.41,32,-11,https://www.eliteprospects.com/player/8611/martin-erat,2001-2002,nhl,Martin Erat,RW/LW,FW
 Sean Hill (D),totals,72,7,26,33,0.46,89,0,https://www.eliteprospects.com/player/9054/sean-hill,2001-2002,nhl,Sean Hill,D,DEF
-Gary Suter (D),San Jose Sharks,82,6,27,33,0.40,57,13,https://www.eliteprospects.com/player/21396/gary-suter,2001-2002,nhl,Gary Suter,D,DEF
+Gary Suter (D),San Jose Sharks,82,6,27,33,0.4,57,13,https://www.eliteprospects.com/player/21396/gary-suter,2001-2002,nhl,Gary Suter,D,DEF
 Patrice Brisebois (D),Montréal Canadiens,71,4,29,33,0.46,25,9,https://www.eliteprospects.com/player/8781/patrice-brisebois,2001-2002,nhl,Patrice Brisebois,D,DEF
 Darryl Sydor (D),Dallas Stars,78,4,29,33,0.42,50,3,https://www.eliteprospects.com/player/8899/darryl-sydor,2001-2002,nhl,Darryl Sydor,D,DEF
 Jamie Langenbrunner (RW),totals,82,13,19,32,0.39,77,-9,https://www.eliteprospects.com/player/8742/jamie-langenbrunner,2001-2002,nhl,Jamie Langenbrunner,RW,FW
 Kenny Jönsson (D),New York Islanders,76,10,22,32,0.42,26,15,https://www.eliteprospects.com/player/717/kenny-jonsson,2001-2002,nhl,Kenny Jönsson,D,DEF
 Daniel Sedin (LW),Vancouver Canucks,79,9,23,32,0.41,32,1,https://www.eliteprospects.com/player/737/daniel-sedin,2001-2002,nhl,Daniel Sedin,LW,FW
-Donald Brashear (LW),totals,81,9,23,32,0.40,199,-8,https://www.eliteprospects.com/player/9094/donald-brashear,2001-2002,nhl,Donald Brashear,LW,FW
+Donald Brashear (LW),totals,81,9,23,32,0.4,199,-8,https://www.eliteprospects.com/player/9094/donald-brashear,2001-2002,nhl,Donald Brashear,LW,FW
 Oleg Tverdovsky (D),Mighty Ducks of Anaheim,73,6,26,32,0.44,31,0,https://www.eliteprospects.com/player/8656/oleg-tverdovsky,2001-2002,nhl,Oleg Tverdovsky,D,DEF
 Adam Graves (LW),San Jose Sharks,81,17,14,31,0.38,51,11,https://www.eliteprospects.com/player/9666/adam-graves,2001-2002,nhl,Adam Graves,LW,FW
-Jan Hlavac (LW/RW),totals,77,16,15,31,0.40,18,9,https://www.eliteprospects.com/player/8709/jan-hlavac,2001-2002,nhl,Jan Hlavac,LW/RW,FW
+Jan Hlavac (LW/RW),totals,77,16,15,31,0.4,18,9,https://www.eliteprospects.com/player/8709/jan-hlavac,2001-2002,nhl,Jan Hlavac,LW/RW,FW
 Steve Heinze (RW),Los Angeles Kings,73,15,16,31,0.42,46,-15,https://www.eliteprospects.com/player/30295/steve-heinze,2001-2002,nhl,Steve Heinze,RW,FW
 Fredrik Modin (LW),Tampa Bay Lightning,54,14,17,31,0.57,27,0,https://www.eliteprospects.com/player/727/fredrik-modin,2001-2002,nhl,Fredrik Modin,LW,FW
-Josef Vasicek (C),Carolina Hurricanes,78,14,17,31,0.40,53,-7,https://www.eliteprospects.com/player/8614/josef-vasicek,2001-2002,nhl,Josef Vasicek,C,FW
+Josef Vasicek (C),Carolina Hurricanes,78,14,17,31,0.4,53,-7,https://www.eliteprospects.com/player/8614/josef-vasicek,2001-2002,nhl,Josef Vasicek,C,FW
 Chris Simon (LW),Washington Capitals,82,14,17,31,0.38,137,-8,https://www.eliteprospects.com/player/8882/chris-simon,2001-2002,nhl,Chris Simon,LW,FW
 David Výborný (C),Columbus Blue Jackets,75,13,18,31,0.41,6,-14,https://www.eliteprospects.com/player/1920/david-vyborny,2001-2002,nhl,David Výborný,C,FW
 Jason Wiemer (C),Florida Panthers,70,11,20,31,0.44,178,-4,https://www.eliteprospects.com/player/8827/jason-wiemer,2001-2002,nhl,Jason Wiemer,C,FW
@@ -229,7 +229,7 @@ Kirk Muller (C),Dallas Stars,78,10,20,30,0.38,28,-12,https://www.eliteprospects.
 Mathieu Schneider (D),Los Angeles Kings,55,7,23,30,0.55,68,3,https://www.eliteprospects.com/player/8875/mathieu-schneider,2001-2002,nhl,Mathieu Schneider,D,DEF
 Philippe Boucher (D),Los Angeles Kings,80,7,23,30,0.38,94,0,https://www.eliteprospects.com/player/9087/philippe-boucher,2001-2002,nhl,Philippe Boucher,D,DEF
 Ivan Novoseltsev (LW),Florida Panthers,70,13,16,29,0.41,44,-10,https://www.eliteprospects.com/player/12236/ivan-novoseltsev,2001-2002,nhl,Ivan Novoseltsev,LW,FW
-Martin Gélinas (LW),Carolina Hurricanes,72,13,16,29,0.40,30,-1,https://www.eliteprospects.com/player/8787/martin-gelinas,2001-2002,nhl,Martin Gélinas,LW,FW
+Martin Gélinas (LW),Carolina Hurricanes,72,13,16,29,0.4,30,-1,https://www.eliteprospects.com/player/8787/martin-gelinas,2001-2002,nhl,Martin Gélinas,LW,FW
 Daniel Cleary (LW/RW),Edmonton Oilers,65,10,19,29,0.45,51,-1,https://www.eliteprospects.com/player/4376/daniel-cleary,2001-2002,nhl,Daniel Cleary,LW/RW,FW
 Michal Rozsíval (D),Pittsburgh Penguins,79,9,20,29,0.37,47,-6,https://www.eliteprospects.com/player/8687/michal-rozsival,2001-2002,nhl,Michal Rozsíval,D,DEF
 Olli Jokinen (C),Florida Panthers,80,9,20,29,0.36,98,-16,https://www.eliteprospects.com/player/2679/olli-jokinen,2001-2002,nhl,Olli Jokinen,C,FW
@@ -265,14 +265,14 @@ Tomas Holmström (RW),Detroit Red Wings,69,8,18,26,0.38,58,-12,https://www.elite
 Igor Kravchuk (D),Calgary Flames,78,4,22,26,0.33,19,3,https://www.eliteprospects.com/player/27220/igor-kravchuk,2001-2002,nhl,Igor Kravchuk,D,DEF
 Zdeno Cíger (LW),totals,56,12,13,25,0.45,26,-15,https://www.eliteprospects.com/player/69982/zdeno-ciger,2001-2002,nhl,Zdeno Cíger,LW,FW
 Rob Zamuner (LW),Boston Bruins,66,12,13,25,0.38,24,6,https://www.eliteprospects.com/player/38173/rob-zamuner,2001-2002,nhl,Rob Zamuner,LW,FW
-Richard Park (RW/C),Minnesota Wild,63,10,15,25,0.40,10,-1,https://www.eliteprospects.com/player/5214/richard-park,2001-2002,nhl,Richard Park,RW/C,FW
+Richard Park (RW/C),Minnesota Wild,63,10,15,25,0.4,10,-1,https://www.eliteprospects.com/player/5214/richard-park,2001-2002,nhl,Richard Park,RW/C,FW
 Kris Beech (C),Pittsburgh Penguins,79,10,15,25,0.32,45,-25,https://www.eliteprospects.com/player/8429/kris-beech,2001-2002,nhl,Kris Beech,C,FW
 Hnat Domenichelli (LW),totals,67,9,16,25,0.37,44,-23,https://www.eliteprospects.com/player/10650/hnat-domenichelli,2001-2002,nhl,Hnat Domenichelli,LW,FW
 Trevor Letowski (RW),totals,75,9,16,25,0.33,19,4,https://www.eliteprospects.com/player/8777/trevor-letowski,2001-2002,nhl,Trevor Letowski,RW,FW
 Boyd Devereaux (LW),Detroit Red Wings,79,9,16,25,0.32,24,9,https://www.eliteprospects.com/player/9135/boyd-devereaux,2001-2002,nhl,Boyd Devereaux,LW,FW
 Brent Sopel (D),Vancouver Canucks,66,8,17,25,0.38,44,21,https://www.eliteprospects.com/player/10229/brent-sopel,2001-2002,nhl,Brent Sopel,D,DEF
-Mike Grier (RW),Edmonton Oilers,82,8,17,25,0.30,32,1,https://www.eliteprospects.com/player/9171/mike-grier,2001-2002,nhl,Mike Grier,RW,FW
-Craig Rivet (D),Montréal Canadiens,82,8,17,25,0.30,76,1,https://www.eliteprospects.com/player/8719/craig-rivet,2001-2002,nhl,Craig Rivet,D,DEF
+Mike Grier (RW),Edmonton Oilers,82,8,17,25,0.3,32,1,https://www.eliteprospects.com/player/9171/mike-grier,2001-2002,nhl,Mike Grier,RW,FW
+Craig Rivet (D),Montréal Canadiens,82,8,17,25,0.3,76,1,https://www.eliteprospects.com/player/8719/craig-rivet,2001-2002,nhl,Craig Rivet,D,DEF
 Deron Quint (D),Columbus Blue Jackets,75,7,18,25,0.33,26,-34,https://www.eliteprospects.com/player/11363/deron-quint,2001-2002,nhl,Deron Quint,D,DEF
 Eric Brewer (D),Edmonton Oilers,81,7,18,25,0.31,45,-5,https://www.eliteprospects.com/player/9095/eric-brewer,2001-2002,nhl,Eric Brewer,D,DEF
 Éric Desjardins (D),Philadelphia Flyers,65,6,19,25,0.38,24,-1,https://www.eliteprospects.com/player/9133/eric-desjardins,2001-2002,nhl,Éric Desjardins,D,DEF
@@ -284,7 +284,7 @@ Tom Poti (D),totals,66,2,23,25,0.38,44,-10,https://www.eliteprospects.com/player
 Mike Fisher (C),Ottawa Senators,58,15,9,24,0.41,55,8,https://www.eliteprospects.com/player/8771/mike-fisher,2001-2002,nhl,Mike Fisher,C,FW
 Andreas Johansson (LW),New York Rangers,70,14,10,24,0.34,46,6,https://www.eliteprospects.com/player/696/andreas-johansson,2001-2002,nhl,Andreas Johansson,LW,FW
 Tyler Wright (C),Columbus Blue Jackets,77,13,11,24,0.31,100,-40,https://www.eliteprospects.com/player/9669/tyler-wright,2001-2002,nhl,Tyler Wright,C,FW
-Shane Willis (RW),totals,80,11,13,24,0.30,30,-8,https://www.eliteprospects.com/player/7307/shane-willis,2001-2002,nhl,Shane Willis,RW,FW
+Shane Willis (RW),totals,80,11,13,24,0.3,30,-8,https://www.eliteprospects.com/player/7307/shane-willis,2001-2002,nhl,Shane Willis,RW,FW
 Yannick Tremblay (D),Atlanta Thrashers,66,9,15,24,0.36,47,-15,https://www.eliteprospects.com/player/11032/yannick-tremblay,2001-2002,nhl,Yannick Tremblay,D,DEF
 Darby Hendrickson (C),Minnesota Wild,68,9,15,24,0.35,50,-22,https://www.eliteprospects.com/player/23275/darby-hendrickson,2001-2002,nhl,Darby Hendrickson,C,FW
 Kirk Maltby (LW),Detroit Red Wings,82,9,15,24,0.29,40,15,https://www.eliteprospects.com/player/8954/kirk-maltby,2001-2002,nhl,Kirk Maltby,LW,FW
@@ -296,8 +296,8 @@ Per-Johan Axelsson (LW),Boston Bruins,78,7,17,24,0.31,16,6,https://www.elitepros
 Andrei Markov (D),Montréal Canadiens,56,5,19,24,0.43,24,-1,https://www.eliteprospects.com/player/8579/andrei-markov,2001-2002,nhl,Andrei Markov,D,DEF
 Filip Kuba (D),Minnesota Wild,62,5,19,24,0.39,32,-6,https://www.eliteprospects.com/player/8639/filip-kuba,2001-2002,nhl,Filip Kuba,D,DEF
 Lubomir Sekeras (D),Minnesota Wild,69,4,20,24,0.35,38,-7,https://www.eliteprospects.com/player/3674/lubomir-sekeras,2001-2002,nhl,Lubomir Sekeras,D,DEF
-Eric Weinrich (D),Philadelphia Flyers,80,4,20,24,0.30,26,27,https://www.eliteprospects.com/player/8706/eric-weinrich,2001-2002,nhl,Eric Weinrich,D,DEF
-Alexander Khavanov (D),St. Louis Blues,81,3,21,24,0.30,55,9,https://www.eliteprospects.com/player/8659/alexander-khavanov,2001-2002,nhl,Alexander Khavanov,D,DEF
+Eric Weinrich (D),Philadelphia Flyers,80,4,20,24,0.3,26,27,https://www.eliteprospects.com/player/8706/eric-weinrich,2001-2002,nhl,Eric Weinrich,D,DEF
+Alexander Khavanov (D),St. Louis Blues,81,3,21,24,0.3,55,9,https://www.eliteprospects.com/player/8659/alexander-khavanov,2001-2002,nhl,Alexander Khavanov,D,DEF
 John Madden (C),New Jersey Devils,82,15,8,23,0.28,25,6,https://www.eliteprospects.com/player/8723/john-madden,2001-2002,nhl,John Madden,C,FW
 Zdeno Chára (D),Ottawa Senators,75,10,13,23,0.31,156,30,https://www.eliteprospects.com/player/4530/zdeno-chara,2001-2002,nhl,Zdeno Chára,D,DEF
 Sandy McCarthy (RW),New York Rangers,82,10,13,23,0.28,171,-8,https://www.eliteprospects.com/player/25706/sandy-mccarthy,2001-2002,nhl,Sandy McCarthy,RW,FW
@@ -306,7 +306,7 @@ Chad Kilger (LW/C),Montréal Canadiens,75,8,15,23,0.31,27,-7,https://www.elitepr
 Steve Rucchin (C),Mighty Ducks of Anaheim,38,7,16,23,0.61,6,-3,https://www.eliteprospects.com/player/8555/steve-rucchin,2001-2002,nhl,Steve Rucchin,C,FW
 Mark Messier (C),New York Rangers,41,7,16,23,0.56,32,-1,https://www.eliteprospects.com/player/21309/mark-messier,2001-2002,nhl,Mark Messier,C,FW
 Patrik Stefan (C),Atlanta Thrashers,59,7,16,23,0.39,22,-4,https://www.eliteprospects.com/player/3666/patrik-stefan,2001-2002,nhl,Patrik Stefan,C,FW
-Vaclav Varada (RW),Buffalo Sabres,76,7,16,23,0.30,82,-7,https://www.eliteprospects.com/player/8661/vaclav-varada,2001-2002,nhl,Vaclav Varada,RW,FW
+Vaclav Varada (RW),Buffalo Sabres,76,7,16,23,0.3,82,-7,https://www.eliteprospects.com/player/8661/vaclav-varada,2001-2002,nhl,Vaclav Varada,RW,FW
 Marek Malík (D),Carolina Hurricanes,82,4,19,23,0.28,88,8,https://www.eliteprospects.com/player/1907/marek-malik,2001-2002,nhl,Marek Malík,D,DEF
 Bryan Berard (D),New York Rangers,82,2,21,23,0.28,60,-1,https://www.eliteprospects.com/player/9078/bryan-berard,2001-2002,nhl,Bryan Berard,D,DEF
 Krys Kolanos (C/W),Phoenix Coyotes,57,11,11,22,0.39,48,6,https://www.eliteprospects.com/player/8716/krys-kolanos,2001-2002,nhl,Krys Kolanos,C/W,FW
@@ -342,9 +342,9 @@ Jan Bulis (C/LW),Montréal Canadiens,53,9,10,19,0.36,8,-2,https://www.eliteprosp
 Tie Domi (RW),Toronto Maple Leafs,74,9,10,19,0.26,157,3,https://www.eliteprospects.com/player/9138/tie-domi,2001-2002,nhl,Tie Domi,RW,FW
 Erik Rasmussen (C),Buffalo Sabres,69,8,11,19,0.28,34,-1,https://www.eliteprospects.com/player/8868/erik-rasmussen,2001-2002,nhl,Erik Rasmussen,C,FW
 Patric Kjellberg (LW),totals,77,8,11,19,0.25,16,-12,https://www.eliteprospects.com/player/720/patric-kjellberg,2001-2002,nhl,Patric Kjellberg,LW,FW
-Landon Wilson (RW),Phoenix Coyotes,47,7,12,19,0.40,46,4,https://www.eliteprospects.com/player/10833/landon-wilson,2001-2002,nhl,Landon Wilson,RW,FW
+Landon Wilson (RW),Phoenix Coyotes,47,7,12,19,0.4,46,4,https://www.eliteprospects.com/player/10833/landon-wilson,2001-2002,nhl,Landon Wilson,RW,FW
 Dmitry Yushkevich (D),Toronto Maple Leafs,55,6,13,19,0.35,26,14,https://www.eliteprospects.com/player/18636/dmitry-yushkevich,2001-2002,nhl,Dmitry Yushkevich,D,DEF
-Jeff Halpern (C),Washington Capitals,48,5,14,19,0.40,29,-9,https://www.eliteprospects.com/player/8776/jeff-halpern,2001-2002,nhl,Jeff Halpern,C,FW
+Jeff Halpern (C),Washington Capitals,48,5,14,19,0.4,29,-9,https://www.eliteprospects.com/player/8776/jeff-halpern,2001-2002,nhl,Jeff Halpern,C,FW
 Dan McGillis (D),Philadelphia Flyers,75,5,14,19,0.25,46,17,https://www.eliteprospects.com/player/9670/dan-mcgillis,2001-2002,nhl,Dan McGillis,D,DEF
 Georges Laraque (RW),Edmonton Oilers,80,5,14,19,0.24,157,6,https://www.eliteprospects.com/player/5693/georges-laraque,2001-2002,nhl,Georges Laraque,RW,FW
 Dick Tärnström (D),New York Islanders,62,3,16,19,0.31,38,-12,https://www.eliteprospects.com/player/744/dick-tarnstrom,2001-2002,nhl,Dick Tärnström,D,DEF
@@ -388,7 +388,7 @@ Brad Ference (D),Florida Panthers,80,2,15,17,0.21,254,-13,https://www.eliteprosp
 Glen Metropolit (C),totals,35,1,16,17,0.49,6,1,https://www.eliteprospects.com/player/3587/glen-metropolit,2001-2002,nhl,Glen Metropolit,C,FW
 Scott Stevens (D),New Jersey Devils,82,1,16,17,0.21,44,15,https://www.eliteprospects.com/player/21375/scott-stevens,2001-2002,nhl,Scott Stevens,D,DEF
 Geoff Sanderson (LW),Columbus Blue Jackets,42,11,5,16,0.38,12,-15,https://www.eliteprospects.com/player/8780/geoff-sanderson,2001-2002,nhl,Geoff Sanderson,LW,FW
-Ethan Moreau (LW),Edmonton Oilers,80,11,5,16,0.20,81,4,https://www.eliteprospects.com/player/8703/ethan-moreau,2001-2002,nhl,Ethan Moreau,LW,FW
+Ethan Moreau (LW),Edmonton Oilers,80,11,5,16,0.2,81,4,https://www.eliteprospects.com/player/8703/ethan-moreau,2001-2002,nhl,Ethan Moreau,LW,FW
 Milan Kraft (C),Pittsburgh Penguins,68,8,8,16,0.24,16,-9,https://www.eliteprospects.com/player/9630/milan-kraft,2001-2002,nhl,Milan Kraft,C,FW
 Ken Klee (D),Washington Capitals,68,8,8,16,0.24,38,4,https://www.eliteprospects.com/player/9016/ken-klee,2001-2002,nhl,Ken Klee,D,DEF
 Serge Aubin (C/LW),Columbus Blue Jackets,71,8,8,16,0.23,32,-20,https://www.eliteprospects.com/player/8785/serge-aubin,2001-2002,nhl,Serge Aubin,C/LW,FW
@@ -397,7 +397,7 @@ Brad Chartrand (RW),Los Angeles Kings,46,7,9,16,0.35,40,5,https://www.eliteprosp
 André Roy (LW),totals,65,7,9,16,0.25,211,-2,https://www.eliteprospects.com/player/8924/andre-roy,2001-2002,nhl,André Roy,LW,FW
 Mikael Samuelsson (RW),New York Rangers,67,6,10,16,0.24,23,10,https://www.eliteprospects.com/player/736/mikael-samuelsson,2001-2002,nhl,Mikael Samuelsson,RW,FW
 Stéphane Quintal (D),Montréal Canadiens,75,6,10,16,0.21,87,-7,https://www.eliteprospects.com/player/9667/stephane-quintal,2001-2002,nhl,Stéphane Quintal,D,DEF
-Alyn McCauley (C/LW),Toronto Maple Leafs,82,6,10,16,0.20,18,10,https://www.eliteprospects.com/player/8974/alyn-mccauley,2001-2002,nhl,Alyn McCauley,C/LW,FW
+Alyn McCauley (C/LW),Toronto Maple Leafs,82,6,10,16,0.2,18,10,https://www.eliteprospects.com/player/8974/alyn-mccauley,2001-2002,nhl,Alyn McCauley,C/LW,FW
 Bret Hedican (D),totals,57,5,11,16,0.28,22,-1,https://www.eliteprospects.com/player/9045/bret-hedican,2001-2002,nhl,Bret Hedican,D,DEF
 Jamie Wright (LW),Calgary Flames,44,4,12,16,0.36,20,6,https://www.eliteprospects.com/player/8486/jamie-wright,2001-2002,nhl,Jamie Wright,LW,FW
 David Tanabe (D),Carolina Hurricanes,78,1,15,16,0.21,35,-13,https://www.eliteprospects.com/player/8773/david-tanabe,2001-2002,nhl,David Tanabe,D,DEF
@@ -407,8 +407,8 @@ Trent Klatt (RW),Vancouver Canucks,34,8,7,15,0.44,10,9,https://www.eliteprospect
 Shean Donovan (RW),totals,61,8,7,15,0.25,44,-21,https://www.eliteprospects.com/player/8571/shean-donovan,2001-2002,nhl,Shean Donovan,RW,FW
 Benoit Hogue (C),totals,58,7,8,15,0.26,37,-5,https://www.eliteprospects.com/player/31877/benoit-hogue,2001-2002,nhl,Benoit Hogue,C,FW
 Garry Valk (LW/RW),Toronto Maple Leafs,63,5,10,15,0.24,28,2,https://www.eliteprospects.com/player/66981/garry-valk,2001-2002,nhl,Garry Valk,LW/RW,FW
-Éric Messier (D/LW),Colorado Avalanche,74,5,10,15,0.20,26,-5,https://www.eliteprospects.com/player/24171/eric-messier,2001-2002,nhl,Éric Messier,D/LW,DEF
-Bill Lindsay (LW),totals,76,5,10,15,0.20,140,-11,https://www.eliteprospects.com/player/27298/bill-lindsay,2001-2002,nhl,Bill Lindsay,LW,FW
+Éric Messier (D/LW),Colorado Avalanche,74,5,10,15,0.2,26,-5,https://www.eliteprospects.com/player/24171/eric-messier,2001-2002,nhl,Éric Messier,D/LW,DEF
+Bill Lindsay (LW),totals,76,5,10,15,0.2,140,-11,https://www.eliteprospects.com/player/27298/bill-lindsay,2001-2002,nhl,Bill Lindsay,LW,FW
 Robert Kron (LW),Columbus Blue Jackets,59,4,11,15,0.25,4,-14,https://www.eliteprospects.com/player/32119/robert-kron,2001-2002,nhl,Robert Kron,LW,FW
 Juha Ylönen (C),totals,80,4,11,15,0.19,10,-11,https://www.eliteprospects.com/player/2704/juha-ylonen,2001-2002,nhl,Juha Ylönen,C,FW
 Mats Lindgren (C),New York Islanders,59,3,12,15,0.25,16,0,https://www.eliteprospects.com/player/724/mats-lindgren,2001-2002,nhl,Mats Lindgren,C,FW
@@ -424,11 +424,11 @@ Keith Carney (D),Mighty Ducks of Anaheim,60,5,9,14,0.23,30,14,https://www.elitep
 Jay Pandolfo (LW),New Jersey Devils,65,4,10,14,0.22,15,12,https://www.eliteprospects.com/player/8704/jay-pandolfo,2001-2002,nhl,Jay Pandolfo,LW,FW
 Scott Pellerin (LW),totals,68,4,10,14,0.21,21,-11,https://www.eliteprospects.com/player/39224/scott-pellerin,2001-2002,nhl,Scott Pellerin,LW,FW
 Chris Therien (D),Philadelphia Flyers,77,4,10,14,0.18,30,16,https://www.eliteprospects.com/player/8849/chris-therien,2001-2002,nhl,Chris Therien,D,DEF
-Sylvain Côté (D),Washington Capitals,70,3,11,14,0.20,26,-15,https://www.eliteprospects.com/player/31444/sylvain-cote,2001-2002,nhl,Sylvain Côté,D,DEF
+Sylvain Côté (D),Washington Capitals,70,3,11,14,0.2,26,-15,https://www.eliteprospects.com/player/31444/sylvain-cote,2001-2002,nhl,Sylvain Côté,D,DEF
 Jimmie Ölvestad (LW),Tampa Bay Lightning,74,3,11,14,0.19,24,3,https://www.eliteprospects.com/player/752/jimmie-olvestad,2001-2002,nhl,Jimmie Ölvestad,LW,FW
 Aaron Ward (D),Carolina Hurricanes,79,3,11,14,0.18,74,0,https://www.eliteprospects.com/player/8744/aaron-ward,2001-2002,nhl,Aaron Ward,D,DEF
 Brett Harkins (C),Columbus Blue Jackets,25,2,12,14,0.56,8,-5,https://www.eliteprospects.com/player/1357/brett-harkins,2001-2002,nhl,Brett Harkins,C,FW
-Steve Konowalchuk (LW),Washington Capitals,28,2,12,14,0.50,23,-2,https://www.eliteprospects.com/player/9020/steve-konowalchuk,2001-2002,nhl,Steve Konowalchuk,LW,FW
+Steve Konowalchuk (LW),Washington Capitals,28,2,12,14,0.5,23,-2,https://www.eliteprospects.com/player/9020/steve-konowalchuk,2001-2002,nhl,Steve Konowalchuk,LW,FW
 Scott Hannan (D),San Jose Sharks,75,2,12,14,0.19,57,10,https://www.eliteprospects.com/player/9041/scott-hannan,2001-2002,nhl,Scott Hannan,D,DEF
 Ossi Väänänen (D),Phoenix Coyotes,76,2,12,14,0.18,74,6,https://www.eliteprospects.com/player/2685/ossi-vaananen,2001-2002,nhl,Ossi Väänänen,D,DEF
 Darius Kasparaitis (D),totals,80,2,12,14,0.18,142,0,https://www.eliteprospects.com/player/8685/darius-kasparaitis,2001-2002,nhl,Darius Kasparaitis,D,DEF
@@ -436,12 +436,12 @@ Frantisek Kucera (D),Washington Capitals,56,1,13,14,0.25,12,7,https://www.elitep
 Dave Lowry (LW),Calgary Flames,62,7,6,13,0.21,51,-20,https://www.eliteprospects.com/player/32207/dave-lowry,2001-2002,nhl,Dave Lowry,LW,FW
 Sheldon Keefe (RW),Tampa Bay Lightning,39,6,7,13,0.33,16,-11,https://www.eliteprospects.com/player/22836/sheldon-keefe,2001-2002,nhl,Sheldon Keefe,RW,FW
 Janne Laukkanen (D),Pittsburgh Penguins,47,6,7,13,0.28,28,-18,https://www.eliteprospects.com/player/2662/janne-laukkanen,2001-2002,nhl,Janne Laukkanen,D,DEF
-Tyson Nash (LW),St. Louis Blues,64,6,7,13,0.20,100,2,https://www.eliteprospects.com/player/8948/tyson-nash,2001-2002,nhl,Tyson Nash,LW,FW
+Tyson Nash (LW),St. Louis Blues,64,6,7,13,0.2,100,2,https://www.eliteprospects.com/player/8948/tyson-nash,2001-2002,nhl,Tyson Nash,LW,FW
 Kelly Buchberger (RW),Los Angeles Kings,74,6,7,13,0.18,105,-13,https://www.eliteprospects.com/player/62762/kelly-buchberger,2001-2002,nhl,Kelly Buchberger,RW,FW
 James Patrick (D),Buffalo Sabres,56,5,8,13,0.23,16,3,https://www.eliteprospects.com/player/32586/james-patrick,2001-2002,nhl,James Patrick,D,DEF
 Kevin Dineen (RW),Columbus Blue Jackets,59,5,8,13,0.22,62,-6,https://www.eliteprospects.com/player/22687/kevin-dineen,2001-2002,nhl,Kevin Dineen,RW,FW
-Denis Gauthier (D),Calgary Flames,66,5,8,13,0.20,91,9,https://www.eliteprospects.com/player/8861/denis-gauthier,2001-2002,nhl,Denis Gauthier,D,DEF
-Jyrki Lumme (D),totals,66,4,9,13,0.20,22,8,https://www.eliteprospects.com/player/2666/jyrki-lumme,2001-2002,nhl,Jyrki Lumme,D,DEF
+Denis Gauthier (D),Calgary Flames,66,5,8,13,0.2,91,9,https://www.eliteprospects.com/player/8861/denis-gauthier,2001-2002,nhl,Denis Gauthier,D,DEF
+Jyrki Lumme (D),totals,66,4,9,13,0.2,22,8,https://www.eliteprospects.com/player/2666/jyrki-lumme,2001-2002,nhl,Jyrki Lumme,D,DEF
 Chris Herperger (C),Ottawa Senators,72,4,9,13,0.18,43,4,https://www.eliteprospects.com/player/10829/chris-herperger,2001-2002,nhl,Chris Herperger,C,FW
 Pascal Trépanier (D),Colorado Avalanche,74,4,9,13,0.18,59,4,https://www.eliteprospects.com/player/12796/pascal-trepanier,2001-2002,nhl,Pascal Trépanier,D,DEF
 Jassen Cullimore (D),Tampa Bay Lightning,78,4,9,13,0.17,58,-1,https://www.eliteprospects.com/player/9127/jassen-cullimore,2001-2002,nhl,Jassen Cullimore,D,DEF
@@ -451,19 +451,19 @@ Pavel Trnka (D),Mighty Ducks of Anaheim,71,2,11,13,0.18,66,-5,https://www.elitep
 Jay McKee (D),Buffalo Sabres,81,2,11,13,0.16,43,18,https://www.eliteprospects.com/player/8977/jay-mckee,2001-2002,nhl,Jay McKee,D,DEF
 Steve Bégin (LW/C),Calgary Flames,51,7,5,12,0.24,79,-3,https://www.eliteprospects.com/player/9076/steve-begin,2001-2002,nhl,Steve Bégin,LW/C,FW
 Dan Hinote (RW),Colorado Avalanche,58,6,6,12,0.21,39,8,https://www.eliteprospects.com/player/5534/dan-hinote,2001-2002,nhl,Dan Hinote,RW,FW
-Rob DiMaio (RW),Dallas Stars,61,6,6,12,0.20,25,-2,https://www.eliteprospects.com/player/8760/rob-dimaio,2001-2002,nhl,Rob DiMaio,RW,FW
+Rob DiMaio (RW),Dallas Stars,61,6,6,12,0.2,25,-2,https://www.eliteprospects.com/player/8760/rob-dimaio,2001-2002,nhl,Rob DiMaio,RW,FW
 Bryce Salvador (D),St. Louis Blues,66,6,7,12,0.18,78,3,https://www.eliteprospects.com/player/8864/bryce-salvador,2001-2002,nhl,Bryce Salvador,D,DEF
 Sergei Varlamov (LW/C),St. Louis Blues,52,5,7,12,0.23,26,4,https://www.eliteprospects.com/player/18322/sergei-varlamov,2001-2002,nhl,Sergei Varlamov,LW/C,FW
 Darren McCarty (RW),Detroit Red Wings,62,5,7,12,0.19,98,2,https://www.eliteprospects.com/player/8973/darren-mccarty,2001-2002,nhl,Darren McCarty,RW,FW
 Ronald Petrovicky (RW),Calgary Flames,77,5,7,12,0.16,85,0,https://www.eliteprospects.com/player/5673/ronald-petrovicky,2001-2002,nhl,Ronald Petrovicky,RW,FW
 Karl Dykhuis (D),Montréal Canadiens,80,5,7,12,0.15,32,16,https://www.eliteprospects.com/player/54584/karl-dykhuis,2001-2002,nhl,Karl Dykhuis,D,DEF
 Cory Cross (D),Toronto Maple Leafs,50,3,9,12,0.24,54,11,https://www.eliteprospects.com/player/43326/cory-cross,2001-2002,nhl,Cory Cross,D,DEF
-Stéphane Matteau (LW),San Jose Sharks,55,7,4,11,0.20,15,4,https://www.eliteprospects.com/player/54466/stephane-matteau,2001-2002,nhl,Stéphane Matteau,LW,FW
+Stéphane Matteau (LW),San Jose Sharks,55,7,4,11,0.2,15,4,https://www.eliteprospects.com/player/54466/stephane-matteau,2001-2002,nhl,Stéphane Matteau,LW,FW
 Marty Reasoner (C),Edmonton Oilers,52,6,5,11,0.21,41,0,https://www.eliteprospects.com/player/8708/marty-reasoner,2001-2002,nhl,Marty Reasoner,C,FW
 Sean Brown (D),totals,73,6,5,11,0.15,174,7,https://www.eliteprospects.com/player/9100/sean-brown,2001-2002,nhl,Sean Brown,D,DEF
 Andrei Nazarov (LW),totals,77,6,5,11,0.14,215,5,https://www.eliteprospects.com/player/32117/andrei-nazarov,2001-2002,nhl,Andrei Nazarov,LW,FW
 Byron Ritchie (C/LW),totals,35,5,6,11,0.31,36,-2,https://www.eliteprospects.com/player/4520/byron-ritchie,2001-2002,nhl,Byron Ritchie,C/LW,FW
-Greg Classen (C/W),Nashville Predators,55,5,6,11,0.20,30,1,https://www.eliteprospects.com/player/12472/greg-classen,2001-2002,nhl,Greg Classen,C/W,FW
+Greg Classen (C/W),Nashville Predators,55,5,6,11,0.2,30,1,https://www.eliteprospects.com/player/12472/greg-classen,2001-2002,nhl,Greg Classen,C/W,FW
 Jason Marshall (D),Minnesota Wild,80,5,6,11,0.14,148,-8,https://www.eliteprospects.com/player/8533/jason-marshall,2001-2002,nhl,Jason Marshall,D,DEF
 Brian Gionta (RW),New Jersey Devils,33,4,7,11,0.33,8,10,https://www.eliteprospects.com/player/9048/brian-gionta,2001-2002,nhl,Brian Gionta,RW,FW
 Daniel Corso (C),St. Louis Blues,41,4,7,11,0.27,6,3,https://www.eliteprospects.com/player/11573/daniel-corso,2001-2002,nhl,Daniel Corso,C,FW
@@ -473,15 +473,15 @@ Ruslan Salei (D),Mighty Ducks of Anaheim,82,4,7,11,0.13,97,-10,https://www.elite
 Darren Van Impe (D),totals,67,3,8,11,0.16,59,12,https://www.eliteprospects.com/player/22093/darren-van-impe,2001-2002,nhl,Darren Van Impe,D,DEF
 Blake Sloan (D),totals,67,2,9,11,0.16,50,-17,https://www.eliteprospects.com/player/6811/blake-sloan,2001-2002,nhl,Blake Sloan,D,DEF
 Mattias Norström (D),Los Angeles Kings,79,2,9,11,0.14,38,-2,https://www.eliteprospects.com/player/750/mattias-norstrom,2001-2002,nhl,Mattias Norström,D,DEF
-Stéphane Robidas (D),Montréal Canadiens,56,1,10,11,0.20,14,-25,https://www.eliteprospects.com/player/8731/stephane-robidas,2001-2002,nhl,Stéphane Robidas,D,DEF
+Stéphane Robidas (D),Montréal Canadiens,56,1,10,11,0.2,14,-25,https://www.eliteprospects.com/player/8731/stephane-robidas,2001-2002,nhl,Stéphane Robidas,D,DEF
 Dave Karpa (D),New York Rangers,75,1,10,11,0.15,131,-9,https://www.eliteprospects.com/player/25709/dave-karpa,2001-2002,nhl,Dave Karpa,D,DEF
 Aki Berg (D),Toronto Maple Leafs,81,1,10,11,0.14,46,14,https://www.eliteprospects.com/player/2667/aki-berg,2001-2002,nhl,Aki Berg,D,DEF
 Scott Lachance (D),Vancouver Canucks,81,1,10,11,0.14,50,15,https://www.eliteprospects.com/player/21483/scott-lachance,2001-2002,nhl,Scott Lachance,D,DEF
 Cory Sarich (D),Tampa Bay Lightning,72,0,11,11,0.15,105,-4,https://www.eliteprospects.com/player/8867/cory-sarich,2001-2002,nhl,Cory Sarich,D,DEF
-Jason Williams (RW/C),Detroit Red Wings,25,8,2,10,0.40,4,2,https://www.eliteprospects.com/player/8713/jason-williams,2001-2002,nhl,Jason Williams,RW/C,FW
+Jason Williams (RW/C),Detroit Red Wings,25,8,2,10,0.4,4,2,https://www.eliteprospects.com/player/8713/jason-williams,2001-2002,nhl,Jason Williams,RW/C,FW
 Matt Pettinger (LW),Washington Capitals,61,7,3,10,0.16,44,-8,https://www.eliteprospects.com/player/8769/matt-pettinger,2001-2002,nhl,Matt Pettinger,LW,FW
 Bryan Helmer (D),Vancouver Canucks,40,5,5,10,0.25,53,10,https://www.eliteprospects.com/player/11481/bryan-helmer,2001-2002,nhl,Bryan Helmer,D,DEF
-Artyom Chubarov (C),Vancouver Canucks,51,5,5,10,0.20,10,-3,https://www.eliteprospects.com/player/9596/artyom-chubarov,2001-2002,nhl,Artyom Chubarov,C,FW
+Artyom Chubarov (C),Vancouver Canucks,51,5,5,10,0.2,10,-3,https://www.eliteprospects.com/player/9596/artyom-chubarov,2001-2002,nhl,Artyom Chubarov,C,FW
 Rhett Warrener (D),Buffalo Sabres,65,5,5,10,0.15,113,15,https://www.eliteprospects.com/player/8812/rhett-warrener,2001-2002,nhl,Rhett Warrener,D,DEF
 Sergei Nemchinov (C),New Jersey Devils,68,5,5,10,0.15,10,-9,https://www.eliteprospects.com/player/25132/sergei-nemchinov,2001-2002,nhl,Sergei Nemchinov,C,FW
 Steve Staios (D),Edmonton Oilers,73,5,5,10,0.14,108,10,https://www.eliteprospects.com/player/5677/steve-staios,2001-2002,nhl,Steve Staios,D,DEF
@@ -489,7 +489,7 @@ Nick Schultz (D),Minnesota Wild,52,4,6,10,0.19,14,0,https://www.eliteprospects.c
 Paul Healey (RW),Toronto Maple Leafs,21,3,7,10,0.48,2,7,https://www.eliteprospects.com/player/9893/paul-healey,2001-2002,nhl,Paul Healey,RW,FW
 Andy Berenzweig (D),Nashville Predators,26,3,7,10,0.38,14,-3,https://www.eliteprospects.com/player/69861/andy-berenzweig,2001-2002,nhl,Andy Berenzweig,D,DEF
 Alexander Korolyuk (RW/LW),San Jose Sharks,32,3,7,10,0.31,14,2,https://www.eliteprospects.com/player/10195/alexander-korolyuk,2001-2002,nhl,Alexander Korolyuk,RW/LW,FW
-Wayne Primeau (C),Pittsburgh Penguins,33,3,7,10,0.30,18,-1,https://www.eliteprospects.com/player/8575/wayne-primeau,2001-2002,nhl,Wayne Primeau,C,FW
+Wayne Primeau (C),Pittsburgh Penguins,33,3,7,10,0.3,18,-1,https://www.eliteprospects.com/player/8575/wayne-primeau,2001-2002,nhl,Wayne Primeau,C,FW
 Brendan Witt (D),Washington Capitals,68,3,7,10,0.15,78,-1,https://www.eliteprospects.com/player/8831/brendan-witt,2001-2002,nhl,Brendan Witt,D,DEF
 Andy Sutton (D),totals,43,2,8,10,0.23,81,-4,https://www.eliteprospects.com/player/8554/andy-sutton,2001-2002,nhl,Andy Sutton,D,DEF
 Mike Van Ryn (D),St. Louis Blues,48,2,8,10,0.21,18,10,https://www.eliteprospects.com/player/8834/mike-van-ryn,2001-2002,nhl,Mike Van Ryn,D,DEF
@@ -504,13 +504,13 @@ Paul Ranheim (LW),Philadelphia Flyers,79,5,4,9,0.11,36,5,https://www.eliteprospe
 Scott Walker (RW),Nashville Predators,28,4,5,9,0.32,18,-13,https://www.eliteprospects.com/player/8801/scott-walker,2001-2002,nhl,Scott Walker,RW,FW
 Jukka Hentunen (RW),totals,38,4,5,9,0.24,4,-9,https://www.eliteprospects.com/player/2709/jukka-hentunen,2001-2002,nhl,Jukka Hentunen,RW,FW
 Andreas Salomonsson (LW),New Jersey Devils,39,4,5,9,0.23,22,-12,https://www.eliteprospects.com/player/753/andreas-salomonsson,2001-2002,nhl,Andreas Salomonsson,LW,FW
-Marc Chouinard (C),Mighty Ducks of Anaheim,45,4,5,9,0.20,10,2,https://www.eliteprospects.com/player/8547/marc-chouinard,2001-2002,nhl,Marc Chouinard,C,FW
+Marc Chouinard (C),Mighty Ducks of Anaheim,45,4,5,9,0.2,10,2,https://www.eliteprospects.com/player/8547/marc-chouinard,2001-2002,nhl,Marc Chouinard,C,FW
 Peter Worrell (LW),Florida Panthers,79,4,5,9,0.11,354,-15,https://www.eliteprospects.com/player/69474/peter-worrell,2001-2002,nhl,Peter Worrell,LW,FW
 Brian Pothier (D),Atlanta Thrashers,33,3,6,9,0.27,22,-19,https://www.eliteprospects.com/player/8917/brian-pothier,2001-2002,nhl,Brian Pothier,D,DEF
-Brent Gilchrist (LW),totals,45,3,6,9,0.20,14,-9,https://www.eliteprospects.com/player/69480/brent-gilchrist,2001-2002,nhl,Brent Gilchrist,LW,FW
-Jiri Slegr (D),totals,46,3,6,9,0.20,59,-20,https://www.eliteprospects.com/player/1938/jiri-slegr,2001-2002,nhl,Jiri Slegr,D,DEF
+Brent Gilchrist (LW),totals,45,3,6,9,0.2,14,-9,https://www.eliteprospects.com/player/69480/brent-gilchrist,2001-2002,nhl,Brent Gilchrist,LW,FW
+Jiri Slegr (D),totals,46,3,6,9,0.2,59,-20,https://www.eliteprospects.com/player/1938/jiri-slegr,2001-2002,nhl,Jiri Slegr,D,DEF
 Richard Smehlik (D),Buffalo Sabres,60,3,6,9,0.15,22,-9,https://www.eliteprospects.com/player/26113/richard-smehlik,2001-2002,nhl,Richard Smehlik,D,DEF
-Christian Berglund (LW),New Jersey Devils,15,2,7,9,0.60,8,-3,https://www.eliteprospects.com/player/707/christian-berglund,2001-2002,nhl,Christian Berglund,LW,FW
+Christian Berglund (LW),New Jersey Devils,15,2,7,9,0.6,8,-3,https://www.eliteprospects.com/player/707/christian-berglund,2001-2002,nhl,Christian Berglund,LW,FW
 Todd Warriner (LW),totals,32,2,7,9,0.28,20,1,https://www.eliteprospects.com/player/3726/todd-warriner,2001-2002,nhl,Todd Warriner,LW,FW
 Ricard Persson (D),Ottawa Senators,34,2,7,9,0.26,42,3,https://www.eliteprospects.com/player/731/ricard-persson,2001-2002,nhl,Ricard Persson,D,DEF
 Jarkko Ruutu (LW),Vancouver Canucks,49,2,7,9,0.18,74,-1,https://www.eliteprospects.com/player/2673/jarkko-ruutu,2001-2002,nhl,Jarkko Ruutu,LW,FW
@@ -518,12 +518,12 @@ Brad Larsen (LW),Colorado Avalanche,50,2,7,9,0.18,47,4,https://www.eliteprospect
 Luke Richardson (D),Philadelphia Flyers,72,1,8,9,0.13,102,18,https://www.eliteprospects.com/player/8933/luke-richardson,2001-2002,nhl,Luke Richardson,D,DEF
 Steve Dubinsky (C),totals,29,6,2,8,0.28,14,-1,https://www.eliteprospects.com/player/25895/steve-dubinsky,2001-2002,nhl,Steve Dubinsky,C,FW
 Colin Forbes (C),Washington Capitals,38,5,3,8,0.21,15,-2,https://www.eliteprospects.com/player/12799/colin-forbes,2001-2002,nhl,Colin Forbes,C,FW
-Harold Druken (C),Vancouver Canucks,27,4,4,8,0.30,6,-1,https://www.eliteprospects.com/player/38451/harold-druken,2001-2002,nhl,Harold Druken,C,FW
+Harold Druken (C),Vancouver Canucks,27,4,4,8,0.3,6,-1,https://www.eliteprospects.com/player/38451/harold-druken,2001-2002,nhl,Harold Druken,C,FW
 Gino Odjick (LW),Montréal Canadiens,36,4,4,8,0.22,104,3,https://www.eliteprospects.com/player/25424/gino-odjick,2001-2002,nhl,Gino Odjick,LW,FW
 Nikita Alexeyev (RW/LW),Tampa Bay Lightning,44,4,4,8,0.18,8,-9,https://www.eliteprospects.com/player/10221/nikita-alexeyev,2001-2002,nhl,Nikita Alexeyev,RW/LW,FW
 Jeff Odgers (RW),Atlanta Thrashers,46,4,4,8,0.17,135,-3,https://www.eliteprospects.com/player/60871/jeff-odgers,2001-2002,nhl,Jeff Odgers,RW,FW
 Tim Taylor (C),Tampa Bay Lightning,48,4,4,8,0.17,25,-2,https://www.eliteprospects.com/player/8848/tim-taylor,2001-2002,nhl,Tim Taylor,C,FW
-Justin Kurtz (D),Vancouver Canucks,27,3,5,8,0.30,14,-4,https://www.eliteprospects.com/player/10634/justin-kurtz,2001-2002,nhl,Justin Kurtz,D,DEF
+Justin Kurtz (D),Vancouver Canucks,27,3,5,8,0.3,14,-4,https://www.eliteprospects.com/player/10634/justin-kurtz,2001-2002,nhl,Justin Kurtz,D,DEF
 Sheldon Souray (D),Montréal Canadiens,34,3,5,8,0.24,62,-5,https://www.eliteprospects.com/player/4505/sheldon-souray,2001-2002,nhl,Sheldon Souray,D,DEF
 Kent Manderville (C),totals,38,3,5,8,0.21,12,3,https://www.eliteprospects.com/player/3722/kent-manderville,2001-2002,nhl,Kent Manderville,C,FW
 Mark Eaton (D),Nashville Predators,58,3,5,8,0.14,24,-12,https://www.eliteprospects.com/player/9143/mark-eaton,2001-2002,nhl,Mark Eaton,D,DEF
@@ -534,22 +534,22 @@ Denis Pederson (C),totals,48,2,6,8,0.17,51,-4,https://www.eliteprospects.com/pla
 Joe Reekie (D),totals,55,2,6,8,0.15,69,-5,https://www.eliteprospects.com/player/69418/joe-reekie,2001-2002,nhl,Joe Reekie,D,DEF
 Drake Berehowsky (D),totals,57,2,6,8,0.14,60,0,https://www.eliteprospects.com/player/5535/drake-berehowsky,2001-2002,nhl,Drake Berehowsky,D,DEF
 Denis Hamel (LW),Buffalo Sabres,61,2,6,8,0.13,28,-1,https://www.eliteprospects.com/player/9039/denis-hamel,2001-2002,nhl,Denis Hamel,LW,FW
-Robyn Regehr (D),Calgary Flames,78,2,6,8,0.10,93,-24,https://www.eliteprospects.com/player/8913/robyn-regehr,2001-2002,nhl,Robyn Regehr,D,DEF
-Jean-Luc Grand-Pierre (D),Columbus Blue Jackets,81,2,6,8,0.10,90,-28,https://www.eliteprospects.com/player/5521/jean-luc-grand-pierre,2001-2002,nhl,Jean-Luc Grand-Pierre,D,DEF
+Robyn Regehr (D),Calgary Flames,78,2,6,8,0.1,93,-24,https://www.eliteprospects.com/player/8913/robyn-regehr,2001-2002,nhl,Robyn Regehr,D,DEF
+Jean-Luc Grand-Pierre (D),Columbus Blue Jackets,81,2,6,8,0.1,90,-28,https://www.eliteprospects.com/player/5521/jean-luc-grand-pierre,2001-2002,nhl,Jean-Luc Grand-Pierre,D,DEF
 Andreas Karlsson (C),Atlanta Thrashers,42,1,7,8,0.19,20,-8,https://www.eliteprospects.com/player/719/andreas-karlsson,2001-2002,nhl,Andreas Karlsson,C,FW
 Steve Poapst (D),Chicago Blackhawks,56,1,7,8,0.14,30,6,https://www.eliteprospects.com/player/8916/steve-poapst,2001-2002,nhl,Steve Poapst,D,DEF
 Ladislav Benysek (D),Minnesota Wild,74,1,7,8,0.11,28,-12,https://www.eliteprospects.com/player/3578/ladislav-benysek,2001-2002,nhl,Ladislav Benysek,D,DEF
-Stanislav Neckar (D),Tampa Bay Lightning,77,1,7,8,0.10,24,-18,https://www.eliteprospects.com/player/6641/stanislav-neckar,2001-2002,nhl,Stanislav Neckar,D,DEF
+Stanislav Neckar (D),Tampa Bay Lightning,77,1,7,8,0.1,24,-18,https://www.eliteprospects.com/player/6641/stanislav-neckar,2001-2002,nhl,Stanislav Neckar,D,DEF
 Kyle McLaren (D),Boston Bruins,38,0,8,8,0.21,19,-4,https://www.eliteprospects.com/player/8978/kyle-mclaren,2001-2002,nhl,Kyle McLaren,D,DEF
 Bill Muckalt (RW),Ottawa Senators,70,0,8,8,0.11,46,-3,https://www.eliteprospects.com/player/69936/bill-muckalt,2001-2002,nhl,Bill Muckalt,RW,FW
 Jamie Pushor (D),totals,76,0,8,8,0.11,84,-13,https://www.eliteprospects.com/player/11563/jamie-pushor,2001-2002,nhl,Jamie Pushor,D,DEF
-Bill Houlder (D),Nashville Predators,82,0,8,8,0.10,40,-1,https://www.eliteprospects.com/player/67298/bill-houlder,2001-2002,nhl,Bill Houlder,D,DEF
+Bill Houlder (D),Nashville Predators,82,0,8,8,0.1,40,-1,https://www.eliteprospects.com/player/67298/bill-houlder,2001-2002,nhl,Bill Houlder,D,DEF
 Reid Simpson (LW),totals,51,6,1,7,0.14,132,-1,https://www.eliteprospects.com/player/64714/reid-simpson,2001-2002,nhl,Reid Simpson,LW,FW
 Nelson Emerson (RW),Los Angeles Kings,41,5,2,7,0.17,25,-8,https://www.eliteprospects.com/player/21569/nelson-emerson,2001-2002,nhl,Nelson Emerson,RW,FW
 Paul Laus (D),Florida Panthers,45,4,3,7,0.16,157,1,https://www.eliteprospects.com/player/41684/paul-laus,2001-2002,nhl,Paul Laus,D,DEF
 Todd Fedoruk (LW),Philadelphia Flyers,55,3,4,7,0.13,141,-2,https://www.eliteprospects.com/player/8528/todd-fedoruk,2001-2002,nhl,Todd Fedoruk,LW,FW
 Hans Jonsson (D),Pittsburgh Penguins,53,2,5,7,0.13,22,-12,https://www.eliteprospects.com/player/715/hans-jonsson,2001-2002,nhl,Hans Jonsson,D,DEF
-Denny Lambert (LW),Mighty Ducks of Anaheim,73,2,5,7,0.10,213,1,https://www.eliteprospects.com/player/67108/denny-lambert,2001-2002,nhl,Denny Lambert,LW,FW
+Denny Lambert (LW),Mighty Ducks of Anaheim,73,2,5,7,0.1,213,1,https://www.eliteprospects.com/player/67108/denny-lambert,2001-2002,nhl,Denny Lambert,LW,FW
 Eric Cairns (D),New York Islanders,74,2,5,7,0.09,176,-2,https://www.eliteprospects.com/player/8751/eric-cairns,2001-2002,nhl,Eric Cairns,D,DEF
 Billy Tibbetts (RW),totals,42,1,6,7,0.17,178,-16,https://www.eliteprospects.com/player/10456/billy-tibbetts,2001-2002,nhl,Billy Tibbetts,RW,FW
 Murray Baron (D),Vancouver Canucks,61,1,6,7,0.11,68,8,https://www.eliteprospects.com/player/70103/murray-baron,2001-2002,nhl,Murray Baron,D,DEF
@@ -560,19 +560,19 @@ Branko Radivojevic (RW),Phoenix Coyotes,18,4,2,6,0.33,4,1,https://www.eliteprosp
 Jaroslav Bednar (LW/RW),Los Angeles Kings,22,4,2,6,0.27,8,-4,https://www.eliteprospects.com/player/10863/jaroslav-bednar,2001-2002,nhl,Jaroslav Bednar,LW/RW,FW
 Mike Peluso (RW),Chicago Blackhawks,37,4,2,6,0.16,19,-3,https://www.eliteprospects.com/player/31336/mike-peluso,2001-2002,nhl,Mike Peluso,RW,FW
 Jamie Rivers (D),totals,66,4,2,6,0.09,49,3,https://www.eliteprospects.com/player/8935/jamie-rivers,2001-2002,nhl,Jamie Rivers,D,DEF
-John MacLean (RW),Dallas Stars,20,3,3,6,0.30,17,-1,https://www.eliteprospects.com/player/22482/john-maclean,2001-2002,nhl,John MacLean,RW,FW
+John MacLean (RW),Dallas Stars,20,3,3,6,0.3,17,-1,https://www.eliteprospects.com/player/22482/john-maclean,2001-2002,nhl,John MacLean,RW,FW
 Brian Campbell (D),Buffalo Sabres,29,3,3,6,0.21,12,0,https://www.eliteprospects.com/player/8565/brian-campbell,2001-2002,nhl,Brian Campbell,D,DEF
 Jeff Shantz (C),Calgary Flames,40,3,3,6,0.15,23,-3,https://www.eliteprospects.com/player/12798/jeff-shantz,2001-2002,nhl,Jeff Shantz,C,FW
 Peter White (C),Chicago Blackhawks,48,3,3,6,0.13,10,-8,https://www.eliteprospects.com/player/8470/peter-white,2001-2002,nhl,Peter White,C,FW
 Mark Smith (C),San Jose Sharks,49,3,3,6,0.12,72,-1,https://www.eliteprospects.com/player/8884/mark-smith,2001-2002,nhl,Mark Smith,C,FW
 Jody Shelley (LW),Columbus Blue Jackets,52,3,3,6,0.12,206,1,https://www.eliteprospects.com/player/8722/jody-shelley,2001-2002,nhl,Jody Shelley,LW,FW
 Chris Tamer (D),Atlanta Thrashers,78,3,3,6,0.08,111,-11,https://www.eliteprospects.com/player/27556/chris-tamer,2001-2002,nhl,Chris Tamer,D,DEF
-Brad Tapper (RW),Atlanta Thrashers,20,2,4,6,0.30,43,-3,https://www.eliteprospects.com/player/12594/brad-tapper,2001-2002,nhl,Brad Tapper,RW,FW
+Brad Tapper (RW),Atlanta Thrashers,20,2,4,6,0.3,43,-3,https://www.eliteprospects.com/player/12594/brad-tapper,2001-2002,nhl,Brad Tapper,RW,FW
 Jason Strudwick (D),Vancouver Canucks,44,2,4,6,0.14,96,4,https://www.eliteprospects.com/player/8753/jason-strudwick,2001-2002,nhl,Jason Strudwick,D,DEF
-Steve Webb (RW),New York Islanders,60,2,4,6,0.10,104,0,https://www.eliteprospects.com/player/59367/steve-webb,2001-2002,nhl,Steve Webb,RW,FW
+Steve Webb (RW),New York Islanders,60,2,4,6,0.1,104,0,https://www.eliteprospects.com/player/59367/steve-webb,2001-2002,nhl,Steve Webb,RW,FW
 Bob Boughner (D),Calgary Flames,79,2,4,6,0.08,170,9,https://www.eliteprospects.com/player/53885/bob-boughner,2001-2002,nhl,Bob Boughner,D,DEF
 Martin Cibak (C),Tampa Bay Lightning,21,1,5,6,0.29,8,-6,https://www.eliteprospects.com/player/8637/martin-cibak,2001-2002,nhl,Martin Cibak,C,FW
-Radim Bičánek (D),Columbus Blue Jackets,60,1,5,6,0.10,34,-15,https://www.eliteprospects.com/player/23859/radim-bicanek,2001-2002,nhl,Radim Bičánek,D,DEF
+Radim Bičánek (D),Columbus Blue Jackets,60,1,5,6,0.1,34,-15,https://www.eliteprospects.com/player/23859/radim-bicanek,2001-2002,nhl,Radim Bičánek,D,DEF
 Domenic Pittis (C),Edmonton Oilers,22,0,6,6,0.27,8,-2,https://www.eliteprospects.com/player/10655/domenic-pittis,2001-2002,nhl,Domenic Pittis,C,FW
 Marko Kiprusoff (D),New York Islanders,27,0,6,6,0.22,4,0,https://www.eliteprospects.com/player/1903/marko-kiprusoff,2001-2002,nhl,Marko Kiprusoff,D,DEF
 Ken Daneyko (D),New Jersey Devils,67,0,6,6,0.09,60,2,https://www.eliteprospects.com/player/31973/ken-daneyko,2001-2002,nhl,Ken Daneyko,D,DEF
@@ -581,11 +581,11 @@ Jean-Pierre Vigier (RW),Atlanta Thrashers,15,4,1,5,0.33,4,-5,https://www.elitepr
 Jeff Daniels (LW),Carolina Hurricanes,65,4,1,5,0.08,12,-6,https://www.eliteprospects.com/player/64768/jeff-daniels,2001-2002,nhl,Jeff Daniels,LW,FW
 Michal Grošek (LW/RW),New York Rangers,15,3,2,5,0.33,12,-3,https://www.eliteprospects.com/player/10812/michal-gro%C5%A1ek,2001-2002,nhl,Michal Grošek,LW/RW,FW
 Herberts Vasiljevs (C),Vancouver Canucks,18,3,2,5,0.28,2,0,https://www.eliteprospects.com/player/10958/herberts-vasiljevs,2001-2002,nhl,Herberts Vasiljevs,C,FW
-Scott Ferguson (D),Edmonton Oilers,50,3,2,5,0.10,75,11,https://www.eliteprospects.com/player/5597/scott-ferguson,2001-2002,nhl,Scott Ferguson,D,DEF
+Scott Ferguson (D),Edmonton Oilers,50,3,2,5,0.1,75,11,https://www.eliteprospects.com/player/5597/scott-ferguson,2001-2002,nhl,Scott Ferguson,D,DEF
 Tony Virta (RW/C),Minnesota Wild,8,2,3,5,0.63,0,0,https://www.eliteprospects.com/player/2095/tony-virta,2001-2002,nhl,Tony Virta,RW/C,FW
 Riku Hahl (C),Colorado Avalanche,22,2,3,5,0.23,14,1,https://www.eliteprospects.com/player/2671/riku-hahl,2001-2002,nhl,Riku Hahl,C,FW
 Chris Nielsen (RW),Columbus Blue Jackets,23,2,3,5,0.22,4,-3,https://www.eliteprospects.com/player/29019/chris-nielsen,2001-2002,nhl,Chris Nielsen,RW,FW
-Patrick Traverse (D),Montréal Canadiens,25,2,3,5,0.20,14,-7,https://www.eliteprospects.com/player/10639/patrick-traverse,2001-2002,nhl,Patrick Traverse,D,DEF
+Patrick Traverse (D),Montréal Canadiens,25,2,3,5,0.2,14,-7,https://www.eliteprospects.com/player/10639/patrick-traverse,2001-2002,nhl,Patrick Traverse,D,DEF
 Sergei Krivokrasov (RW),totals,26,2,3,5,0.19,36,-2,https://www.eliteprospects.com/player/18730/sergei-krivokrasov,2001-2002,nhl,Sergei Krivokrasov,RW,FW
 Eric Boulton (LW),Buffalo Sabres,35,2,3,5,0.14,129,-1,https://www.eliteprospects.com/player/8556/eric-boulton,2001-2002,nhl,Eric Boulton,LW,FW
 Rob Ray (RW),Buffalo Sabres,71,2,3,5,0.07,200,-3,https://www.eliteprospects.com/player/42518/rob-ray,2001-2002,nhl,Rob Ray,RW,FW
@@ -595,7 +595,7 @@ Radek Martínek (D),New York Islanders,23,1,4,5,0.22,16,5,https://www.eliteprosp
 Andreas Lilja (D),Los Angeles Kings,26,1,4,5,0.19,22,3,https://www.eliteprospects.com/player/726/andreas-lilja,2001-2002,nhl,Andreas Lilja,D,DEF
 Kevin Stevens (LW),Pittsburgh Penguins,32,1,4,5,0.16,25,-9,https://www.eliteprospects.com/player/21382/kevin-stevens,2001-2002,nhl,Kevin Stevens,LW,FW
 Andrei Zyuzin (D),totals,47,1,4,5,0.11,31,-5,https://www.eliteprospects.com/player/8608/andrei-zyuzin,2001-2002,nhl,Andrei Zyuzin,D,DEF
-Rob Zettler (D),Washington Capitals,49,1,4,5,0.10,56,3,https://www.eliteprospects.com/player/55333/rob-zettler,2001-2002,nhl,Rob Zettler,D,DEF
+Rob Zettler (D),Washington Capitals,49,1,4,5,0.1,56,3,https://www.eliteprospects.com/player/55333/rob-zettler,2001-2002,nhl,Rob Zettler,D,DEF
 Scott Parker (RW),Colorado Avalanche,63,1,4,5,0.08,154,0,https://www.eliteprospects.com/player/8904/scott-parker,2001-2002,nhl,Scott Parker,RW,FW
 Lance Ward (D),Florida Panthers,68,1,4,5,0.07,131,-20,https://www.eliteprospects.com/player/8289/lance-ward,2001-2002,nhl,Lance Ward,D,DEF
 Patrick Poulin (LW),Montréal Canadiens,28,0,5,5,0.18,6,6,https://www.eliteprospects.com/player/27209/patrick-poulin,2001-2002,nhl,Patrick Poulin,LW,FW
@@ -606,37 +606,37 @@ Chris McAllister (D),Philadelphia Flyers,42,0,5,5,0.12,113,-7,https://www.elitep
 Chris Dingman (LW),totals,44,0,5,5,0.11,103,-10,https://www.eliteprospects.com/player/9136/chris-dingman,2001-2002,nhl,Chris Dingman,LW,FW
 Reed Low (RW),St. Louis Blues,58,0,5,5,0.09,160,-3,https://www.eliteprospects.com/player/10198/reed-low,2001-2002,nhl,Reed Low,RW,FW
 Matt Johnson (LW),Minnesota Wild,60,4,0,4,0.07,183,-13,https://www.eliteprospects.com/player/53191/matt-johnson,2001-2002,nhl,Matt Johnson,LW,FW
-Marcel Hossa (LW/RW),Montréal Canadiens,10,3,1,4,0.40,2,2,https://www.eliteprospects.com/player/4532/marcel-hossa,2001-2002,nhl,Marcel Hossa,LW/RW,FW
+Marcel Hossa (LW/RW),Montréal Canadiens,10,3,1,4,0.4,2,2,https://www.eliteprospects.com/player/4532/marcel-hossa,2001-2002,nhl,Marcel Hossa,LW/RW,FW
 Tyler Arnason (C/LW),Chicago Blackhawks,21,3,1,4,0.19,4,-3,https://www.eliteprospects.com/player/4746/tyler-arnason,2001-2002,nhl,Tyler Arnason,C/LW,FW
 Sean Pronger (C),Columbus Blue Jackets,26,3,1,4,0.15,4,-4,https://www.eliteprospects.com/player/26121/sean-pronger,2001-2002,nhl,Sean Pronger,C,FW
 Craig Berube (LW),Calgary Flames,66,3,1,4,0.06,164,-2,https://www.eliteprospects.com/player/31936/craig-berube,2001-2002,nhl,Craig Berube,LW,FW
-Jaroslav Svoboda (RW),Carolina Hurricanes,10,2,2,4,0.40,2,0,https://www.eliteprospects.com/player/8594/jaroslav-svoboda,2001-2002,nhl,Jaroslav Svoboda,RW,FW
+Jaroslav Svoboda (RW),Carolina Hurricanes,10,2,2,4,0.4,2,0,https://www.eliteprospects.com/player/8594/jaroslav-svoboda,2001-2002,nhl,Jaroslav Svoboda,RW,FW
 Jody Hull (RW),Ottawa Senators,24,2,2,4,0.17,6,0,https://www.eliteprospects.com/player/54340/jody-hull,2001-2002,nhl,Jody Hull,RW,FW
 Václav Nedorost (C/LW),Colorado Avalanche,25,2,2,4,0.16,2,-4,https://www.eliteprospects.com/player/8710/vaclav-nedorost,2001-2002,nhl,Václav Nedorost,C/LW,FW
 Sean Avery (LW/C),Detroit Red Wings,36,2,2,4,0.11,68,1,https://www.eliteprospects.com/player/8720/sean-avery,2001-2002,nhl,Sean Avery,LW/C,FW
 Stephen Peat (RW),Washington Capitals,38,2,2,4,0.11,85,-1,https://www.eliteprospects.com/player/9739/stephen-peat,2001-2002,nhl,Stephen Peat,RW,FW
-Eric Beaudoin (LW/C),Florida Panthers,8,1,3,4,0.50,4,-2,https://www.eliteprospects.com/player/7117/eric-beaudoin,2001-2002,nhl,Eric Beaudoin,LW/C,FW
+Eric Beaudoin (LW/C),Florida Panthers,8,1,3,4,0.5,4,-2,https://www.eliteprospects.com/player/7117/eric-beaudoin,2001-2002,nhl,Eric Beaudoin,LW/C,FW
 Ales Kotalik (RW/LW),Buffalo Sabres,13,1,3,4,0.31,2,-1,https://www.eliteprospects.com/player/8676/ales-kotalik,2001-2002,nhl,Ales Kotalik,RW/LW,FW
 Karel Pilar (D),Toronto Maple Leafs,23,1,3,4,0.17,8,3,https://www.eliteprospects.com/player/11485/karel-pilar,2001-2002,nhl,Karel Pilar,D,DEF
 Ivan Ciernik (RW),totals,29,1,3,4,0.14,6,0,https://www.eliteprospects.com/player/12449/ivan-ciernik,2001-2002,nhl,Ivan Ciernik,RW,FW
 Ryan Johnson (C),Florida Panthers,29,1,3,4,0.14,10,-5,https://www.eliteprospects.com/player/9033/ryan-johnson,2001-2002,nhl,Ryan Johnson,C,FW
 Jean-François Fortin (D),Washington Capitals,36,1,3,4,0.11,20,-1,https://www.eliteprospects.com/player/14511/jean-francois-fortin,2001-2002,nhl,Jean-François Fortin,D,DEF
-Petr Buzek (D),totals,41,1,3,4,0.10,27,0,https://www.eliteprospects.com/player/29026/petr-buzek,2001-2002,nhl,Petr Buzek,D,DEF
-Tommy Albelin (D),New Jersey Devils,42,1,3,4,0.10,4,0,https://www.eliteprospects.com/player/701/tommy-albelin,2001-2002,nhl,Tommy Albelin,D,DEF
+Petr Buzek (D),totals,41,1,3,4,0.1,27,0,https://www.eliteprospects.com/player/29026/petr-buzek,2001-2002,nhl,Petr Buzek,D,DEF
+Tommy Albelin (D),New Jersey Devils,42,1,3,4,0.1,4,0,https://www.eliteprospects.com/player/701/tommy-albelin,2001-2002,nhl,Tommy Albelin,D,DEF
 Tomas Kloucek (D),New York Rangers,52,1,3,4,0.08,137,-2,https://www.eliteprospects.com/player/9686/tomas-kloucek,2001-2002,nhl,Tomas Kloucek,D,DEF
 Grant Ledyard (D),Tampa Bay Lightning,53,1,3,4,0.08,12,-5,https://www.eliteprospects.com/player/32197/grant-ledyard,2001-2002,nhl,Grant Ledyard,D,DEF
 Bob Probert (LW),Chicago Blackhawks,61,1,3,4,0.07,176,-9,https://www.eliteprospects.com/player/21365/bob-probert,2001-2002,nhl,Bob Probert,LW,FW
 Wade Belak (RW/D),Toronto Maple Leafs,63,1,3,4,0.06,142,2,https://www.eliteprospects.com/player/8749/wade-belak,2001-2002,nhl,Wade Belak,RW/D,DEF
 John Jakopin (D),Pittsburgh Penguins,19,0,4,4,0.21,42,2,https://www.eliteprospects.com/player/41648/john-jakopin,2001-2002,nhl,John Jakopin,D,DEF
 Todd Gill (D),Colorado Avalanche,36,0,4,4,0.11,25,3,https://www.eliteprospects.com/player/69416/todd-gill,2001-2002,nhl,Todd Gill,D,DEF
-Dale Purinton (D),New York Rangers,40,0,4,4,0.10,113,4,https://www.eliteprospects.com/player/14755/dale-purinton,2001-2002,nhl,Dale Purinton,D,DEF
+Dale Purinton (D),New York Rangers,40,0,4,4,0.1,113,4,https://www.eliteprospects.com/player/14755/dale-purinton,2001-2002,nhl,Dale Purinton,D,DEF
 Brad Brown (D),Minnesota Wild,51,0,4,4,0.08,123,-11,https://www.eliteprospects.com/player/11823/brad-brown,2001-2002,nhl,Brad Brown,D,DEF
 Jon Sim (LW),Dallas Stars,26,3,0,3,0.12,10,-3,https://www.eliteprospects.com/player/8563/jon-sim,2001-2002,nhl,Jon Sim,LW,FW
 Bruce Gardiner (C),New Jersey Devils,7,2,1,3,0.43,2,-1,https://www.eliteprospects.com/player/3572/bruce-gardiner,2001-2002,nhl,Bruce Gardiner,C,FW
 Steve McKenna (D/LW),New York Rangers,54,2,1,3,0.06,144,0,https://www.eliteprospects.com/player/26312/steve-mckenna,2001-2002,nhl,Steve McKenna,D/LW,DEF
 Darren Langdon (LW),Carolina Hurricanes,58,2,1,3,0.05,106,2,https://www.eliteprospects.com/player/66990/darren-langdon,2001-2002,nhl,Darren Langdon,LW,FW
 Denis Shvidki (RW),Florida Panthers,8,1,2,3,0.38,2,-4,https://www.eliteprospects.com/player/9600/denis-shvidki,2001-2002,nhl,Denis Shvidki,RW,FW
-Marian Cisar (RW),Nashville Predators,10,1,2,3,0.30,8,-3,https://www.eliteprospects.com/player/69862/marian-cisar,2001-2002,nhl,Marian Cisar,RW,FW
+Marian Cisar (RW),Nashville Predators,10,1,2,3,0.3,8,-3,https://www.eliteprospects.com/player/69862/marian-cisar,2001-2002,nhl,Marian Cisar,RW,FW
 Tom Kostopoulos (RW),Pittsburgh Penguins,11,1,2,3,0.27,9,-1,https://www.eliteprospects.com/player/9021/tom-kostopoulos,2001-2002,nhl,Tom Kostopoulos,RW,FW
 Steve Montador (D),Calgary Flames,11,1,2,3,0.27,26,-2,https://www.eliteprospects.com/player/8729/steve-montador,2001-2002,nhl,Steve Montador,D,DEF
 Mark Mowers (C),Nashville Predators,14,1,2,3,0.21,2,-2,https://www.eliteprospects.com/player/5533/mark-mowers,2001-2002,nhl,Mark Mowers,C,FW
@@ -654,7 +654,7 @@ Niclas Hävelid (D),Mighty Ducks of Anaheim,52,1,2,3,0.06,40,-13,https://www.eli
 Mark Rycroft (RW),St. Louis Blues,9,0,3,3,0.33,4,0,https://www.eliteprospects.com/player/8727/mark-rycroft,2001-2002,nhl,Mark Rycroft,RW,FW
 Timo Pärssinen (LW/RW),Mighty Ducks of Anaheim,17,0,3,3,0.18,2,0,https://www.eliteprospects.com/player/2710/timo-parssinen,2001-2002,nhl,Timo Pärssinen,LW/RW,FW
 Jonathan Girard (D),Boston Bruins,20,0,3,3,0.15,9,0,https://www.eliteprospects.com/player/67360/jonathan-girard,2001-2002,nhl,Jonathan Girard,D,DEF
-Marc Bergevin (D),St. Louis Blues,30,0,3,3,0.10,2,6,https://www.eliteprospects.com/player/31935/marc-bergevin,2001-2002,nhl,Marc Bergevin,D,DEF
+Marc Bergevin (D),St. Louis Blues,30,0,3,3,0.1,2,6,https://www.eliteprospects.com/player/31935/marc-bergevin,2001-2002,nhl,Marc Bergevin,D,DEF
 Jarno Kultanen (D),Boston Bruins,38,0,3,3,0.08,33,-1,https://www.eliteprospects.com/player/2668/jarno-kultanen,2001-2002,nhl,Jarno Kultanen,D,DEF
 Chris McAlpine (D),Chicago Blackhawks,40,0,3,3,0.08,36,8,https://www.eliteprospects.com/player/25710/chris-mcalpine,2001-2002,nhl,Chris McAlpine,D,DEF
 Nolan Pratt (D),Tampa Bay Lightning,46,0,3,3,0.07,51,-4,https://www.eliteprospects.com/player/8747/nolan-pratt,2001-2002,nhl,Nolan Pratt,D,DEF
@@ -664,7 +664,7 @@ Vitali Vishnevski (D),Mighty Ducks of Anaheim,74,0,3,3,0.04,60,-10,https://www.e
 Roman Simicek (C),Minnesota Wild,6,2,0,2,0.33,8,1,https://www.eliteprospects.com/player/13654/roman-simicek,2001-2002,nhl,Roman Simicek,C,FW
 Juraj Kolnik (RW),New York Islanders,7,2,0,2,0.29,0,-2,https://www.eliteprospects.com/player/8654/juraj-kolnik,2001-2002,nhl,Juraj Kolnik,RW,FW
 Alexei Ponikarovsky (LW),Toronto Maple Leafs,8,2,0,2,0.25,0,2,https://www.eliteprospects.com/player/8658/alexei-ponikarovsky,2001-2002,nhl,Alexei Ponikarovsky,LW,FW
-Kelly Fairchild (C),Colorado Avalanche,10,2,0,2,0.20,2,1,https://www.eliteprospects.com/player/15424/kelly-fairchild,2001-2002,nhl,Kelly Fairchild,C,FW
+Kelly Fairchild (C),Colorado Avalanche,10,2,0,2,0.2,2,1,https://www.eliteprospects.com/player/15424/kelly-fairchild,2001-2002,nhl,Kelly Fairchild,C,FW
 Yuri Butsayev (RW),totals,11,2,0,2,0.18,4,0,https://www.eliteprospects.com/player/18507/yuri-butsayev,2001-2002,nhl,Yuri Butsayev,RW,FW
 Calle Johansson (D),Washington Capitals,11,2,0,2,0.18,8,-4,https://www.eliteprospects.com/player/714/calle-johansson,2001-2002,nhl,Calle Johansson,D,DEF
 Roman Lyashenko (C),totals,19,2,0,2,0.11,0,-2,https://www.eliteprospects.com/player/28790/roman-lyashenko,2001-2002,nhl,Roman Lyashenko,C,FW
@@ -678,7 +678,7 @@ Craig MacDonald (C),Carolina Hurricanes,12,1,1,2,0.17,0,-1,https://www.elitepros
 Mathieu Darche (LW),Columbus Blue Jackets,14,1,1,2,0.14,6,-5,https://www.eliteprospects.com/player/10621/mathieu-darche,2001-2002,nhl,Mathieu Darche,LW,FW
 Rob Valicevic (RW),Los Angeles Kings,17,1,1,2,0.12,8,-4,https://www.eliteprospects.com/player/12676/rob-valicevic,2001-2002,nhl,Rob Valicevic,RW,FW
 Adam Mair (RW),Los Angeles Kings,18,1,1,2,0.11,57,1,https://www.eliteprospects.com/player/8811/adam-mair,2001-2002,nhl,Adam Mair,RW,FW
-Mike Wilson (D),Pittsburgh Penguins,21,1,1,2,0.10,17,-12,https://www.eliteprospects.com/player/8477/mike-wilson,2001-2002,nhl,Mike Wilson,D,DEF
+Mike Wilson (D),Pittsburgh Penguins,21,1,1,2,0.1,17,-12,https://www.eliteprospects.com/player/8477/mike-wilson,2001-2002,nhl,Mike Wilson,D,DEF
 Bryan Muir (D),Colorado Avalanche,22,1,1,2,0.09,9,1,https://www.eliteprospects.com/player/4317/bryan-muir,2001-2002,nhl,Bryan Muir,D,DEF
 Stu Grimson (LW),Nashville Predators,30,1,1,2,0.07,76,0,https://www.eliteprospects.com/player/43441/stu-grimson,2001-2002,nhl,Stu Grimson,LW,FW
 Shane Hnidy (D),Ottawa Senators,33,1,1,2,0.06,57,-10,https://www.eliteprospects.com/player/8560/shane-hnidy,2001-2002,nhl,Shane Hnidy,D,DEF
@@ -697,8 +697,8 @@ Rick Tocchet (RW),Philadelphia Flyers,14,0,2,2,0.14,28,-2,https://www.eliteprosp
 Gord Murphy (D),Boston Bruins,15,0,2,2,0.13,13,2,https://www.eliteprospects.com/player/67359/gord-murphy,2001-2002,nhl,Gord Murphy,D,DEF
 Yevgeni Korolyov (D),New York Islanders,17,0,2,2,0.12,6,0,https://www.eliteprospects.com/player/18742/yevgeni-korolyov,2001-2002,nhl,Yevgeni Korolyov,D,DEF
 Shawn Heins (D),San Jose Sharks,17,0,2,2,0.12,24,1,https://www.eliteprospects.com/player/10827/shawn-heins,2001-2002,nhl,Shawn Heins,D,DEF
-Ken Sutton (D),New York Islanders,21,0,2,2,0.10,8,-5,https://www.eliteprospects.com/player/68049/ken-sutton,2001-2002,nhl,Ken Sutton,D,DEF
-Turner Stevenson (RW),New Jersey Devils,21,0,2,2,0.10,25,-3,https://www.eliteprospects.com/player/25592/turner-stevenson,2001-2002,nhl,Turner Stevenson,RW,FW
+Ken Sutton (D),New York Islanders,21,0,2,2,0.1,8,-5,https://www.eliteprospects.com/player/68049/ken-sutton,2001-2002,nhl,Ken Sutton,D,DEF
+Turner Stevenson (RW),New Jersey Devils,21,0,2,2,0.1,25,-3,https://www.eliteprospects.com/player/25592/turner-stevenson,2001-2002,nhl,Turner Stevenson,RW,FW
 John Emmons (C),Boston Bruins,22,0,2,2,0.09,16,-4,https://www.eliteprospects.com/player/52897/john-emmons,2001-2002,nhl,John Emmons,C,FW
 Brad Norton (D),Florida Panthers,22,0,2,2,0.09,45,-2,https://www.eliteprospects.com/player/8479/brad-norton,2001-2002,nhl,Brad Norton,D,DEF
 Branislav Mezei (D),New York Islanders,24,0,2,2,0.08,12,2,https://www.eliteprospects.com/player/8653/branislav-mezei,2001-2002,nhl,Branislav Mezei,D,DEF
@@ -712,7 +712,7 @@ Dave Manson (D),totals,47,0,2,2,0.04,33,2,https://www.eliteprospects.com/player/
 Krzysztof Oliwa (LW),Pittsburgh Penguins,57,0,2,2,0.04,150,-5,https://www.eliteprospects.com/player/2660/krzysztof-oliwa,2001-2002,nhl,Krzysztof Oliwa,LW,FW
 Cale Hulse (D),Nashville Predators,63,0,2,2,0.03,121,-18,https://www.eliteprospects.com/player/9059/cale-hulse,2001-2002,nhl,Cale Hulse,D,DEF
 Rick Berry (D),totals,70,0,2,2,0.03,81,-3,https://www.eliteprospects.com/player/11494/rick-berry,2001-2002,nhl,Rick Berry,D,DEF
-Derrick Walser (D),Columbus Blue Jackets,2,1,0,1,0.50,0,-2,https://www.eliteprospects.com/player/10663/derrick-walser,2001-2002,nhl,Derrick Walser,D,DEF
+Derrick Walser (D),Columbus Blue Jackets,2,1,0,1,0.5,0,-2,https://www.eliteprospects.com/player/10663/derrick-walser,2001-2002,nhl,Derrick Walser,D,DEF
 Tomas Divisek (C),Philadelphia Flyers,3,1,0,1,0.33,0,1,https://www.eliteprospects.com/player/9627/tomas-divisek,2001-2002,nhl,Tomas Divisek,C,FW
 Jason Chimera (LW/RW),Edmonton Oilers,3,1,0,1,0.33,0,-3,https://www.eliteprospects.com/player/8762/jason-chimera,2001-2002,nhl,Jason Chimera,LW/RW,FW
 Martin Spanhel (LW),Columbus Blue Jackets,4,1,0,1,0.25,2,-2,https://www.eliteprospects.com/player/3576/martin-spanhel,2001-2002,nhl,Martin Spanhel,LW,FW
@@ -726,23 +726,23 @@ Nolan Yonkman (D),Washington Capitals,11,1,0,1,0.09,4,3,https://www.eliteprospec
 Steve Martins (C),Ottawa Senators,14,1,0,1,0.07,4,1,https://www.eliteprospects.com/player/8968/steve-martins,2001-2002,nhl,Steve Martins,C,FW
 Aaron Downey (RW),Chicago Blackhawks,36,1,0,1,0.03,76,-2,https://www.eliteprospects.com/player/9139/aaron-downey,2001-2002,nhl,Aaron Downey,RW,FW
 Joey Tetarenko (RW),Florida Panthers,38,1,0,1,0.03,123,-5,https://www.eliteprospects.com/player/68941/joey-tetarenko,2001-2002,nhl,Joey Tetarenko,RW,FW
-Jeff Daw (C),Colorado Avalanche,1,0,1,1,1.00,0,0,https://www.eliteprospects.com/player/69477/jeff-daw,2001-2002,nhl,Jeff Daw,C,FW
-Chris Ferraro (C),Washington Capitals,1,0,1,1,1.00,0,0,https://www.eliteprospects.com/player/4397/chris-ferraro,2001-2002,nhl,Chris Ferraro,C,FW
-Ivan Huml (W/C),Boston Bruins,1,0,1,1,1.00,0,2,https://www.eliteprospects.com/player/7605/ivan-huml,2001-2002,nhl,Ivan Huml,W/C,FW
-Adam Hall (RW),Nashville Predators,1,0,1,1,1.00,0,0,https://www.eliteprospects.com/player/8724/adam-hall,2001-2002,nhl,Adam Hall,RW,FW
-Joël Bouchard (D),New Jersey Devils,1,0,1,1,1.00,0,1,https://www.eliteprospects.com/player/9085/joel-bouchard,2001-2002,nhl,Joël Bouchard,D,DEF
-Pyotr Schastlivy (C),Ottawa Senators,1,0,1,1,1.00,0,1,https://www.eliteprospects.com/player/12245/pyotr-schastlivy,2001-2002,nhl,Pyotr Schastlivy,C,FW
-Éric Landry (C),Montréal Canadiens,2,0,1,1,0.50,0,2,https://www.eliteprospects.com/player/10821/eric-landry,2001-2002,nhl,Éric Landry,C,FW
-Blake Bellefeuille (C),Columbus Blue Jackets,2,0,1,1,0.50,0,1,https://www.eliteprospects.com/player/14466/blake-bellefeuille,2001-2002,nhl,Blake Bellefeuille,C,FW
+Jeff Daw (C),Colorado Avalanche,1,0,1,1,1,0,0,https://www.eliteprospects.com/player/69477/jeff-daw,2001-2002,nhl,Jeff Daw,C,FW
+Chris Ferraro (C),Washington Capitals,1,0,1,1,1,0,0,https://www.eliteprospects.com/player/4397/chris-ferraro,2001-2002,nhl,Chris Ferraro,C,FW
+Ivan Huml (W/C),Boston Bruins,1,0,1,1,1,0,2,https://www.eliteprospects.com/player/7605/ivan-huml,2001-2002,nhl,Ivan Huml,W/C,FW
+Adam Hall (RW),Nashville Predators,1,0,1,1,1,0,0,https://www.eliteprospects.com/player/8724/adam-hall,2001-2002,nhl,Adam Hall,RW,FW
+Joël Bouchard (D),New Jersey Devils,1,0,1,1,1,0,1,https://www.eliteprospects.com/player/9085/joel-bouchard,2001-2002,nhl,Joël Bouchard,D,DEF
+Pyotr Schastlivy (C),Ottawa Senators,1,0,1,1,1,0,1,https://www.eliteprospects.com/player/12245/pyotr-schastlivy,2001-2002,nhl,Pyotr Schastlivy,C,FW
+Éric Landry (C),Montréal Canadiens,2,0,1,1,0.5,0,2,https://www.eliteprospects.com/player/10821/eric-landry,2001-2002,nhl,Éric Landry,C,FW
+Blake Bellefeuille (C),Columbus Blue Jackets,2,0,1,1,0.5,0,1,https://www.eliteprospects.com/player/14466/blake-bellefeuille,2001-2002,nhl,Blake Bellefeuille,C,FW
 Steve Kariya (LW),Vancouver Canucks,3,0,1,1,0.33,2,-2,https://www.eliteprospects.com/player/5974/steve-kariya,2001-2002,nhl,Steve Kariya,LW,FW
 Peter Ferraro (RW),Washington Capitals,4,0,1,1,0.25,0,-1,https://www.eliteprospects.com/player/4398/peter-ferraro,2001-2002,nhl,Peter Ferraro,RW,FW
 Matt Henderson (LW),Chicago Blackhawks,4,0,1,1,0.25,0,-1,https://www.eliteprospects.com/player/43811/matt-henderson,2001-2002,nhl,Matt Henderson,LW,FW
 Jason Jaspers (C),Phoenix Coyotes,4,0,1,1,0.25,4,-1,https://www.eliteprospects.com/player/9029/jason-jaspers,2001-2002,nhl,Jason Jaspers,C,FW
 Shane Endicott (C),Pittsburgh Penguins,4,0,1,1,0.25,4,-1,https://www.eliteprospects.com/player/12253/shane-endicott,2001-2002,nhl,Shane Endicott,C,FW
-Norm Milley (RW),Buffalo Sabres,5,0,1,1,0.20,0,0,https://www.eliteprospects.com/player/8981/norm-milley,2001-2002,nhl,Norm Milley,RW,FW
-Steve Bancroft (D),San Jose Sharks,5,0,1,1,0.20,2,-2,https://www.eliteprospects.com/player/54574/steve-bancroft,2001-2002,nhl,Steve Bancroft,D,DEF
-Steven Halko (D),Carolina Hurricanes,5,0,1,1,0.20,6,3,https://www.eliteprospects.com/player/68992/steven-halko,2001-2002,nhl,Steven Halko,D,DEF
-Steve Gainey (LW),Dallas Stars,5,0,1,1,0.20,7,-1,https://www.eliteprospects.com/player/8726/steve-gainey,2001-2002,nhl,Steve Gainey,LW,FW
+Norm Milley (RW),Buffalo Sabres,5,0,1,1,0.2,0,0,https://www.eliteprospects.com/player/8981/norm-milley,2001-2002,nhl,Norm Milley,RW,FW
+Steve Bancroft (D),San Jose Sharks,5,0,1,1,0.2,2,-2,https://www.eliteprospects.com/player/54574/steve-bancroft,2001-2002,nhl,Steve Bancroft,D,DEF
+Steven Halko (D),Carolina Hurricanes,5,0,1,1,0.2,6,3,https://www.eliteprospects.com/player/68992/steven-halko,2001-2002,nhl,Steven Halko,D,DEF
+Steve Gainey (LW),Dallas Stars,5,0,1,1,0.2,7,-1,https://www.eliteprospects.com/player/8726/steve-gainey,2001-2002,nhl,Steve Gainey,LW,FW
 Chris Bala (LW),Ottawa Senators,6,0,1,1,0.17,0,1,https://www.eliteprospects.com/player/15317/chris-bala,2001-2002,nhl,Chris Bala,LW,FW
 Steve Kelly (C),Los Angeles Kings,8,0,1,1,0.13,2,-1,https://www.eliteprospects.com/player/7115/steve-kelly,2001-2002,nhl,Steve Kelly,C,FW
 Peter Smrek (D),New York Rangers,8,0,1,1,0.13,4,-7,https://www.eliteprospects.com/player/5869/peter-smrek,2001-2002,nhl,Peter Smrek,D,DEF
@@ -752,7 +752,7 @@ Christian Laflamme (D),St. Louis Blues,8,0,1,1,0.13,4,3,https://www.eliteprospec
 Chris Corrinet (F),Washington Capitals,8,0,1,1,0.13,6,-4,https://www.eliteprospects.com/player/51342/chris-corrinet,2001-2002,nhl,Chris Corrinet,F,FW
 Uwe Krupp (D),Detroit Red Wings,8,0,1,1,0.13,8,-1,https://www.eliteprospects.com/player/21349/uwe-krupp,2001-2002,nhl,Uwe Krupp,D,DEF
 Niko Kapanen (C),Dallas Stars,9,0,1,1,0.11,2,-1,https://www.eliteprospects.com/player/2688/niko-kapanen,2001-2002,nhl,Niko Kapanen,C,FW
-Toni Dahlman (RW),Ottawa Senators,10,0,1,1,0.10,0,-1,https://www.eliteprospects.com/player/2665/toni-dahlman,2001-2002,nhl,Toni Dahlman,RW,FW
+Toni Dahlman (RW),Ottawa Senators,10,0,1,1,0.1,0,-1,https://www.eliteprospects.com/player/2665/toni-dahlman,2001-2002,nhl,Toni Dahlman,RW,FW
 Raffi Torres (LW),New York Islanders,14,0,1,1,0.07,6,2,https://www.eliteprospects.com/player/8857/raffi-torres,2001-2002,nhl,Raffi Torres,LW,FW
 Jesse Wallin (D),Detroit Red Wings,15,0,1,1,0.07,13,-1,https://www.eliteprospects.com/player/29021/jesse-wallin,2001-2002,nhl,Jesse Wallin,D,DEF
 Mike Weaver (D),Atlanta Thrashers,16,0,1,1,0.06,10,0,https://www.eliteprospects.com/player/8814/mike-weaver,2001-2002,nhl,Mike Weaver,D,DEF
@@ -763,116 +763,116 @@ Trent Whitfield (C),totals,25,0,1,1,0.04,28,-2,https://www.eliteprospects.com/pl
 Craig Adams (RW),Carolina Hurricanes,33,0,1,1,0.03,38,2,https://www.eliteprospects.com/player/8756/craig-adams,2001-2002,nhl,Craig Adams,RW,FW
 John Erskine (D),Dallas Stars,33,0,1,1,0.03,62,-8,https://www.eliteprospects.com/player/9148/john-erskine,2001-2002,nhl,John Erskine,D,DEF
 Mike Commodore (D),New Jersey Devils,37,0,1,1,0.03,30,-12,https://www.eliteprospects.com/player/9119/mike-commodore,2001-2002,nhl,Mike Commodore,D,DEF
-Peter Forsberg (C),Colorado Avalanche,0,0,0,0,0.00,0,-,https://www.eliteprospects.com/player/710/peter-forsberg,2001-2002,nhl,Peter Forsberg,C,FW
-Don MacLean (LW),Toronto Maple Leafs,0,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/8953/don-maclean,2001-2002,nhl,Don MacLean,LW,FW
-Trent Hunter (RW),New York Islanders,0,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/5215/trent-hunter,2001-2002,nhl,Trent Hunter,RW,FW
-Dave Roche (LW),New York Islanders,1,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/68678/dave-roche,2001-2002,nhl,Dave Roche,LW,FW
-Mike Mottau (D),New York Rangers,1,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/13951/mike-mottau,2001-2002,nhl,Mike Mottau,D,DEF
-John Slaney (D),Philadelphia Flyers,1,0,0,0,0.00,0,2,https://www.eliteprospects.com/player/13524/john-slaney,2001-2002,nhl,John Slaney,D,DEF
-Yves Sarault (LW),Nashville Predators,1,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/12584/yves-sarault,2001-2002,nhl,Yves Sarault,LW,FW
-Bob Wren (C),Toronto Maple Leafs,1,0,0,0,0.00,0,1,https://www.eliteprospects.com/player/11576/bob-wren,2001-2002,nhl,Bob Wren,C,FW
-Vaclav Pletka (LW),Philadelphia Flyers,1,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/10855/vaclav-pletka,2001-2002,nhl,Vaclav Pletka,LW,FW
-Justin Papineau (C/LW),St. Louis Blues,1,0,0,0,0.00,0,-2,https://www.eliteprospects.com/player/10313/justin-papineau,2001-2002,nhl,Justin Papineau,C/LW,FW
-Barret Jackman (D),St. Louis Blues,1,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/9025/barret-jackman,2001-2002,nhl,Barret Jackman,D,DEF
-Chris Kelleher (D),Boston Bruins,1,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/8159/chris-kelleher,2001-2002,nhl,Chris Kelleher,D,DEF
-Jason Dawe (LW),New York Rangers,1,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/3731/jason-dawe,2001-2002,nhl,Jason Dawe,LW,FW
-Drew Bannister (D),Mighty Ducks of Anaheim,1,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/3727/drew-bannister,2001-2002,nhl,Drew Bannister,D,DEF
-Marko Tuomainen (RW),New York Islanders,1,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/2712/marko-tuomainen,2001-2002,nhl,Marko Tuomainen,RW,FW
-Martti Järventie (D),Montréal Canadiens,1,0,0,0,0.00,0,2,https://www.eliteprospects.com/player/2701/martti-jarventie,2001-2002,nhl,Martti Järventie,D,DEF
-Jani Rita (LW/RW),Edmonton Oilers,1,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/2676/jani-rita,2001-2002,nhl,Jani Rita,LW/RW,FW
-Antti-Jussi Niemi (D),Mighty Ducks of Anaheim,1,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/2569/antti-jussi-niemi,2001-2002,nhl,Antti-Jussi Niemi,D,DEF
-Robert Schnabel (D),Nashville Predators,1,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/1934/robert-schnabel,2001-2002,nhl,Robert Schnabel,D,DEF
-Jiri Bicek (LW/RW),New Jersey Devils,1,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/5988/jiri-bicek,2001-2002,nhl,Jiri Bicek,LW/RW,FW
-Josh Langfeld (RW),Ottawa Senators,1,0,0,0,0.00,2,0,https://www.eliteprospects.com/player/8985/josh-langfeld,2001-2002,nhl,Josh Langfeld,RW,FW
-Luke Sellars (D),Atlanta Thrashers,1,0,0,0,0.00,2,0,https://www.eliteprospects.com/player/10894/luke-sellars,2001-2002,nhl,Luke Sellars,D,DEF
-Derek MacKenzie (C/LW),Atlanta Thrashers,1,0,0,0,0.00,2,-1,https://www.eliteprospects.com/player/8567/derek-mackenzie,2001-2002,nhl,Derek MacKenzie,C/LW,FW
-Jarrod Skalde (C),Philadelphia Flyers,1,0,0,0,0.00,2,0,https://www.eliteprospects.com/player/6812/jarrod-skalde,2001-2002,nhl,Jarrod Skalde,C,FW
-Kevin Haller (D),New York Islanders,1,0,0,0,0.00,2,-1,https://www.eliteprospects.com/player/54568/kevin-haller,2001-2002,nhl,Kevin Haller,D,DEF
-Jason Podollan (RW),New York Islanders,1,0,0,0,0.00,2,0,https://www.eliteprospects.com/player/29025/jason-podollan,2001-2002,nhl,Jason Podollan,RW,FW
-Henrik Tallinder (D),Buffalo Sabres,2,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/1955/henrik-tallinder,2001-2002,nhl,Henrik Tallinder,D,DEF
-Kristian Kudroc (D),Tampa Bay Lightning,2,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/5527/kristian-kudroc,2001-2002,nhl,Kristian Kudroc,D,DEF
-Tony Tuzzolino (RW),Boston Bruins,2,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/7283/tony-tuzzolino,2001-2002,nhl,Tony Tuzzolino,RW,FW
-Jason Krog (C),New York Islanders,2,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/7305/jason-krog,2001-2002,nhl,Jason Krog,C,FW
-Brett Clark (D),Atlanta Thrashers,2,0,0,0,0.00,0,-3,https://www.eliteprospects.com/player/9113/brett-clark,2001-2002,nhl,Brett Clark,D,DEF
-Brad Leeb (RW),Vancouver Canucks,2,0,0,0,0.00,0,1,https://www.eliteprospects.com/player/9529/brad-leeb,2001-2002,nhl,Brad Leeb,RW,FW
-Jakub Cutta (D),Washington Capitals,2,0,0,0,0.00,0,-3,https://www.eliteprospects.com/player/9632/jakub-cutta,2001-2002,nhl,Jakub Cutta,D,DEF
-Alexei Tezikov (D),Vancouver Canucks,2,0,0,0,0.00,0,2,https://www.eliteprospects.com/player/13529/alexei-tezikov,2001-2002,nhl,Alexei Tezikov,D,DEF
-Craig Darby (C),Montréal Canadiens,2,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/14735/craig-darby,2001-2002,nhl,Craig Darby,C,FW
-Alan Letang (D),Calgary Flames,2,0,0,0,0.00,0,-2,https://www.eliteprospects.com/player/19450/alan-letang,2001-2002,nhl,Alan Letang,D,DEF
-Ryan Christie (LW),Calgary Flames,2,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/58855/ryan-christie,2001-2002,nhl,Ryan Christie,LW,FW
-Mike Craig (RW),San Jose Sharks,2,0,0,0,0.00,2,0,https://www.eliteprospects.com/player/11579/mike-craig,2001-2002,nhl,Mike Craig,RW,FW
-Ales Pisa (D),Edmonton Oilers,2,0,0,0,0.00,2,0,https://www.eliteprospects.com/player/10860/ales-pisa,2001-2002,nhl,Ales Pisa,D,DEF
-Mark Hartigan (C),Atlanta Thrashers,2,0,0,0,0.00,2,-2,https://www.eliteprospects.com/player/10234/mark-hartigan,2001-2002,nhl,Mark Hartigan,C,FW
-Greg Hawgood (D),Dallas Stars,2,0,0,0,0.00,2,0,https://www.eliteprospects.com/player/8489/greg-hawgood,2001-2002,nhl,Greg Hawgood,D,DEF
-Micki DuPont (D),Calgary Flames,2,0,0,0,0.00,2,0,https://www.eliteprospects.com/player/8062/micki-dupont,2001-2002,nhl,Micki DuPont,D,DEF
-Ric Jackman (D),Boston Bruins,2,0,0,0,0.00,2,-1,https://www.eliteprospects.com/player/4485/ric-jackman,2001-2002,nhl,Ric Jackman,D,DEF
-Patrick Boileau (D),Washington Capitals,2,0,0,0,0.00,2,-1,https://www.eliteprospects.com/player/17841/patrick-boileau,2001-2002,nhl,Patrick Boileau,D,DEF
-Ray Giroux (D),New York Islanders,2,0,0,0,0.00,2,-1,https://www.eliteprospects.com/player/12229/ray-giroux,2001-2002,nhl,Ray Giroux,D,DEF
-Kyle Rossiter (D),Florida Panthers,2,0,0,0,0.00,2,-1,https://www.eliteprospects.com/player/6559/kyle-rossiter,2001-2002,nhl,Kyle Rossiter,D,DEF
-Ray Schultz (D),New York Islanders,2,0,0,0,0.00,5,-1,https://www.eliteprospects.com/player/69930/ray-schultz,2001-2002,nhl,Ray Schultz,D,DEF
-Nikos Tselios (D),Carolina Hurricanes,2,0,0,0,0.00,6,-2,https://www.eliteprospects.com/player/7310/nikos-tselios,2001-2002,nhl,Nikos Tselios,D,DEF
-Brad Moran (C),Columbus Blue Jackets,3,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/11030/brad-moran,2001-2002,nhl,Brad Moran,C,FW
-Matt Herr (C),Florida Panthers,3,0,0,0,0.00,0,-2,https://www.eliteprospects.com/player/67427/matt-herr,2001-2002,nhl,Matt Herr,C,FW
-Casey Hankinson (LW),Chicago Blackhawks,3,0,0,0,0.00,0,-2,https://www.eliteprospects.com/player/67106/casey-hankinson,2001-2002,nhl,Casey Hankinson,LW,FW
-Jason Holland (D),Los Angeles Kings,3,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/12765/jason-holland,2001-2002,nhl,Jason Holland,D,DEF
-Eric Manlow (LW),Boston Bruins,3,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/12485/eric-manlow,2001-2002,nhl,Eric Manlow,LW,FW
-Guillaume Lefebvre (LW),Philadelphia Flyers,3,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/12252/guillaume-lefebvre,2001-2002,nhl,Guillaume Lefebvre,LW,FW
-Nathan Dempsey (D),Toronto Maple Leafs,3,0,0,0,0.00,0,1,https://www.eliteprospects.com/player/8741/nathan-dempsey,2001-2002,nhl,Nathan Dempsey,D,DEF
-Oleg Saprykin (LW),Calgary Flames,3,0,0,0,0.00,0,-2,https://www.eliteprospects.com/player/8589/oleg-saprykin,2001-2002,nhl,Oleg Saprykin,LW,FW
-Jaroslav Obsut (D),Colorado Avalanche,3,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/3736/jaroslav-obsut,2001-2002,nhl,Jaroslav Obsut,D,DEF
-Mike Matteucci (D),Minnesota Wild,3,0,0,0,0.00,2,1,https://www.eliteprospects.com/player/69754/mike-matteucci,2001-2002,nhl,Mike Matteucci,D,DEF
-Jean-Guy Trudel (LW/RW),Phoenix Coyotes,3,0,0,0,0.00,2,0,https://www.eliteprospects.com/player/10649/jean-guy-trudel,2001-2002,nhl,Jean-Guy Trudel,LW/RW,FW
-Kirill Safronov (D),totals,3,0,0,0,0.00,2,-5,https://www.eliteprospects.com/player/9557/kirill-safronov,2001-2002,nhl,Kirill Safronov,D,DEF
-Steve McCarthy (D),Chicago Blackhawks,3,0,0,0,0.00,2,-1,https://www.eliteprospects.com/player/8568/steve-mccarthy,2001-2002,nhl,Steve McCarthy,D,DEF
-Pavel Skrbek (D),Nashville Predators,3,0,0,0,0.00,2,-2,https://www.eliteprospects.com/player/506/pavel-skrbek,2001-2002,nhl,Pavel Skrbek,D,DEF
-Gaétan Royer (RW),Tampa Bay Lightning,3,0,0,0,0.00,2,-1,https://www.eliteprospects.com/player/17943/gaetan-royer,2001-2002,nhl,Gaétan Royer,RW,FW
-Dallas Eakins (D),Calgary Flames,3,0,0,0,0.00,4,1,https://www.eliteprospects.com/player/47269/dallas-eakins,2001-2002,nhl,Dallas Eakins,D,DEF
-David Gosselin (LW),Nashville Predators,3,0,0,0,0.00,5,-1,https://www.eliteprospects.com/player/14737/david-gosselin,2001-2002,nhl,David Gosselin,LW,FW
-Jesse Boulerice (RW),Philadelphia Flyers,3,0,0,0,0.00,5,-1,https://www.eliteprospects.com/player/9088/jesse-boulerice,2001-2002,nhl,Jesse Boulerice,RW,FW
-Brett Hauer (D),Nashville Predators,3,0,0,0,0.00,6,-3,https://www.eliteprospects.com/player/1613/brett-hauer,2001-2002,nhl,Brett Hauer,D,DEF
-Duvie Westcott (D),Columbus Blue Jackets,4,0,0,0,0.00,2,-2,https://www.eliteprospects.com/player/8714/duvie-westcott,2001-2002,nhl,Duvie Westcott,D,DEF
-Travis Roche (D),Minnesota Wild,4,0,0,0,0.00,2,-1,https://www.eliteprospects.com/player/10399/travis-roche,2001-2002,nhl,Travis Roche,D,DEF
-Rich Brennan (D),Nashville Predators,4,0,0,0,0.00,2,0,https://www.eliteprospects.com/player/13637/rich-brennan,2001-2002,nhl,Rich Brennan,D,DEF
-Dean Melanson (D),Washington Capitals,4,0,0,0,0.00,4,1,https://www.eliteprospects.com/player/13356/dean-melanson,2001-2002,nhl,Dean Melanson,D,DEF
-Ladislav Kohn (RW),Detroit Red Wings,4,0,0,0,0.00,4,0,https://www.eliteprospects.com/player/3573/ladislav-kohn,2001-2002,nhl,Ladislav Kohn,RW,FW
-Ryan Tobler (LW),Tampa Bay Lightning,4,0,0,0,0.00,5,-2,https://www.eliteprospects.com/player/24650/ryan-tobler,2001-2002,nhl,Ryan Tobler,LW,FW
-David Morisset (RW),Florida Panthers,4,0,0,0,0.00,5,-7,https://www.eliteprospects.com/player/29020/david-morisset,2001-2002,nhl,David Morisset,RW,FW
-Jeremy Stevenson (LW),Nashville Predators,4,0,0,0,0.00,9,0,https://www.eliteprospects.com/player/12904/jeremy-stevenson,2001-2002,nhl,Jeremy Stevenson,LW,FW
-Kip Brennan (LW),Los Angeles Kings,4,0,0,0,0.00,22,1,https://www.eliteprospects.com/player/9683/kip-brennan,2001-2002,nhl,Kip Brennan,LW,FW
-Lukas Krajicek (D),Florida Panthers,5,0,0,0,0.00,0,0,https://www.eliteprospects.com/player/8550/lukas-krajicek,2001-2002,nhl,Lukas Krajicek,D,DEF
-Dmitry Afanasenkov (LW/RW),Tampa Bay Lightning,5,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/8634/dmitry-afanasenkov,2001-2002,nhl,Dmitry Afanasenkov,LW/RW,FW
-Jonas Andersson (RW/LW),Nashville Predators,5,0,0,0,0.00,2,-2,https://www.eliteprospects.com/player/704/jonas-andersson,2001-2002,nhl,Jonas Andersson,RW/LW,FW
-Rory Fitzpatrick (D),Buffalo Sabres,5,0,0,0,0.00,4,-2,https://www.eliteprospects.com/player/9155/rory-fitzpatrick,2001-2002,nhl,Rory Fitzpatrick,D,DEF
-Alexander Kharitonov (LW),New York Islanders,5,0,0,0,0.00,4,-1,https://www.eliteprospects.com/player/12452/alexander-kharitonov,2001-2002,nhl,Alexander Kharitonov,LW,FW
-Ted Donato (LW),totals,5,0,0,0,0.00,4,-5,https://www.eliteprospects.com/player/32184/ted-donato,2001-2002,nhl,Ted Donato,LW,FW
-Richard Scott (LW),New York Rangers,5,0,0,0,0.00,5,0,https://www.eliteprospects.com/player/69973/richard-scott,2001-2002,nhl,Richard Scott,LW,FW
-Martin Grenier (D),Phoenix Coyotes,5,0,0,0,0.00,5,0,https://www.eliteprospects.com/player/10325/martin-grenier,2001-2002,nhl,Martin Grenier,D,DEF
-David Ling (RW/C),Columbus Blue Jackets,5,0,0,0,0.00,7,-1,https://www.eliteprospects.com/player/13407/david-ling,2001-2002,nhl,David Ling,RW/C,FW
-Aris Brimanis (D),Mighty Ducks of Anaheim,5,0,0,0,0.00,9,-1,https://www.eliteprospects.com/player/10830/aris-brimanis,2001-2002,nhl,Aris Brimanis,D,DEF
-Francis Lessard (RW),Atlanta Thrashers,5,0,0,0,0.00,26,0,https://www.eliteprospects.com/player/9688/francis-lessard,2001-2002,nhl,Francis Lessard,RW,FW
-Hannes Hyvönen (RW),San Jose Sharks,6,0,0,0,0.00,0,-2,https://www.eliteprospects.com/player/2093/hannes-hyvonen,2001-2002,nhl,Hannes Hyvönen,RW,FW
-Ben Simon (C),Atlanta Thrashers,6,0,0,0,0.00,6,1,https://www.eliteprospects.com/player/11760/ben-simon,2001-2002,nhl,Ben Simon,C,FW
-Rocky Thompson (D/RW),Florida Panthers,6,0,0,0,0.00,12,0,https://www.eliteprospects.com/player/68809/rocky-thompson,2001-2002,nhl,Rocky Thompson,D/RW,DEF
-Brian Sutherby (C),Washington Capitals,7,0,0,0,0.00,2,-3,https://www.eliteprospects.com/player/8898/brian-sutherby,2001-2002,nhl,Brian Sutherby,C,FW
-Bruno St-Jacques (D),Philadelphia Flyers,7,0,0,0,0.00,2,4,https://www.eliteprospects.com/player/9386/bruno-st-jacques,2001-2002,nhl,Bruno St-Jacques,D,DEF
-Tyler Bouck (LW),Phoenix Coyotes,7,0,0,0,0.00,4,-1,https://www.eliteprospects.com/player/8717/tyler-bouck,2001-2002,nhl,Tyler Bouck,LW,FW
-Mike Farrell (D/RW),Washington Capitals,8,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/69860/mike-farrell,2001-2002,nhl,Mike Farrell,D/RW,DEF
-Steve Moore (C),Colorado Avalanche,8,0,0,0,0.00,0,-4,https://www.eliteprospects.com/player/42057/steve-moore,2001-2002,nhl,Steve Moore,C,FW
-Josh Holden (C),Carolina Hurricanes,8,0,0,0,0.00,2,0,https://www.eliteprospects.com/player/10825/josh-holden,2001-2002,nhl,Josh Holden,C,FW
-Dan Focht (D),Phoenix Coyotes,8,0,0,0,0.00,11,0,https://www.eliteprospects.com/player/70004/dan-focht,2001-2002,nhl,Dan Focht,D,DEF
-Rico Fata (C),New York Rangers,10,0,0,0,0.00,0,-2,https://www.eliteprospects.com/player/8755/rico-fata,2001-2002,nhl,Rico Fata,C,FW
-Wyatt Smith (C),Phoenix Coyotes,10,0,0,0,0.00,0,-5,https://www.eliteprospects.com/player/8885/wyatt-smith,2001-2002,nhl,Wyatt Smith,C,FW
-Barrett Heisten (LW),New York Rangers,10,0,0,0,0.00,2,-4,https://www.eliteprospects.com/player/9454/barrett-heisten,2001-2002,nhl,Barrett Heisten,LW,FW
-Ryan Flinn (LW),Los Angeles Kings,10,0,0,0,0.00,51,0,https://www.eliteprospects.com/player/11475/ryan-flinn,2001-2002,nhl,Ryan Flinn,LW,FW
-Sascha Goc (D),totals,11,0,0,0,0.00,4,0,https://www.eliteprospects.com/player/10699/sascha-goc,2001-2002,nhl,Sascha Goc,D,DEF
-Bryan Allen (D),Vancouver Canucks,11,0,0,0,0.00,6,1,https://www.eliteprospects.com/player/8767/bryan-allen,2001-2002,nhl,Bryan Allen,D,DEF
-Joel Kwiatkowski (D),Ottawa Senators,11,0,0,0,0.00,12,5,https://www.eliteprospects.com/player/9024/joel-kwiatkowski,2001-2002,nhl,Joel Kwiatkowski,D,DEF
-Jim Cummins (RW),totals,12,0,0,0,0.00,31,-6,https://www.eliteprospects.com/player/20596/jim-cummins,2001-2002,nhl,Jim Cummins,RW,FW
-Pavel Kolarik (D),Boston Bruins,13,0,0,0,0.00,6,0,https://www.eliteprospects.com/player/18317/pavel-kolarik,2001-2002,nhl,Pavel Kolarik,D,DEF
-Sven Butenschön (D),Edmonton Oilers,14,0,0,0,0.00,4,0,https://www.eliteprospects.com/player/8740/sven-butenschon,2001-2002,nhl,Sven Butenschön,D,DEF
-Nick Smith (C),Florida Panthers,15,0,0,0,0.00,0,-1,https://www.eliteprospects.com/player/69539/nick-smith,2001-2002,nhl,Nick Smith,C,FW
-Marc Moro (D),totals,15,0,0,0,0.00,25,-3,https://www.eliteprospects.com/player/11821/marc-moro,2001-2002,nhl,Marc Moro,D,DEF
-Mike Brown (LW),Vancouver Canucks,15,0,0,0,0.00,72,1,https://www.eliteprospects.com/player/41108/mike-brown,2001-2002,nhl,Mike Brown,LW,FW
-David Cullen (D),totals,17,0,0,0,0.00,6,-8,https://www.eliteprospects.com/player/12772/david-cullen,2001-2002,nhl,David Cullen,D,DEF
-Mathieu Biron (D),Tampa Bay Lightning,36,0,0,0,0.00,12,-16,https://www.eliteprospects.com/player/9083/mathieu-biron,2001-2002,nhl,Mathieu Biron,D,DEF
-Sami Helenius (D),Dallas Stars,39,0,0,0,0.00,58,-4,https://www.eliteprospects.com/player/2663/sami-helenius,2001-2002,nhl,Sami Helenius,D,DEF
+Peter Forsberg (C),Colorado Avalanche,0,0,0,0,0,0,-,https://www.eliteprospects.com/player/710/peter-forsberg,2001-2002,nhl,Peter Forsberg,C,FW
+Don MacLean (LW),Toronto Maple Leafs,0,0,0,0,0,0,0,https://www.eliteprospects.com/player/8953/don-maclean,2001-2002,nhl,Don MacLean,LW,FW
+Trent Hunter (RW),New York Islanders,0,0,0,0,0,0,0,https://www.eliteprospects.com/player/5215/trent-hunter,2001-2002,nhl,Trent Hunter,RW,FW
+Dave Roche (LW),New York Islanders,1,0,0,0,0,0,0,https://www.eliteprospects.com/player/68678/dave-roche,2001-2002,nhl,Dave Roche,LW,FW
+Mike Mottau (D),New York Rangers,1,0,0,0,0,0,0,https://www.eliteprospects.com/player/13951/mike-mottau,2001-2002,nhl,Mike Mottau,D,DEF
+John Slaney (D),Philadelphia Flyers,1,0,0,0,0,0,2,https://www.eliteprospects.com/player/13524/john-slaney,2001-2002,nhl,John Slaney,D,DEF
+Yves Sarault (LW),Nashville Predators,1,0,0,0,0,0,0,https://www.eliteprospects.com/player/12584/yves-sarault,2001-2002,nhl,Yves Sarault,LW,FW
+Bob Wren (C),Toronto Maple Leafs,1,0,0,0,0,0,1,https://www.eliteprospects.com/player/11576/bob-wren,2001-2002,nhl,Bob Wren,C,FW
+Vaclav Pletka (LW),Philadelphia Flyers,1,0,0,0,0,0,0,https://www.eliteprospects.com/player/10855/vaclav-pletka,2001-2002,nhl,Vaclav Pletka,LW,FW
+Justin Papineau (C/LW),St. Louis Blues,1,0,0,0,0,0,-2,https://www.eliteprospects.com/player/10313/justin-papineau,2001-2002,nhl,Justin Papineau,C/LW,FW
+Barret Jackman (D),St. Louis Blues,1,0,0,0,0,0,0,https://www.eliteprospects.com/player/9025/barret-jackman,2001-2002,nhl,Barret Jackman,D,DEF
+Chris Kelleher (D),Boston Bruins,1,0,0,0,0,0,0,https://www.eliteprospects.com/player/8159/chris-kelleher,2001-2002,nhl,Chris Kelleher,D,DEF
+Jason Dawe (LW),New York Rangers,1,0,0,0,0,0,-1,https://www.eliteprospects.com/player/3731/jason-dawe,2001-2002,nhl,Jason Dawe,LW,FW
+Drew Bannister (D),Mighty Ducks of Anaheim,1,0,0,0,0,0,0,https://www.eliteprospects.com/player/3727/drew-bannister,2001-2002,nhl,Drew Bannister,D,DEF
+Marko Tuomainen (RW),New York Islanders,1,0,0,0,0,0,-1,https://www.eliteprospects.com/player/2712/marko-tuomainen,2001-2002,nhl,Marko Tuomainen,RW,FW
+Martti Järventie (D),Montréal Canadiens,1,0,0,0,0,0,2,https://www.eliteprospects.com/player/2701/martti-jarventie,2001-2002,nhl,Martti Järventie,D,DEF
+Jani Rita (LW/RW),Edmonton Oilers,1,0,0,0,0,0,0,https://www.eliteprospects.com/player/2676/jani-rita,2001-2002,nhl,Jani Rita,LW/RW,FW
+Antti-Jussi Niemi (D),Mighty Ducks of Anaheim,1,0,0,0,0,0,-1,https://www.eliteprospects.com/player/2569/antti-jussi-niemi,2001-2002,nhl,Antti-Jussi Niemi,D,DEF
+Robert Schnabel (D),Nashville Predators,1,0,0,0,0,0,0,https://www.eliteprospects.com/player/1934/robert-schnabel,2001-2002,nhl,Robert Schnabel,D,DEF
+Jiri Bicek (LW/RW),New Jersey Devils,1,0,0,0,0,0,-1,https://www.eliteprospects.com/player/5988/jiri-bicek,2001-2002,nhl,Jiri Bicek,LW/RW,FW
+Josh Langfeld (RW),Ottawa Senators,1,0,0,0,0,2,0,https://www.eliteprospects.com/player/8985/josh-langfeld,2001-2002,nhl,Josh Langfeld,RW,FW
+Luke Sellars (D),Atlanta Thrashers,1,0,0,0,0,2,0,https://www.eliteprospects.com/player/10894/luke-sellars,2001-2002,nhl,Luke Sellars,D,DEF
+Derek MacKenzie (C/LW),Atlanta Thrashers,1,0,0,0,0,2,-1,https://www.eliteprospects.com/player/8567/derek-mackenzie,2001-2002,nhl,Derek MacKenzie,C/LW,FW
+Jarrod Skalde (C),Philadelphia Flyers,1,0,0,0,0,2,0,https://www.eliteprospects.com/player/6812/jarrod-skalde,2001-2002,nhl,Jarrod Skalde,C,FW
+Kevin Haller (D),New York Islanders,1,0,0,0,0,2,-1,https://www.eliteprospects.com/player/54568/kevin-haller,2001-2002,nhl,Kevin Haller,D,DEF
+Jason Podollan (RW),New York Islanders,1,0,0,0,0,2,0,https://www.eliteprospects.com/player/29025/jason-podollan,2001-2002,nhl,Jason Podollan,RW,FW
+Henrik Tallinder (D),Buffalo Sabres,2,0,0,0,0,0,-1,https://www.eliteprospects.com/player/1955/henrik-tallinder,2001-2002,nhl,Henrik Tallinder,D,DEF
+Kristian Kudroc (D),Tampa Bay Lightning,2,0,0,0,0,0,0,https://www.eliteprospects.com/player/5527/kristian-kudroc,2001-2002,nhl,Kristian Kudroc,D,DEF
+Tony Tuzzolino (RW),Boston Bruins,2,0,0,0,0,0,-1,https://www.eliteprospects.com/player/7283/tony-tuzzolino,2001-2002,nhl,Tony Tuzzolino,RW,FW
+Jason Krog (C),New York Islanders,2,0,0,0,0,0,0,https://www.eliteprospects.com/player/7305/jason-krog,2001-2002,nhl,Jason Krog,C,FW
+Brett Clark (D),Atlanta Thrashers,2,0,0,0,0,0,-3,https://www.eliteprospects.com/player/9113/brett-clark,2001-2002,nhl,Brett Clark,D,DEF
+Brad Leeb (RW),Vancouver Canucks,2,0,0,0,0,0,1,https://www.eliteprospects.com/player/9529/brad-leeb,2001-2002,nhl,Brad Leeb,RW,FW
+Jakub Cutta (D),Washington Capitals,2,0,0,0,0,0,-3,https://www.eliteprospects.com/player/9632/jakub-cutta,2001-2002,nhl,Jakub Cutta,D,DEF
+Alexei Tezikov (D),Vancouver Canucks,2,0,0,0,0,0,2,https://www.eliteprospects.com/player/13529/alexei-tezikov,2001-2002,nhl,Alexei Tezikov,D,DEF
+Craig Darby (C),Montréal Canadiens,2,0,0,0,0,0,0,https://www.eliteprospects.com/player/14735/craig-darby,2001-2002,nhl,Craig Darby,C,FW
+Alan Letang (D),Calgary Flames,2,0,0,0,0,0,-2,https://www.eliteprospects.com/player/19450/alan-letang,2001-2002,nhl,Alan Letang,D,DEF
+Ryan Christie (LW),Calgary Flames,2,0,0,0,0,0,-1,https://www.eliteprospects.com/player/58855/ryan-christie,2001-2002,nhl,Ryan Christie,LW,FW
+Mike Craig (RW),San Jose Sharks,2,0,0,0,0,2,0,https://www.eliteprospects.com/player/11579/mike-craig,2001-2002,nhl,Mike Craig,RW,FW
+Ales Pisa (D),Edmonton Oilers,2,0,0,0,0,2,0,https://www.eliteprospects.com/player/10860/ales-pisa,2001-2002,nhl,Ales Pisa,D,DEF
+Mark Hartigan (C),Atlanta Thrashers,2,0,0,0,0,2,-2,https://www.eliteprospects.com/player/10234/mark-hartigan,2001-2002,nhl,Mark Hartigan,C,FW
+Greg Hawgood (D),Dallas Stars,2,0,0,0,0,2,0,https://www.eliteprospects.com/player/8489/greg-hawgood,2001-2002,nhl,Greg Hawgood,D,DEF
+Micki DuPont (D),Calgary Flames,2,0,0,0,0,2,0,https://www.eliteprospects.com/player/8062/micki-dupont,2001-2002,nhl,Micki DuPont,D,DEF
+Ric Jackman (D),Boston Bruins,2,0,0,0,0,2,-1,https://www.eliteprospects.com/player/4485/ric-jackman,2001-2002,nhl,Ric Jackman,D,DEF
+Patrick Boileau (D),Washington Capitals,2,0,0,0,0,2,-1,https://www.eliteprospects.com/player/17841/patrick-boileau,2001-2002,nhl,Patrick Boileau,D,DEF
+Ray Giroux (D),New York Islanders,2,0,0,0,0,2,-1,https://www.eliteprospects.com/player/12229/ray-giroux,2001-2002,nhl,Ray Giroux,D,DEF
+Kyle Rossiter (D),Florida Panthers,2,0,0,0,0,2,-1,https://www.eliteprospects.com/player/6559/kyle-rossiter,2001-2002,nhl,Kyle Rossiter,D,DEF
+Ray Schultz (D),New York Islanders,2,0,0,0,0,5,-1,https://www.eliteprospects.com/player/69930/ray-schultz,2001-2002,nhl,Ray Schultz,D,DEF
+Nikos Tselios (D),Carolina Hurricanes,2,0,0,0,0,6,-2,https://www.eliteprospects.com/player/7310/nikos-tselios,2001-2002,nhl,Nikos Tselios,D,DEF
+Brad Moran (C),Columbus Blue Jackets,3,0,0,0,0,0,0,https://www.eliteprospects.com/player/11030/brad-moran,2001-2002,nhl,Brad Moran,C,FW
+Matt Herr (C),Florida Panthers,3,0,0,0,0,0,-2,https://www.eliteprospects.com/player/67427/matt-herr,2001-2002,nhl,Matt Herr,C,FW
+Casey Hankinson (LW),Chicago Blackhawks,3,0,0,0,0,0,-2,https://www.eliteprospects.com/player/67106/casey-hankinson,2001-2002,nhl,Casey Hankinson,LW,FW
+Jason Holland (D),Los Angeles Kings,3,0,0,0,0,0,-1,https://www.eliteprospects.com/player/12765/jason-holland,2001-2002,nhl,Jason Holland,D,DEF
+Eric Manlow (LW),Boston Bruins,3,0,0,0,0,0,0,https://www.eliteprospects.com/player/12485/eric-manlow,2001-2002,nhl,Eric Manlow,LW,FW
+Guillaume Lefebvre (LW),Philadelphia Flyers,3,0,0,0,0,0,-1,https://www.eliteprospects.com/player/12252/guillaume-lefebvre,2001-2002,nhl,Guillaume Lefebvre,LW,FW
+Nathan Dempsey (D),Toronto Maple Leafs,3,0,0,0,0,0,1,https://www.eliteprospects.com/player/8741/nathan-dempsey,2001-2002,nhl,Nathan Dempsey,D,DEF
+Oleg Saprykin (LW),Calgary Flames,3,0,0,0,0,0,-2,https://www.eliteprospects.com/player/8589/oleg-saprykin,2001-2002,nhl,Oleg Saprykin,LW,FW
+Jaroslav Obsut (D),Colorado Avalanche,3,0,0,0,0,0,0,https://www.eliteprospects.com/player/3736/jaroslav-obsut,2001-2002,nhl,Jaroslav Obsut,D,DEF
+Mike Matteucci (D),Minnesota Wild,3,0,0,0,0,2,1,https://www.eliteprospects.com/player/69754/mike-matteucci,2001-2002,nhl,Mike Matteucci,D,DEF
+Jean-Guy Trudel (LW/RW),Phoenix Coyotes,3,0,0,0,0,2,0,https://www.eliteprospects.com/player/10649/jean-guy-trudel,2001-2002,nhl,Jean-Guy Trudel,LW/RW,FW
+Kirill Safronov (D),totals,3,0,0,0,0,2,-5,https://www.eliteprospects.com/player/9557/kirill-safronov,2001-2002,nhl,Kirill Safronov,D,DEF
+Steve McCarthy (D),Chicago Blackhawks,3,0,0,0,0,2,-1,https://www.eliteprospects.com/player/8568/steve-mccarthy,2001-2002,nhl,Steve McCarthy,D,DEF
+Pavel Skrbek (D),Nashville Predators,3,0,0,0,0,2,-2,https://www.eliteprospects.com/player/506/pavel-skrbek,2001-2002,nhl,Pavel Skrbek,D,DEF
+Gaétan Royer (RW),Tampa Bay Lightning,3,0,0,0,0,2,-1,https://www.eliteprospects.com/player/17943/gaetan-royer,2001-2002,nhl,Gaétan Royer,RW,FW
+Dallas Eakins (D),Calgary Flames,3,0,0,0,0,4,1,https://www.eliteprospects.com/player/47269/dallas-eakins,2001-2002,nhl,Dallas Eakins,D,DEF
+David Gosselin (LW),Nashville Predators,3,0,0,0,0,5,-1,https://www.eliteprospects.com/player/14737/david-gosselin,2001-2002,nhl,David Gosselin,LW,FW
+Jesse Boulerice (RW),Philadelphia Flyers,3,0,0,0,0,5,-1,https://www.eliteprospects.com/player/9088/jesse-boulerice,2001-2002,nhl,Jesse Boulerice,RW,FW
+Brett Hauer (D),Nashville Predators,3,0,0,0,0,6,-3,https://www.eliteprospects.com/player/1613/brett-hauer,2001-2002,nhl,Brett Hauer,D,DEF
+Duvie Westcott (D),Columbus Blue Jackets,4,0,0,0,0,2,-2,https://www.eliteprospects.com/player/8714/duvie-westcott,2001-2002,nhl,Duvie Westcott,D,DEF
+Travis Roche (D),Minnesota Wild,4,0,0,0,0,2,-1,https://www.eliteprospects.com/player/10399/travis-roche,2001-2002,nhl,Travis Roche,D,DEF
+Rich Brennan (D),Nashville Predators,4,0,0,0,0,2,0,https://www.eliteprospects.com/player/13637/rich-brennan,2001-2002,nhl,Rich Brennan,D,DEF
+Dean Melanson (D),Washington Capitals,4,0,0,0,0,4,1,https://www.eliteprospects.com/player/13356/dean-melanson,2001-2002,nhl,Dean Melanson,D,DEF
+Ladislav Kohn (RW),Detroit Red Wings,4,0,0,0,0,4,0,https://www.eliteprospects.com/player/3573/ladislav-kohn,2001-2002,nhl,Ladislav Kohn,RW,FW
+Ryan Tobler (LW),Tampa Bay Lightning,4,0,0,0,0,5,-2,https://www.eliteprospects.com/player/24650/ryan-tobler,2001-2002,nhl,Ryan Tobler,LW,FW
+David Morisset (RW),Florida Panthers,4,0,0,0,0,5,-7,https://www.eliteprospects.com/player/29020/david-morisset,2001-2002,nhl,David Morisset,RW,FW
+Jeremy Stevenson (LW),Nashville Predators,4,0,0,0,0,9,0,https://www.eliteprospects.com/player/12904/jeremy-stevenson,2001-2002,nhl,Jeremy Stevenson,LW,FW
+Kip Brennan (LW),Los Angeles Kings,4,0,0,0,0,22,1,https://www.eliteprospects.com/player/9683/kip-brennan,2001-2002,nhl,Kip Brennan,LW,FW
+Lukas Krajicek (D),Florida Panthers,5,0,0,0,0,0,0,https://www.eliteprospects.com/player/8550/lukas-krajicek,2001-2002,nhl,Lukas Krajicek,D,DEF
+Dmitry Afanasenkov (LW/RW),Tampa Bay Lightning,5,0,0,0,0,0,-1,https://www.eliteprospects.com/player/8634/dmitry-afanasenkov,2001-2002,nhl,Dmitry Afanasenkov,LW/RW,FW
+Jonas Andersson (RW/LW),Nashville Predators,5,0,0,0,0,2,-2,https://www.eliteprospects.com/player/704/jonas-andersson,2001-2002,nhl,Jonas Andersson,RW/LW,FW
+Rory Fitzpatrick (D),Buffalo Sabres,5,0,0,0,0,4,-2,https://www.eliteprospects.com/player/9155/rory-fitzpatrick,2001-2002,nhl,Rory Fitzpatrick,D,DEF
+Alexander Kharitonov (LW),New York Islanders,5,0,0,0,0,4,-1,https://www.eliteprospects.com/player/12452/alexander-kharitonov,2001-2002,nhl,Alexander Kharitonov,LW,FW
+Ted Donato (LW),totals,5,0,0,0,0,4,-5,https://www.eliteprospects.com/player/32184/ted-donato,2001-2002,nhl,Ted Donato,LW,FW
+Richard Scott (LW),New York Rangers,5,0,0,0,0,5,0,https://www.eliteprospects.com/player/69973/richard-scott,2001-2002,nhl,Richard Scott,LW,FW
+Martin Grenier (D),Phoenix Coyotes,5,0,0,0,0,5,0,https://www.eliteprospects.com/player/10325/martin-grenier,2001-2002,nhl,Martin Grenier,D,DEF
+David Ling (RW/C),Columbus Blue Jackets,5,0,0,0,0,7,-1,https://www.eliteprospects.com/player/13407/david-ling,2001-2002,nhl,David Ling,RW/C,FW
+Aris Brimanis (D),Mighty Ducks of Anaheim,5,0,0,0,0,9,-1,https://www.eliteprospects.com/player/10830/aris-brimanis,2001-2002,nhl,Aris Brimanis,D,DEF
+Francis Lessard (RW),Atlanta Thrashers,5,0,0,0,0,26,0,https://www.eliteprospects.com/player/9688/francis-lessard,2001-2002,nhl,Francis Lessard,RW,FW
+Hannes Hyvönen (RW),San Jose Sharks,6,0,0,0,0,0,-2,https://www.eliteprospects.com/player/2093/hannes-hyvonen,2001-2002,nhl,Hannes Hyvönen,RW,FW
+Ben Simon (C),Atlanta Thrashers,6,0,0,0,0,6,1,https://www.eliteprospects.com/player/11760/ben-simon,2001-2002,nhl,Ben Simon,C,FW
+Rocky Thompson (D/RW),Florida Panthers,6,0,0,0,0,12,0,https://www.eliteprospects.com/player/68809/rocky-thompson,2001-2002,nhl,Rocky Thompson,D/RW,DEF
+Brian Sutherby (C),Washington Capitals,7,0,0,0,0,2,-3,https://www.eliteprospects.com/player/8898/brian-sutherby,2001-2002,nhl,Brian Sutherby,C,FW
+Bruno St-Jacques (D),Philadelphia Flyers,7,0,0,0,0,2,4,https://www.eliteprospects.com/player/9386/bruno-st-jacques,2001-2002,nhl,Bruno St-Jacques,D,DEF
+Tyler Bouck (LW),Phoenix Coyotes,7,0,0,0,0,4,-1,https://www.eliteprospects.com/player/8717/tyler-bouck,2001-2002,nhl,Tyler Bouck,LW,FW
+Mike Farrell (D/RW),Washington Capitals,8,0,0,0,0,0,-1,https://www.eliteprospects.com/player/69860/mike-farrell,2001-2002,nhl,Mike Farrell,D/RW,DEF
+Steve Moore (C),Colorado Avalanche,8,0,0,0,0,0,-4,https://www.eliteprospects.com/player/42057/steve-moore,2001-2002,nhl,Steve Moore,C,FW
+Josh Holden (C),Carolina Hurricanes,8,0,0,0,0,2,0,https://www.eliteprospects.com/player/10825/josh-holden,2001-2002,nhl,Josh Holden,C,FW
+Dan Focht (D),Phoenix Coyotes,8,0,0,0,0,11,0,https://www.eliteprospects.com/player/70004/dan-focht,2001-2002,nhl,Dan Focht,D,DEF
+Rico Fata (C),New York Rangers,10,0,0,0,0,0,-2,https://www.eliteprospects.com/player/8755/rico-fata,2001-2002,nhl,Rico Fata,C,FW
+Wyatt Smith (C),Phoenix Coyotes,10,0,0,0,0,0,-5,https://www.eliteprospects.com/player/8885/wyatt-smith,2001-2002,nhl,Wyatt Smith,C,FW
+Barrett Heisten (LW),New York Rangers,10,0,0,0,0,2,-4,https://www.eliteprospects.com/player/9454/barrett-heisten,2001-2002,nhl,Barrett Heisten,LW,FW
+Ryan Flinn (LW),Los Angeles Kings,10,0,0,0,0,51,0,https://www.eliteprospects.com/player/11475/ryan-flinn,2001-2002,nhl,Ryan Flinn,LW,FW
+Sascha Goc (D),totals,11,0,0,0,0,4,0,https://www.eliteprospects.com/player/10699/sascha-goc,2001-2002,nhl,Sascha Goc,D,DEF
+Bryan Allen (D),Vancouver Canucks,11,0,0,0,0,6,1,https://www.eliteprospects.com/player/8767/bryan-allen,2001-2002,nhl,Bryan Allen,D,DEF
+Joel Kwiatkowski (D),Ottawa Senators,11,0,0,0,0,12,5,https://www.eliteprospects.com/player/9024/joel-kwiatkowski,2001-2002,nhl,Joel Kwiatkowski,D,DEF
+Jim Cummins (RW),totals,12,0,0,0,0,31,-6,https://www.eliteprospects.com/player/20596/jim-cummins,2001-2002,nhl,Jim Cummins,RW,FW
+Pavel Kolarik (D),Boston Bruins,13,0,0,0,0,6,0,https://www.eliteprospects.com/player/18317/pavel-kolarik,2001-2002,nhl,Pavel Kolarik,D,DEF
+Sven Butenschön (D),Edmonton Oilers,14,0,0,0,0,4,0,https://www.eliteprospects.com/player/8740/sven-butenschon,2001-2002,nhl,Sven Butenschön,D,DEF
+Nick Smith (C),Florida Panthers,15,0,0,0,0,0,-1,https://www.eliteprospects.com/player/69539/nick-smith,2001-2002,nhl,Nick Smith,C,FW
+Marc Moro (D),totals,15,0,0,0,0,25,-3,https://www.eliteprospects.com/player/11821/marc-moro,2001-2002,nhl,Marc Moro,D,DEF
+Mike Brown (LW),Vancouver Canucks,15,0,0,0,0,72,1,https://www.eliteprospects.com/player/41108/mike-brown,2001-2002,nhl,Mike Brown,LW,FW
+David Cullen (D),totals,17,0,0,0,0,6,-8,https://www.eliteprospects.com/player/12772/david-cullen,2001-2002,nhl,David Cullen,D,DEF
+Mathieu Biron (D),Tampa Bay Lightning,36,0,0,0,0,12,-16,https://www.eliteprospects.com/player/9083/mathieu-biron,2001-2002,nhl,Mathieu Biron,D,DEF
+Sami Helenius (D),Dallas Stars,39,0,0,0,0,58,-4,https://www.eliteprospects.com/player/2663/sami-helenius,2001-2002,nhl,Sami Helenius,D,DEF
