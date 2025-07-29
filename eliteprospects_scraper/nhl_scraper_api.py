@@ -272,22 +272,22 @@ def get_player_by_team_with_reusable_driver(team, season, driver, wait):
     return pd.DataFrame(players)
 
 
+def get_player_stats_with_reusable_driver(player_metadata, driver, wait):
+    """
+        Get player's stats from a player's webpage
+        Parameters:
+            player_metadata (pd.DataFrame): DataFrame with player's metadata
+        Returns:
+            df_stats (pd.DataFrame): DataFrame with all player's stats
+    """
+    # Extract playername and link from player_metadata
+    player_url = player_metadata['player_link_official']
+    player_name = player_metadata['player_name']
 
-# def get_player_stats_with_reusable_driver(player_metadata, driver, wait):
-#     """
-#         Get player's stats from a player's webpage
-#         Parameters:
-#             player_metadata (pd.DataFrame): DataFrame with player's metadata
-#         Returns:
-#             df_stats (pd.DataFrame): DataFrame with all player's stats
-#     """
-#     # Extract playername and link from player_metadata
-#     player_url = player_metadata['player_link']
-#     player_name = player_metadata['player_name']
-#
-#     # Print Collecting Info
-#     print(f"Collecting stats from {player_url}")
-#
-#     # Get the player's career stats
+    # Print Collecting Info
+    print(f"Collecting {player_name}'s stats from {player_url}")
+
+    # Get the player's career stats
+
 
 
