@@ -3,6 +3,7 @@
     1. get_player_by_team(team, season): Allows you to get all players from a specific team and season
     2. get_player_stats(player_metadata): Allows you to get all information from a player's webpage
 """
+from io import StringIO
 
 import numpy as np
 import pandas as pd
@@ -274,20 +275,80 @@ def get_player_by_team_with_reusable_driver(team, season, driver, wait):
 
 def get_player_stats_with_reusable_driver(player_metadata, driver, wait):
     """
-        Get player's stats from a player's webpage
-        Parameters:
-            player_metadata (pd.DataFrame): DataFrame with player's metadata
-        Returns:
-            df_stats (pd.DataFrame): DataFrame with all player's stats
+    Get a player's regular season and playoff stats from their NHL player page.
+
+    Parameters:
+        player_metadata (pd.Series): Series with 'player_name' and 'player_link_official'
+        driver (webdriver): Reusable Selenium driver
+        wait (WebDriverWait): Reusable WebDriverWait object
+
+    Returns:
+        pd.DataFrame: Combined DataFrame with regular and playoff stats
     """
-    # Extract playername and link from player_metadata
+
     player_url = player_metadata['player_link_official']
     player_name = player_metadata['player_name']
+    df_regular, df_playoffs = None, None
 
-    # Print Collecting Info
-    print(f"Collecting {player_name}'s stats from {player_url}")
+    try:
+        print(f"Collecting {player_name}'s stats from {player_url}")
+        driver.get(player_url)
+        time.sleep(random.uniform(1.5, 2.5))
 
-    # Get the player's career stats
+        # ---------- Step 1: Select All Leagues and Scrape Regular Season ----------
+        try:
+            league_dropdown = wait.until(ec.element_to_be_clickable(
+                (By.XPATH, "//input[@id='league-select']/following-sibling::div//button")
+            ))
+
+            print("Successfully located dropdown button")
+
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", league_dropdown)
+            driver.execute_script("arguments[0].click();", league_dropdown)
+
+            print("Successfully clicked dropdown button")
+
+            time.sleep(1)
+
+            all_leagues_option = wait.until(ec.element_to_be_clickable(
+                (By.XPATH, "//li[normalize-space()='All Leagues']")
+            ))
+
+            print("Successfully located all leagues option")
+
+            all_leagues_option.click()
+
+            print("Successfully clicked all leagues option")
+
+            time.sleep(2)
+
+            # Scrape the table
+            soup = BeautifulSoup(driver.page_source, "html.parser")
+            table = soup.find("table", id="career-stats-table")
+
+            # print(table.prettify()[:500])
+
+            if not table:
+                raise ValueError("No regular season stats tables found on page")
+
+            # Convert table to dataframe
+            html_str = str(table)
+            df_regular = pd.read_html(StringIO(html_str))[0]
+
+            # Add player name to the dataframe
+            df_regular.insert(0, "Player", player_name)
+
+            print("Successfully scraped regular season stats")
+
+            return df_regular
+
+        except Exception as e:
+            print(f"Failed to scrape regular season for {player_name}: {e}")
+
+    except Exception as e:
+        print(f"Failed to scrape {player_name} at {player_url}")
+        print("Error:", e)
+        return None
 
 
 
