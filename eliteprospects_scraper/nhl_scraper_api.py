@@ -393,8 +393,6 @@ def get_player_stats_with_reusable_driver(player_metadata, driver, wait):
             soup = BeautifulSoup(driver.page_source, "html.parser")
             table = soup.find("table", id="career-stats-table")
 
-            # print(table.prettify()[:500])
-
             if not table:
                 raise ValueError("No regular season stats tables found on page")
 
@@ -408,11 +406,11 @@ def get_player_stats_with_reusable_driver(player_metadata, driver, wait):
             print("Successfully scraped regular season stats")
 
             # Replace "--" with np.nan before renaming and merging
-            df_regular.replace("--", np.nan, inplace=True)
-            df_regular = df_regular.infer_objects(copy=False)
+            df_regular = df_regular.mask(df_regular == "--", np.nan)
 
         except Exception as e:
             print(f"Failed to scrape regular season for {player_name}: {e}")
+            return None
 
         # ---------- Step 2: Scrape Playoff Stats ----------
         try:
@@ -455,8 +453,7 @@ def get_player_stats_with_reusable_driver(player_metadata, driver, wait):
             print("Successfully scraped playoff stats")
 
             # Replace "--" with np.nan before renaming and merging
-            df_playoffs.replace("--", np.nan, inplace=True)
-            df_playoffs = df_playoffs.infer_objects(copy=False)
+            df_playoffs = df_playoffs.mask(df_playoffs == "--", np.nan)
 
         except:
             print(f"Failed to scrape playoff stats for {player_name} in 'All Leagues' Tab")
@@ -512,8 +509,8 @@ def get_player_stats_with_reusable_driver(player_metadata, driver, wait):
                 df_playoffs['League'] = 'NHL'
 
                 # Replace "--" with np.nan before renaming and merging
-                df_playoffs.replace("--", np.nan, inplace=True)
-                df_playoffs = df_playoffs.infer_objects(copy=False)
+                pd.set_option('future.no_silent_downcasting', True)
+                df_playoffs = df_playoffs.replace("--", np.nan).infer_objects(copy=False)
 
             except Exception as e:
                 print(f"Failed to scrape playoff stats for {player_name} in 'NHL' Tab: {e}")
