@@ -72,6 +72,71 @@ def validate_season(season):
         return False
     return True
 
+def merge_stats(df_regular, df_playoffs):
+    """
+        Helper function to merge regular season and postseason stats
+        Parameters:
+            df_regular (pd.DataFrame): DataFrame with regular season stats
+            df_playoffs (pd.DataFrame): DataFrame with postseason stats
+        Returns:
+            df (pd.DataFrame): DataFrame with merged stats
+    """
+    # Rename columns for the regular season stats
+    df_regular = df_regular.rename(columns={
+        'Player': 'player_name',
+        'Season': 'season',
+        'Team': 'team',
+        'League': 'league',
+        'GP': 'gp_regular',
+        'G': 'g_regular',
+        'A': 'a_regular',
+        'P': 'p_regular',
+        '+/-': 'plus_minus_regular',
+        'PIM': 'pim_regular',
+        'PPG': 'ppg_regular',
+        'PPP': 'ppp_regular',
+        'SHG': 'shg_regular',
+        'SHP': 'shp_regular',
+        'TOI/G': 'toi_per_game_regular',
+        'GWG': 'gwg_regular',
+        'OTG': 'otg_regular',
+        'S': 'sog_regular',
+        'S%': 'shooting_pct_regular',
+        'FO%': 'fo_pct_regular'
+    })
+
+    # Rename columns for the playoffs stats
+    df_playoffs = df_playoffs.rename(columns={
+        'Player': 'player_name',
+        'Season': 'season',
+        'Team': 'team',
+        'League': 'league',
+        'GP': 'gp_playoffs',
+        'G': 'g_playoffs',
+        'A': 'a_playoffs',
+        'P': 'p_playoffs',
+        '+/-': 'plus_minus_playoffs',
+        'PIM': 'pim_playoffs',
+        'PPG': 'ppg_playoffs',
+        'PPP': 'ppp_playoffs',
+        'SHG': 'shg_playoffs',
+        'SHP': 'shp_playoffs',
+        'TOI/G': 'toi_per_game_playoffs',
+        'GWG': 'gwg_playoffs',
+        'OTG': 'otg_playoffs',
+        'S': 'sog_playoffs',
+        'S%': 'shooting_pct_playoffs',
+        'FO%': 'fo_pct_playoffs'
+    })
+
+    # Merge the dataframes on identifiers
+    df_merged = df_regular.merge(df_playoffs, on=['player_name', 'season', 'team', 'league'], how='left')
+
+    # Replace NaN with None, and convert all columns to object dtype
+    df_merged = df_merged.astype(object).where(pd.notnull(df_merged), None)
+
+    return df_merged
+
 """
     The following section is APIs to get data from official NHL website
 """
@@ -297,6 +362,8 @@ def get_player_stats_with_reusable_driver(player_metadata, driver, wait):
 
         # ---------- Step 1: Select All Leagues and Scrape Regular Season ----------
         try:
+            print(f"Scraping 'All Leagues' regular season stats for {player_name}")
+
             league_dropdown = wait.until(ec.element_to_be_clickable(
                 (By.XPATH, "//input[@id='league-select']/following-sibling::div//button")
             ))
@@ -335,20 +402,82 @@ def get_player_stats_with_reusable_driver(player_metadata, driver, wait):
             html_str = str(table)
             df_regular = pd.read_html(StringIO(html_str))[0]
 
-            # Add player name to the dataframe
+            # Add the player name to the dataframe
             df_regular.insert(0, "Player", player_name)
 
             print("Successfully scraped regular season stats")
 
-            return df_regular
+            # Replace "--" with np.nan before renaming and merging
+            df_regular.replace("--", np.nan, inplace=True)
 
         except Exception as e:
             print(f"Failed to scrape regular season for {player_name}: {e}")
+
+        # ---------- Step 2: Scrape Playoff Stats ----------
+        try:
+            print(f"Scraping 'playoff stats' for {player_name}")
+
+            stats_type_dropdown = wait.until(ec.element_to_be_clickable((
+                By.XPATH, "//input[@id='game-type-select']/following::button[1]"
+            )))
+
+            print("Successfully located game-type dropdown button")
+
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", stats_type_dropdown)
+            driver.execute_script("arguments[0].click();", stats_type_dropdown)
+
+            print("Successfully clicked playoffs dropdown button")
+
+            time.sleep(2)
+
+            # Select "Playoffs" from the dropdown
+            playoffs_option = wait.until(ec.element_to_be_clickable((
+                By.XPATH, "//li[normalize-space()='Playoffs']"
+            )))
+            playoffs_option.click()
+            print("Successfully selected 'Playoffs' option")
+
+            # Scrape the table
+            soup = BeautifulSoup(driver.page_source, "html.parser")
+            table = soup.find("table", id="career-stats-table")
+
+            if not table:
+                raise ValueError("No playoff stats tables found on page")
+
+            # Convert table to dataframe
+            html_str = str(table)
+            df_playoffs = pd.read_html(StringIO(html_str))[0]
+
+            # Add the player name to the dataframe
+            df_playoffs.insert(0, "Player", player_name)
+
+            print("Successfully scraped playoff stats")
+
+            # Replace "--" with np.nan before renaming and merging
+            df_playoffs.replace("--", np.nan, inplace=True)
+
+        except Exception as e:
+            print(f"Failed to scrape playoff stats for {player_name}: {e}")
+
+        # ---------- Step 3: Merged Regular Season Stats and Playoff Stats ----------
+        try:
+            if df_regular is not None and df_playoffs is not None:
+                df_merged = merge_stats(df_regular, df_playoffs)
+                return df_merged
+            elif df_regular is not None:
+                print(f"No playoff stats found for {player_name}. Returning regular season stats only.")
+                return df_regular
+            elif df_playoffs is not None:
+                print(f"No regular season stats found for {player_name}. Returning playoff stats only.")
+                return df_playoffs
+            else:
+                return None
+        except Exception as e:
+            print(f"Failed to merge stats for {player_name}: {e}")
+            return None
 
     except Exception as e:
         print(f"Failed to scrape {player_name} at {player_url}")
         print("Error:", e)
         return None
-
-
 
