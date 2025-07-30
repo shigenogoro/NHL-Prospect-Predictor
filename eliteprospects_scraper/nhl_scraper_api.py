@@ -133,9 +133,221 @@ def merge_stats(df_regular, df_playoffs):
     df_merged = df_regular.merge(df_playoffs, on=['player_name', 'season', 'team', 'league'], how='left')
 
     # Replace NaN with None, and convert all columns to object dtype
-    df_merged = df_merged.astype(object).where(pd.notnull(df_merged), None)
+    df_merged = convert_NaN_to_None(df_merged)
 
     return df_merged
+
+def convert_NaN_to_None(df):
+    return df.astype(object).where(pd.notnull(df), None)
+
+def scrape_all_leagues_regular_season_stats(player_name, driver, wait):
+    """
+        Scrape all leagues regular season stats from the NHL website
+        Parameters:
+            player_name: Name of the player
+            driver (webdriver.Chrome): A reusable undetected_chromedriver instance
+        Returns:
+            df (pd.DataFrame): DataFrame with all players' stats
+    """
+    df_regular = None
+    try:
+        print(f"Scraping 'All Leagues' regular season stats for {player_name}")
+
+        league_dropdown = wait.until(ec.element_to_be_clickable(
+            (By.XPATH, "//input[@id='league-select']/following-sibling::div//button")
+        ))
+
+        print("Successfully located dropdown button")
+
+        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", league_dropdown)
+        driver.execute_script("arguments[0].click();", league_dropdown)
+
+        print("Successfully clicked dropdown button")
+
+        time.sleep(1)
+
+        all_leagues_option = wait.until(ec.element_to_be_clickable(
+            (By.XPATH, "//li[normalize-space()='All Leagues']")
+        ))
+
+        print("Successfully located all leagues option")
+
+        all_leagues_option.click()
+
+        print("Successfully clicked all leagues option")
+
+        time.sleep(2)
+
+        # Scrape the table
+        soup = BeautifulSoup(driver.page_source, "html.parser")
+        table = soup.find("table", id="career-stats-table")
+
+        if not table:
+            raise ValueError("No regular season stats tables found on page")
+
+        # Convert table to dataframe
+        html_str = str(table)
+        df_regular = pd.read_html(StringIO(html_str))[0]
+
+        # Add the player name to the dataframe
+        df_regular.insert(0, "Player", player_name)
+
+        print("Successfully scraped regular season stats")
+
+        # Replace "--" with np.nan before renaming and merging
+        df_regular = df_regular.mask(df_regular == "--", np.nan)
+
+        return df_regular
+
+    except Exception as e:
+        print(f"Failed to scrape regular season for {player_name}: {e}")
+
+def scrape_all_leagues_playoff_stats(player_name, driver, wait):
+    """
+        Scrape all leagues playoff stats from the NHL website
+        Parameters:
+            player_name: Name of the player
+            driver (webdriver.Chrome): A reusable undetected_chromedriver instance
+        Returns:
+            df (pd.DataFrame): DataFrame with all players' stats
+    """
+    df_playoffs = None
+    try:
+        print(f"Scraping 'playoff stats' for {player_name}")
+
+        stats_type_dropdown = wait.until(ec.element_to_be_clickable((
+            By.XPATH, "//input[@id='game-type-select']/following::button[1]"
+        )))
+
+        print("Successfully located game-type dropdown button")
+
+        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", stats_type_dropdown)
+        driver.execute_script("arguments[0].click();", stats_type_dropdown)
+
+        print("Successfully clicked game-type dropdown button")
+
+        time.sleep(2)
+
+        # Select "Playoffs" from the dropdown
+        playoffs_option = wait.until(ec.element_to_be_clickable((
+            By.XPATH, "//li[normalize-space()='Playoffs']"
+        )))
+        playoffs_option.click()
+        print("Successfully selected 'Playoffs' option")
+
+        # Scrape the table
+        soup = BeautifulSoup(driver.page_source, "html.parser")
+        table = soup.find("table", id="career-stats-table")
+
+        if not table:
+            raise ValueError("No playoff stats tables found on page")
+
+        # Convert table to dataframe
+        html_str = str(table)
+        df_playoffs = pd.read_html(StringIO(html_str))[0]
+
+        # Add the player name to the dataframe
+        df_playoffs.insert(0, "Player", player_name)
+
+        print("Successfully scraped playoff stats")
+
+        # Replace "--" with np.nan before renaming and merging
+        df_playoffs = df_playoffs.mask(df_playoffs == "--", np.nan)
+
+        return df_playoffs
+
+    except:
+        raise Exception(f"Failed to scrape playoff stats for {player_name} in 'All Leagues' Tab")
+
+def scrape_nhl_playoffs_stats(player_name, driver, wait):
+    """
+        Scrape NHL playoff stats from the NHL website
+        Parameters:
+            player_name: Name of the player
+            driver (webdriver.Chrome): A reusable undetected_chromedriver instance
+        Returns:
+            df (pd.DataFrame): DataFrame with all players' stats
+    """
+    df_playoffs = None
+    try:
+        print(f"Scraping 'playoff stats' for {player_name} in 'NHL' Tab")
+
+        # Locate the league dropdown
+        league_dropdown = wait.until(ec.element_to_be_clickable(
+            (By.XPATH, "//input[@id='league-select']/following-sibling::div//button")
+        ))
+
+        print("Successfully located dropdown button")
+
+        # Click the dropdown
+        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", league_dropdown)
+        driver.execute_script("arguments[0].click();", league_dropdown)
+
+        print("Successfully clicked dropdown button")
+
+        time.sleep(1)
+
+        nhl_option = wait.until(ec.element_to_be_clickable(
+            (By.XPATH, "//li[normalize-space()='NHL']")
+        ))
+
+        print("Successfully located NHL option")
+
+        nhl_option.click()
+
+        print("Successfully clicked NHL option")
+
+        time.sleep(2)
+
+        # Locate the stats type dropdown
+        stats_type_dropdown = wait.until(ec.element_to_be_clickable((
+            By.XPATH, "//input[@id='game-type-select']/following::button[1]"
+        )))
+        print("Successfully located game-type dropdown button")
+
+        # Click the dropdown
+        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", stats_type_dropdown)
+        driver.execute_script("arguments[0].click();", stats_type_dropdown)
+        print("Successfully clicked game-type dropdown button")
+        time.sleep(1)
+
+        # Select "Playoffs" from the dropdown
+        playoffs_option = wait.until(ec.element_to_be_clickable((
+            By.XPATH, "//li[normalize-space()='Playoffs']"
+        )))
+        playoffs_option.click()
+        print("Successfully selected 'Playoffs' option")
+        time.sleep(2)
+
+        # Scrape the table
+        soup = BeautifulSoup(driver.page_source, "html.parser")
+        table = soup.find("table", id="career-stats-table")
+
+        if not table:
+            raise ValueError("No playoff stats tables found on page")
+
+        # Convert table to dataframe
+        html_str = str(table)
+        df_playoffs = pd.read_html(StringIO(html_str))[0]
+
+        # Add the player name to the dataframe
+        df_playoffs.insert(0, "Player", player_name)
+
+        print("Successfully scraped playoff stats in 'NHL' Tab")
+
+        # Add NHL to the league column
+        df_playoffs['League'] = 'NHL'
+
+        # Replace "--" with np.nan before renaming and merging
+        pd.set_option('future.no_silent_downcasting', True)
+        df_playoffs = df_playoffs.replace("--", np.nan).infer_objects(copy=False)
+
+        return df_playoffs
+
+    except:
+        raise Exception(f"Failed to scrape playoff stats for {player_name} in 'NHL' Tab")
+
+
 
 """
     The following section is APIs to get data from official NHL website
@@ -360,170 +572,20 @@ def get_player_stats_with_reusable_driver(player_metadata, driver, wait):
         driver.get(player_url)
         time.sleep(random.uniform(1.5, 2.5))
 
-        # ---------- Step 1: Select All Leagues and Scrape Regular Season ----------
-        try:
-            print(f"Scraping 'All Leagues' regular season stats for {player_name}")
-
-            league_dropdown = wait.until(ec.element_to_be_clickable(
-                (By.XPATH, "//input[@id='league-select']/following-sibling::div//button")
-            ))
-
-            print("Successfully located dropdown button")
-
-            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", league_dropdown)
-            driver.execute_script("arguments[0].click();", league_dropdown)
-
-            print("Successfully clicked dropdown button")
-
-            time.sleep(1)
-
-            all_leagues_option = wait.until(ec.element_to_be_clickable(
-                (By.XPATH, "//li[normalize-space()='All Leagues']")
-            ))
-
-            print("Successfully located all leagues option")
-
-            all_leagues_option.click()
-
-            print("Successfully clicked all leagues option")
-
-            time.sleep(2)
-
-            # Scrape the table
-            soup = BeautifulSoup(driver.page_source, "html.parser")
-            table = soup.find("table", id="career-stats-table")
-
-            if not table:
-                raise ValueError("No regular season stats tables found on page")
-
-            # Convert table to dataframe
-            html_str = str(table)
-            df_regular = pd.read_html(StringIO(html_str))[0]
-
-            # Add the player name to the dataframe
-            df_regular.insert(0, "Player", player_name)
-
-            print("Successfully scraped regular season stats")
-
-            # Replace "--" with np.nan before renaming and merging
-            df_regular = df_regular.mask(df_regular == "--", np.nan)
-
-        except Exception as e:
-            print(f"Failed to scrape regular season for {player_name}: {e}")
-            return None
+        # ---------- Step 1: Scrape Regular Season Stats ----------
+        df_regular = scrape_all_leagues_regular_season_stats(player_name, driver, wait)
 
         # ---------- Step 2: Scrape Playoff Stats ----------
         try:
-            print(f"Scraping 'playoff stats' for {player_name}")
-
-            stats_type_dropdown = wait.until(ec.element_to_be_clickable((
-                By.XPATH, "//input[@id='game-type-select']/following::button[1]"
-            )))
-
-            print("Successfully located game-type dropdown button")
-
-            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", stats_type_dropdown)
-            driver.execute_script("arguments[0].click();", stats_type_dropdown)
-
-            print("Successfully clicked playoffs dropdown button")
-
-            time.sleep(2)
-
-            # Select "Playoffs" from the dropdown
-            playoffs_option = wait.until(ec.element_to_be_clickable((
-                By.XPATH, "//li[normalize-space()='Playoffs']"
-            )))
-            playoffs_option.click()
-            print("Successfully selected 'Playoffs' option")
-
-            # Scrape the table
-            soup = BeautifulSoup(driver.page_source, "html.parser")
-            table = soup.find("table", id="career-stats-table")
-
-            if not table:
-                raise ValueError("No playoff stats tables found on page")
-
-            # Convert table to dataframe
-            html_str = str(table)
-            df_playoffs = pd.read_html(StringIO(html_str))[0]
-
-            # Add the player name to the dataframe
-            df_playoffs.insert(0, "Player", player_name)
-
-            print("Successfully scraped playoff stats")
-
-            # Replace "--" with np.nan before renaming and merging
-            df_playoffs = df_playoffs.mask(df_playoffs == "--", np.nan)
-
-        except:
-            print(f"Failed to scrape playoff stats for {player_name} in 'All Leagues' Tab")
-
+            df_playoffs = scrape_all_leagues_playoff_stats(player_name, driver, wait)
+        except Exception as e:
             # Try to scrape playoffs data in the NHL tab
+            print(e)
             try:
-                print(f"Scraping 'playoff stats' for {player_name} in 'NHL' Tab")
-
-                # Locate the league dropdown
-                league_dropdown = wait.until(ec.element_to_be_clickable(
-                    (By.XPATH, "//input[@id='league-select']/following-sibling::div//button")
-                ))
-
-                print("Successfully located dropdown button")
-
-                # Click the dropdown
-                driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", league_dropdown)
-                driver.execute_script("arguments[0].click();", league_dropdown)
-
-                print("Successfully clicked dropdown button")
-
-                time.sleep(1)
-
-                nhl_option = wait.until(ec.element_to_be_clickable(
-                    (By.XPATH, "//li[normalize-space()='NHL']")
-                ))
-
-                print("Successfully located NHL option")
-
-                nhl_option.click()
-
-                print("Successfully clicked NHL option")
-
-                time.sleep(2)
-
-                # Scrape the table
-                soup = BeautifulSoup(driver.page_source, "html.parser")
-                table = soup.find("table", id="career-stats-table")
-
-                if not table:
-                    raise ValueError("No playoff stats tables found on page")
-
-                # Convert table to dataframe
-                html_str = str(table)
-                df_playoffs = pd.read_html(StringIO(html_str))[0]
-
-                # Add the player name to the dataframe
-                df_playoffs.insert(0, "Player", player_name)
-
-                print("Successfully scraped playoff stats in 'NHL' Tab")
-
-                # Add NHL to the league column
-                df_playoffs['League'] = 'NHL'
-
-                # Replace "--" with np.nan before renaming and merging
-                pd.set_option('future.no_silent_downcasting', True)
-                df_playoffs = df_playoffs.replace("--", np.nan).infer_objects(copy=False)
-
+                df_playoffs = scrape_nhl_playoffs_stats(player_name, driver, wait)
             except Exception as e:
-                print(f"Failed to scrape playoff stats for {player_name} in 'NHL' Tab: {e}")
-
-                # Write player_name and player_url to a separate CSV file
-                failed_df = pd.DataFrame({
-                    "player_name": [player_name],
-                    "player_url": [player_url]
-                })
-
-                print("Write failed player to failed_players.csv")
-                failed_df.to_csv("./data/nhl/official/stats/failed_players.csv", mode='a', header=False, index=False, encoding='utf-8-sig')
-
+                print(e)
+                print(f"Failed to scrape playoff stats for {player_name} in both 'All Leagues' and 'NHL' Tabs")
 
         # ---------- Step 3: Merged Regular Season Stats and Playoff Stats ----------
         try:
@@ -532,18 +594,15 @@ def get_player_stats_with_reusable_driver(player_metadata, driver, wait):
                 return df_merged
             elif df_regular is not None:
                 print(f"No playoff stats found for {player_name}. Returning regular season stats only.")
-                return df_regular
+                return convert_NaN_to_None(df_regular)
             elif df_playoffs is not None:
                 print(f"No regular season stats found for {player_name}. Returning playoff stats only.")
-                return df_playoffs
+                return convert_NaN_to_None(df_playoffs)
             else:
                 return None
         except Exception as e:
-            print(f"Failed to merge stats for {player_name}: {e}")
-            return None
+            print(e)
+            raise f"Failed to merge stats for {player_name}"
 
     except Exception as e:
-        print(f"Failed to scrape {player_name} at {player_url}")
-        print("Error:", e)
-        return None
-
+        raise f"Failed to scrape {player_name} at {player_url}"
