@@ -187,6 +187,10 @@ def extract_draft_info(text):
         return (round_num, overall_num, year)
     return None
 
+# Helper Function to Convert NaN to None
+def convert_NaN_to_None(df):
+    return df.astype(object).where(pd.notnull(df), None)
+
 '''
     The following functions are used to handle the player's stats
 '''
@@ -502,6 +506,138 @@ def get_player_facts(player_metadata):
     except Exception as e:
         print(f"[ERROR] Failed to get facts for {player_name}: {e}")
         return pd.DataFrame()
+    finally:
+        driver.quit()
+
+    return result
+
+def get_player_facts_with_reusable_driver(player_metadata, driver, wait):
+    player_name = str(player_metadata['player_name'])
+    player_url = str(player_metadata['link'])
+
+    print(f"Collecting facts for {player_name} at {player_url}")
+
+    result = None
+
+    try:
+        driver.get(player_url)
+        time.sleep(random.uniform(1.5, 2.5))
+
+        player_facts_section = wait.until(
+            ec.presence_of_element_located((By.ID, "player-facts"))
+        )
+
+        facts_dict = {}
+
+        # Main facts
+        try:
+            facts_list = player_facts_section.find_element(
+                By.CLASS_NAME, "PlayerFacts_factsList__Xw_ID"
+            )
+            fact_items = facts_list.find_elements(By.TAG_NAME, "li")
+            for item in fact_items:
+                try:
+                    label = item.find_element(By.CLASS_NAME, "PlayerFacts_factLabel__EqzO5").text.strip()
+                    value = item.text.replace(label, "").strip()
+                    facts_dict[label] = value
+                except:
+                    continue
+        except:
+            print("Failed to extract main facts.")
+
+        # Extra facts
+        try:
+            extra_facts_list = player_facts_section.find_element(
+                By.CSS_SELECTOR, ".PlayerFacts_factsList__Xw_ID.PlayerFacts_fullWidth__W878B"
+            )
+            extra_fact_items = extra_facts_list.find_elements(By.TAG_NAME, "li")
+            for item in extra_fact_items:
+                try:
+                    label = item.find_element(By.CLASS_NAME, "PlayerFacts_factLabel__EqzO5").text.strip()
+                    value = item.text.replace(label, "").strip()
+                    facts_dict[label] = value
+
+                    # Special handling for Draft
+                    if label == "Drafted":
+                        match = re.search(r"(\d{4}).*?round\s+(\d+).*?#(\d+)", value)
+                        if match:
+                            year, rnd, overall = match.groups()
+                            facts_dict["Draft"] = f"{rnd}rd round, {overall}th overall ({year})"
+                except:
+                    continue
+        except:
+            print("No extra facts found.")
+
+        # Height
+        height_cm = None
+        if "Height" in facts_dict:
+            match = re.search(r"(\d+)\s*cm", facts_dict["Height"])
+            if match:
+                height_cm = int(match.group(1))
+
+        # Weight
+        weight_kg = None
+        if "Weight" in facts_dict:
+            match = re.search(r"(\d+)\s*kg", facts_dict["Weight"])
+            if match:
+                weight_kg = int(match.group(1))
+
+        # Highlights
+        highlights = []
+        try:
+            highlight_elements = player_facts_section.find_elements(By.CLASS_NAME, "highlights-tooltip")
+            for elem in highlight_elements:
+                tooltip = elem.get_attribute("data-tooltip-content")
+                if tooltip:
+                    highlights.append(tooltip.strip())
+        except:
+            print("Failed to extract highlights.")
+
+        # Extract Player Types
+        player_types = []
+        try:
+            player_types_container = player_facts_section.find_element(By.CLASS_NAME, "PlayerFacts_playerTypes__lGoC4")
+            chip_elements = player_types_container.find_elements(By.CLASS_NAME, "Chip_chip__qIK6Z")
+            for chip in chip_elements:
+                text = chip.text.strip()
+                if text:
+                    player_types.append(text)
+        except:
+            player_types = None
+            print("Failed to extract player types - No player types found.")
+
+        description = None
+        try:
+            desc_elem = player_facts_section.find_element(By.CLASS_NAME, "PlayerFacts_description__ujmxU")
+            full_desc = desc_elem.text.strip()
+            description = re.split(r"\[EP \d{4}\]", full_desc)[0].strip()
+        except:
+            print("Description not found.")
+
+        # Compile into a DataFrame
+        result = pd.DataFrame([{
+            "player_name": player_name,
+            "nation": facts_dict.get("Nation"),
+            "position": facts_dict.get("Position"),
+            "height_cm": height_cm,
+            "weight_kg": weight_kg,
+            "shoots": facts_dict.get("Shoots"),
+            "player_type": player_types,
+            "nhl_rights": facts_dict.get("NHL Rights"),
+            "draft": extract_draft_info(facts_dict.get("Draft")),
+            "highlights": highlights,
+            "description": truncate_description(description)
+        }])
+
+        # Replace "--" with np.nan before renaming and merging
+        result = result.mask(df_regular == "--", np.nan)
+
+        # Convert NaN to None
+        result = convert_NaN_to_None(result)
+
+    except Exception as e:
+        raise f"[ERROR] Failed to get facts for {player_name}: {e}"
+
     finally:
         driver.quit()
 
