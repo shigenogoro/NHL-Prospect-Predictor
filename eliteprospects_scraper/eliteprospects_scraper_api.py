@@ -515,14 +515,13 @@ def get_player_facts_with_reusable_driver(player_metadata, driver, wait):
     player_name = str(player_metadata['player_name'])
     player_url = str(player_metadata['link'])
 
-    print(f"Collecting facts for {player_name} at {player_url}")
-
     result = None
-
     try:
+        print(f"Collecting facts for {player_name} at {player_url}")
         driver.get(player_url)
-        time.sleep(random.uniform(1.5, 2.5))
 
+        # Wait for the page to load
+        time.sleep(random.uniform(1.5, 5))
         player_facts_section = wait.until(
             ec.presence_of_element_located((By.ID, "player-facts"))
         )
@@ -531,22 +530,25 @@ def get_player_facts_with_reusable_driver(player_metadata, driver, wait):
 
         # Main facts
         try:
+            print("Locating the main facts_list")
             facts_list = player_facts_section.find_element(
                 By.CLASS_NAME, "PlayerFacts_factsList__Xw_ID"
             )
             fact_items = facts_list.find_elements(By.TAG_NAME, "li")
+            print(f"Found {len(fact_items)} main facts")
             for item in fact_items:
                 try:
                     label = item.find_element(By.CLASS_NAME, "PlayerFacts_factLabel__EqzO5").text.strip()
                     value = item.text.replace(label, "").strip()
                     facts_dict[label] = value
                 except:
-                    continue
+                    raise Exception(f"Failed to extract main fact: {item.text}")
         except:
-            print("Failed to extract main facts.")
+            raise Exception("Failed to extract main facts.")
 
         # Extra facts
         try:
+            print("Extracting extra facts...")
             extra_facts_list = player_facts_section.find_element(
                 By.CSS_SELECTOR, ".PlayerFacts_factsList__Xw_ID.PlayerFacts_fullWidth__W878B"
             )
@@ -557,6 +559,8 @@ def get_player_facts_with_reusable_driver(player_metadata, driver, wait):
                     value = item.text.replace(label, "").strip()
                     facts_dict[label] = value
 
+                    print(f"Extracted extra fact: {label}")
+
                     # Special handling for Draft
                     if label == "Drafted":
                         match = re.search(r"(\d{4}).*?round\s+(\d+).*?#(\d+)", value)
@@ -564,9 +568,9 @@ def get_player_facts_with_reusable_driver(player_metadata, driver, wait):
                             year, rnd, overall = match.groups()
                             facts_dict["Draft"] = f"{rnd}rd round, {overall}th overall ({year})"
                 except:
-                    continue
-        except:
-            print("No extra facts found.")
+                    raise Exception(f"Failed to extract extra fact: {item.text}")
+        except Exception as e:
+            raise Exception(f"Failed to extract extra facts: {e}")
 
         # Height
         height_cm = None
@@ -585,32 +589,38 @@ def get_player_facts_with_reusable_driver(player_metadata, driver, wait):
         # Highlights
         highlights = []
         try:
+            print("Extracting highlights...")
             highlight_elements = player_facts_section.find_elements(By.CLASS_NAME, "highlights-tooltip")
             for elem in highlight_elements:
                 tooltip = elem.get_attribute("data-tooltip-content")
                 if tooltip:
                     highlights.append(tooltip.strip())
+            print("Successfully extracted highlights.")
         except:
             print("Failed to extract highlights.")
 
         # Extract Player Types
         player_types = []
         try:
+            print("Extracting player types...")
             player_types_container = player_facts_section.find_element(By.CLASS_NAME, "PlayerFacts_playerTypes__lGoC4")
             chip_elements = player_types_container.find_elements(By.CLASS_NAME, "Chip_chip__qIK6Z")
             for chip in chip_elements:
                 text = chip.text.strip()
                 if text:
                     player_types.append(text)
+            print("Successfully extracted player types.")
         except:
             player_types = None
             print("Failed to extract player types - No player types found.")
 
         description = None
         try:
+            print("Extracting description...")
             desc_elem = player_facts_section.find_element(By.CLASS_NAME, "PlayerFacts_description__ujmxU")
             full_desc = desc_elem.text.strip()
             description = re.split(r"\[EP \d{4}\]", full_desc)[0].strip()
+            print("Successfully extracted description.")
         except:
             print("Description not found.")
 
@@ -629,17 +639,8 @@ def get_player_facts_with_reusable_driver(player_metadata, driver, wait):
             "description": truncate_description(description)
         }])
 
-        # Replace "--" with np.nan before renaming and merging
-        result = result.mask(df_regular == "--", np.nan)
-
-        # Convert NaN to None
-        result = convert_NaN_to_None(result)
-
     except Exception as e:
-        raise f"[ERROR] Failed to get facts for {player_name}: {e}"
-
-    finally:
-        driver.quit()
+        raise Exception(f"[ERROR] Failed to get facts for {player_name}: {e}")
 
     return result
 
