@@ -83,7 +83,7 @@ def merge_stats(df_regular, df_playoffs):
     """
     # Rename columns for the regular season stats
     df_regular = df_regular.rename(columns={
-        'Player': 'player_name',
+        'Player': 'player_name_official',
         'Season': 'season',
         'Team': 'team',
         'League': 'league',
@@ -107,7 +107,7 @@ def merge_stats(df_regular, df_playoffs):
 
     # Rename columns for the playoffs stats
     df_playoffs = df_playoffs.rename(columns={
-        'Player': 'player_name',
+        'Player': 'player_name_official',
         'Season': 'season',
         'Team': 'team',
         'League': 'league',
@@ -130,7 +130,7 @@ def merge_stats(df_regular, df_playoffs):
     })
 
     # Merge the dataframes on identifiers
-    df_merged = df_regular.merge(df_playoffs, on=['player_name', 'season', 'team', 'league'], how='left')
+    df_merged = df_regular.merge(df_playoffs, on=['player_name_official', 'season', 'team', 'league'], how='left')
 
     # Replace NaN with None, and convert all columns to object dtype
     df_merged = convert_NaN_to_None(df_merged)
