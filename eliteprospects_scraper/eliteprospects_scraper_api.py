@@ -513,7 +513,7 @@ def get_player_facts(player_metadata):
 
 def get_player_facts_with_reusable_driver(player_metadata, driver, wait):
     player_name = str(player_metadata['player_name'])
-    player_url = str(player_metadata['link'])
+    player_url = str(player_metadata['player_link_ep'])
 
     result = None
     try:
@@ -572,6 +572,13 @@ def get_player_facts_with_reusable_driver(player_metadata, driver, wait):
         except Exception as e:
             raise Exception(f"Failed to extract extra facts: {e}")
 
+        # Date of Birth
+        date_of_birth = None
+        if "Date of Birth" in facts_dict:
+            date_of_birth = facts_dict["Date of Birth"]
+            # Convert to datetime: example Oct 30, 1998
+            date_of_birth = pd.to_datetime(date_of_birth, format='%b %d, %Y')
+
         # Height
         height_cm = None
         if "Height" in facts_dict:
@@ -626,7 +633,9 @@ def get_player_facts_with_reusable_driver(player_metadata, driver, wait):
 
         # Compile into a DataFrame
         result = pd.DataFrame([{
-            "player_name": player_name,
+            "player_name_ep": player_name,
+            "player_link_ep": player_url,
+            "date_of_birth": date_of_birth,
             "nation": facts_dict.get("Nation"),
             "position": facts_dict.get("Position"),
             "height_cm": height_cm,
